@@ -38,8 +38,9 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title"> Maiadeen</div>
                 <div class="title">Knowledge Portal</div>
+                <h3 style="color:blue;">comping Soon !!</h3>
 
             </div>
         </div>
