@@ -1,0 +1,49 @@
+body {
+	margin: 0 ;
+	font-family:sans-serif;
+	font-size: 20px;
+}
+
+.header {
+	background-color:beige;
+	padding: 1px;
+	position: relative;
+	width: auto;
+	height: 320px;
+}
+.side-menu {
+	
+}
+
+.container {
+
+	background-color:aliceblue;
+	padding-top: 70px;
+	padding: 70px 10px 30px 10px;
+
+
+}
+.container p {
+	clear: both;
+}
+.box {	
+	display: inline-block;
+	background-color: brown;
+	float: left;
+	margin: 40px;
+	color:white;	
+}
+#one {
+	width: auto;
+	height: auto;
+}
+#two{
+	
+}
+.footer {
+
+	background-color: beige;
+	position:fixed;
+	bottom: 0;
+
+}
