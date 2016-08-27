@@ -12,14 +12,14 @@ class TypesTableSeed extends Seeder
     public function run()
     {
 
-    	DB::table('types')->truncate();
-        $types []=[ 
-	        	['type' => '.Net Programming1','created_at' => new DateTime,'updated_at' => new DateTime ],
-	        	['type' => '.Net Programming2','created_at' => new DateTime,'updated_at' => new DateTime ],
-	        	['type' => '.Net Programming3','created_at' => new DateTime,'updated_at' => new DateTime ],
-	        	['type' => '.Net Programming4','created_at' => new DateTime,'updated_at' => new DateTime ],
+    	DB::table('types')->delete();
+        $types =[ 
+	        	['coursetype' => 'Programming','created_at' => new DateTime,'updated_at' => new DateTime ],
+	        	['coursetype' => 'Networking','created_at' => new DateTime,'updated_at' => new DateTime ],
+	        	['coursetype' => 'Cooking','created_at' => new DateTime,'updated_at' => new DateTime ],
+	        	['coursetype' => 'Farming','created_at' => new DateTime,'updated_at' => new DateTime ],
 
-        	]
+        	] ;
         	
 
         DB::table('types')->insert($types);

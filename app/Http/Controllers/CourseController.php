@@ -10,8 +10,8 @@ use App\Http\Requests;
 class CourseController extends Controller
 {
     public function index() {
-    	$courses = Course::paginate(6);
-        return view('home',compact('courses'));
+    	$courses = Course::all();
+        return view('home2',compact('courses'));
 
 
     	//dd($projects) ;

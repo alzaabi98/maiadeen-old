@@ -12,20 +12,55 @@ class CreateCoursesTable extends Migration
      */
     public function up()
     {
+        
          Schema::create('courses', function (Blueprint $table) {
-            $table->engine = "InnoDB";
+            // $table->engine = "InnoDB";
             $table->increments('id');
-            $table->integer('teacher_id')->unsigned();
-            $table->integer('type_id')->unsigned();
-            //$table->foreign('teacher_id')->references('id')->on('teacher')->onDelete('cascade')->onUpdate('cascade');
             $table->string('title');
-            $table->string('detail');
+            $table->string('summary');
             $table->string('img');
-            $table->string('type');
             $table->string('price');
-            $table->string('rating');
+            
+            $table->integer('teacher_id')->unsigned()->default(0);
+            $table->integer('category_id')->unsigned()->default(0);
+            $table->integer('subcategory_id')->unsigned()->default(0);
+            $table->integer('level_id')->unsigned()->default(0);
+            $table->integer('review_id')->unsigned()->default(0);
+            $table->integer('content_id')->unsigned()->default(0);
+
+
+
+            
             $table->timestamps();
+
+
+            // $table->foreign('teacher_id')->references('id')->on('teachers');
+            // $table->foreign('subtype_id')->references('id')->on('subtypes');
+
+
         });
+     // Schema::create('types', function (Blueprint $table) {
+     //        $table->engine = "InnoDB";
+     //        $table->increments('id');
+     //        $table->string('courseType');
+     //        $table->timestamps();
+     //    });
+     //    Schema::create('subtypes', function (Blueprint $table) {
+     //        $table->engine = "InnoDB";
+     //        $table->increments('id');
+     //        $table->integer('type_id')->unsigned()->default(0);
+     //        $table->string('courseSubtype');
+     //        $table->timestamps();
+
+     //        $table->foreign('type_id')->references('id')->on('types');
+
+     //    });
+
+    
+
+      
+
+        
 
         
     }
@@ -38,7 +73,11 @@ class CreateCoursesTable extends Migration
     public function down()
     {
         
+        // Schema::drop('types');
+        // Schema::drop('subtypes');
         Schema::drop('courses');
+
+
 
     }
 }

@@ -12,7 +12,7 @@ class TeacherTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('teachers')->truncate();
+        DB::table('teachers')->delete();
 
         $faker =Faker::create() ;
         $teachers = [];

@@ -1,3 +1,5 @@
+
+
 @extends('layouts.main')
 
 
@@ -16,8 +18,9 @@
 			  	<?php $title = str_limit($course->title, 40)?>
 			    <h2><a href="#"> {{$title}}</a></h2>
 			    <div class="box-meta">
-			      By <a href="#">{{App\Course::find($course->id)->teacher->name}}</a> <i class="glyphicon glyphicon-time"></i> <time>45</time>
+			      By <a href="#">test</a> <i class="glyphicon glyphicon-time"></i> <time>45</time>
 			    </div>
+			  
 			  </div>
 			</div>
 	        
@@ -25,3 +28,5 @@
 	@endforeach
 
 @endsection
+
+{{--App\Course::find($course->id)->teacher->name--}}

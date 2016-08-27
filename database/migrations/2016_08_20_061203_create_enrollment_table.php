@@ -13,7 +13,10 @@ class CreateEnrollmentTable extends Migration
     public function up()
     {
         Schema::create('enrollment', function (Blueprint $table) {
+            // $table->engine = "InnoDB";
             $table->increments('id');
+            $table->integer('user_id')->unsigned()->default(0);
+            $table->integer('course_id')->unsigned()->default(0);
             $table->timestamps();
         });
     }
