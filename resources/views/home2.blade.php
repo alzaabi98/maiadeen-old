@@ -14,7 +14,9 @@
 	<div class="col-md-12">
 		<div id="owl-demo" class="owl-carousel" >
 			@foreach ($courses as $course)
-			<?php $teacher = DB::table('users')->where('id', '=', $course->teacher_id)->first();?>
+			<?php //$teacher = DB::table('users')->where('id', '=', $course->teacher_id)->first();
+				  $teacher = DB::table('users')->where('id', $course->teacher_id)->first();	
+			?>
 			<a  class="item link">
 			
 				<div class="thumbnail">
@@ -43,7 +45,7 @@
 		</div>
 
 			
-	</div>
+	</div> <!-- This is course scroll -->
 </div>
 
 <div class="row">
@@ -53,7 +55,7 @@
 			</div>
 </div>
 
-	<div class="col-md-12">
+<div class="col-md-12">
 		<div id="owl-demo2" class="owl-carousel" >
 			<?php $teacher_ids = DB::table('courses')->distinct()->get(['teacher_id']); ?>
 			@foreach ($teacher_ids as $record)
@@ -63,7 +65,7 @@
 				<div class="thumbnail">
 					<img src="{{$teacher->avator}}">
 					<div class="caption">
-						{{$teacher->firstname . ' ' . $teacher->lastname}}
+						{{ $teacher->firstname . ' ' . $teacher->lastname }}
 											
 					</div>
 					<hr>
@@ -80,11 +82,7 @@
 				</div>
 			</a>
 			@endforeach
-
 		</div>
-
-			
 	</div>
-
 
 @endsection

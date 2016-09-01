@@ -17,3 +17,13 @@
 
 
 Route::get('/', 'CourseController@index');
+
+
+Route::get('/courses', 'CourseController@show')->name('course-browse');
+
+
+Route::get('/test', function () {
+    
+	$categories = App\Category::all();
+	return view('test',compact('categories'));
+});

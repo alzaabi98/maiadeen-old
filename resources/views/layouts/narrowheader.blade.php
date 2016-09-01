@@ -11,7 +11,7 @@
     
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/custom3.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/custom-narrow.css">
 
 	<!-- Important Owl stylesheet -->
 	<link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">
@@ -77,24 +77,10 @@
   	
   		<div class="jumbotron">
   			
-  			<div class="col-sm-2 col-md-offset-4">
-  				<img src="assets/img/logo.png" alt="logo" width="150" height="150">
-  			</div>
-  			<div class="col-md-4">
-	  			<h1 style="margin-right:40px; margin-top:60px;">
-	  			 ميادين العلم
-	  			 </h1>
-	  			 <h5>
-					لا حدود للعلم والمعرفة 
-					ميادين هو المحطة الموثوقة لجميع ما تطمح لتعلمه
-					رؤية معاصرة  للتعلم في أي مكان وأي وقت 
-				</h5>
-				<a href="courses" class="btn btn-warning btn-lg" role="button">تصفح الدورات </a>
-
-				<!-- <btn class="btn btn-info btn-lg">الدخول</btn> -->
-
+  			
+	  			
 				
-  			</div>
+  			
   		</div>
 
   	</header>
@@ -106,9 +92,9 @@
 
 	<footer>
 		<div class="container-fluid">
-			<div class="navbar navbar-default navbar-fixed-bottom">
+			<div class="navbar navbar-default ">
 			
-				<p class="text-center">&copy;2016 - Maiadeen </p>	
+				<p class="text-center">&copy; 2016 - Maiadeen </p>	
 				<div class="social-icons">	
 					<a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
 					<a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
@@ -127,7 +113,7 @@
 	</footer>
 
 
-	@yield('footer')
+		@yield('header')
 
     <script>
 	$(document).ready(function() {
