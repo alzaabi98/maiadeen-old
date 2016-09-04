@@ -15,7 +15,7 @@ class CourseController extends Controller
     public function index() {
     	$courses = Course::all();
         //return view('debug',compact('courses'));
-        return view('home',compact('courses'));
+        return view('home2',compact('courses'));
        //return view('home2')->with('courses', $courses);
 
 
