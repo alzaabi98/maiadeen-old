@@ -2,8 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Slick Playground</title>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maiadeeb Homepage</title>
+  
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
   <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css" >
   <link rel="stylesheet" href="assets/css/custom.css" >
@@ -18,7 +21,7 @@
 
 
   <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-  
+
 @yield('head') 
 </head>
 <body>
