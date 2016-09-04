@@ -123,7 +123,6 @@
 @endsection
 
 @section('javascript')
-	<script src="assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
 	  <script type="text/javascript">
 	    $(document).on('ready', function() {
 	      $('.responsive').slick({

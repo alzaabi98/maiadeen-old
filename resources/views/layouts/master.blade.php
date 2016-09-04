@@ -6,17 +6,19 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
   <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css" >
-    <link rel="stylesheet" href="assets/css/custom.css" >
+  <link rel="stylesheet" href="assets/css/custom.css" >
 
   <script src="assets/js/bootstrap.min.js" ></script>
-<link href="https://fonts.googleapis.com/css?family=Mirza:700" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css?family=Mirza:700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
 
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 
 
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+  
 @yield('head') 
 </head>
 <body>
@@ -96,6 +98,7 @@
  </footer>
 
 </div>
+  <script src="assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
 
 @yield('javascript') 
     
