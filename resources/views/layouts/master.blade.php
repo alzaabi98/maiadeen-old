@@ -15,11 +15,6 @@
 
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
-  <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css" >
-    <link rel="stylesheet" href="assets/css/custom.css" >
-
-  <script src="assets/js/bootstrap.min.js" ></script>
 
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 @yield('head') 
