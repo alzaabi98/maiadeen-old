@@ -5,7 +5,7 @@
     }
 
     .slider {
-        width: 100%;
+        width: 80%;
         margin: 100px auto;
     }
 
@@ -86,11 +86,11 @@ h5 {
   background-color: #f1f1f1;
   //background-image: url('../img/dark-bg.png'); 
   color: #7fc268;
-  height: 500px;
+  height: 400px;
   padding-top: 100px;
 }
 .jumbotron .btn {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .nav-white {

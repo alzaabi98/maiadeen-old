@@ -8,10 +8,10 @@
       <div class="jumbotron">
         
         <div class="col-sm-2 col-md-offset-4">
-          <img src="assets/img/logo.png" alt="logo" width="150" height="150">
+          <img  src="assets/img/logo.png" alt="logo" width="150" height="150">
         </div>
         <div class="col-md-4">
-          <h1 style="margin-right:40px; margin-top:60px;">
+          <h1 style="margin-right:30px; margin-top:20px; ">
            ميادين العلم
            </h1>
            <h5>
@@ -19,8 +19,7 @@
           ميادين هو المحطة الموثوقة لجميع ما تطمح لتعلمه
           رؤية معاصرة  للتعلم في أي مكان وأي وقت 
         </h5>
-        <btn class="btn btn-warning btn-lg">التسجيل</btn>
-                <btn class="btn btn-info btn-lg">الدخول</btn>
+        <btn class="btn btn-warning btn-lg"> جميع الدورات</btn>
 
         
         </div>
@@ -123,6 +122,8 @@
 @endsection
 
 @section('javascript')
+  <script src="assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+
 	  <script type="text/javascript">
 	    $(document).on('ready', function() {
 	      $('.responsive').slick({

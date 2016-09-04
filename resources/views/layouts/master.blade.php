@@ -2,22 +2,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Maiadeeb Homepage</title>
-  
+  <title>Maiadeen Homepage</title>
+
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
   <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css" >
+  
+  <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
+
   <link rel="stylesheet" href="assets/css/custom.css" >
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 
   <script src="assets/js/bootstrap.min.js" ></script>
   
   <link href="https://fonts.googleapis.com/css?family=Mirza:700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
 
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+
 
 
   <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
@@ -35,8 +38,8 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-            <a class="navbar-brand pull-right" href="#">
-              <h3>Projects Nice</h3>
+            <a class="navbar-brand " href="#">
+              <h3>ميادين</h3>
             </a>
           </div>
           <ul class="nav navbar-nav collapse navbar-collapse pull-right" id="example">
@@ -89,7 +92,7 @@
 
         </div>
         <div>
-           <p class="text-center footer-text">&copy; 2016 - Projects Nice</p>  
+           <p class="text-center footer-text">   حقوق الطبع محفوظة - ميادين &copy; 2016 </p>  
         </div>
 
         
@@ -101,7 +104,6 @@
  </footer>
 
 </div>
-  <script src="assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
 
 @yield('javascript') 
     
