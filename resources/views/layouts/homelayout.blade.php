@@ -130,13 +130,25 @@
 	@yield('footer')
 
     <script>
+    
+
 	$(document).ready(function() {
- 
+ 		
+ 		$(".owl-carousel").owlCarousel({
+ 			  autoPlay: 3000, //Set AutoPlay to 3 seconds
+		 
+		      items : 4,
+		      itemsDesktop : [1199,3],
+		      itemsDesktopSmall : [979,3]
+
+
+ 		});
 		$("#owl-demo").owlCarousel({
  
 			//autoPlay: 3000, //Set AutoPlay to 3 seconds
 
 			items : 3,
+			dots: false,
 			//itemsDesktop : [1199,3],
 			//itemsDesktopSmall : [979,3]
  
@@ -168,15 +180,17 @@
 	</script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script src="assets/js/jquery.min.js"></script>
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <!-- Include js plugin -->
 	
 
 	<!--  jQuery 1.7+  -->
-    <script src="assets/owl-carousel/owl.carousel.js" ></script>
+    <script src="assets/owl-carousel/owl.carousel.min.js" ></script>
 
 	
   </body>
