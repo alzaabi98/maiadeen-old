@@ -86,7 +86,7 @@ h5 {
   background-color: #f1f1f1;
   //background-image: url('../img/dark-bg.png'); 
   color: #7fc268;
-  height: 400px;
+  height: 500px;
   padding-top: 100px;
 }
 .jumbotron .btn {
@@ -189,3 +189,30 @@ a:hover {
 
 text-decoration: none;
 }
+.custom-header {
+  background-color: #f1f1f1;
+  background-image: url('../img/school.png'); 
+  color: #7fc268;
+  height: 150px;
+  padding-top: 100px
+}
+
+
+.panel-default {
+  width: 250px;
+  height: 450px;
+  float: left;
+  margin: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+

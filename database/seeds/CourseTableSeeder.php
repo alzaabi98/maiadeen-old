@@ -17,6 +17,7 @@ class CourseTableSeeder extends Seeder
         $faker =Faker::create() ;
         $courses = [];
 
+        DB::table('courses')->truncate();
         foreach(range(1,20) as $index) {
         	$courses[] =[
         		'title' => $faker->text($maxNbChars = 30),
@@ -24,7 +25,7 @@ class CourseTableSeeder extends Seeder
         		'img' => $faker->imageUrl($width = 100, $height = 100),
         		'price' => rand(10,20) ,
                 'teacher_id' => rand(1,10),
-                'category_id' => rand(1,10),
+                'category_id' => rand(1,4),
                 'subcategory_id' => rand(1,10),
                 'level_id' => rand(1,10),
                 'review_id' => rand(1,10),

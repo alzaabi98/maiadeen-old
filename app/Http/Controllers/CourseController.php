@@ -31,10 +31,10 @@ class CourseController extends Controller
 
         if (($category_id = $request->get("category_id") )) {
 
-            $courses = Course::where('category_id',$category_id)->paginate(5);
+            $courses = Course::where('category_id',$category_id)->paginate(6);
         }
         else {
-            $courses = Course::paginate(5);
+            $courses = Course::paginate(6);
 
         }
 

@@ -19,7 +19,8 @@
           ميادين هو المحطة الموثوقة لجميع ما تطمح لتعلمه
           رؤية معاصرة  للتعلم في أي مكان وأي وقت 
         </h5>
-        <btn class="btn btn-warning btn-lg"> جميع الدورات</btn>
+        <a href="courses" class="btn btn-warning btn-lg" role="button">جميع الدورات</a>
+
 
         
         </div>
