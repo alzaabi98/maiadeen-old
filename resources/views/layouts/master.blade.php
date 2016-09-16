@@ -49,23 +49,31 @@
              <li><a href="#">المحاضرون</a></li>
             
 
-             <button class="btn btn-info navbar-btn">
-              <span class="glyphicon glyphicon-user">
-                Become Teacher
-              </span>
 
-             </button>
-             <div class=" navbar-header dropdown">
-              <button class="btn btn-default dropdown-toggle navbar-btn logged-dropdown" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Logged in
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">User Profile</a></li>
-                <li><a href="#">Teacher</a></li>
-             
-              </ul>
-          </div>
+             @if (Auth::guest())
+          
+                <a href="{{ url('/login') }}" class="btn btn-warning navbar-btn">Login</a>
+                <a href="{{ url('/register') }}" class="btn btn-success navbar-btn">Register</a>
+                @else
+                    <button class="btn btn-info navbar-btn">
+                      <span class="glyphicon glyphicon-user">
+                        Become Teacher
+                      </span>
+
+                   </button>
+                     <div class=" navbar-header dropdown">
+                          <button class="btn btn-default dropdown-toggle navbar-btn logged-dropdown" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                             {{Auth::user()->firstname}}
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">User Profile</a></li>
+                            <li><a href="#">Teacher</a></li>
+                            <li><a href="{{url('/logout')}}">Logout</a></li>
+                         
+                          </ul>
+                        </div>
+                @endif
           </ul>
         </div>
       </div>
@@ -80,7 +88,7 @@
 
   
  <footer>
-    <div class="container-fliud">
+    <div class="container-fluid">
       <div class="navbar navbar-default navbar-fixed-bottom">
       
         

@@ -50,6 +50,7 @@
 body{
 font-family: 'Mirza', cursive;
   margin: 0;
+
   //background-color: #eee;
   //background-image: url('../img/light-bg.png'); 
 
@@ -198,7 +199,7 @@ text-decoration: none;
 }
 
 
-.panel-default {
+.panel-small {
   width: 250px;
   height: 450px;
   float: left;
@@ -206,6 +207,10 @@ text-decoration: none;
 
 }
 
+.panel-login {
+
+  margin-top: 110px;
+}
 
 
 

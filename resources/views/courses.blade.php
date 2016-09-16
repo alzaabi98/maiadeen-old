@@ -39,7 +39,7 @@
 		
 				<a href="">
 					
-					<div class="panel panel-default">
+					<div class="panel panel-default panel-small">
 						<div class="panel-body">
 							<img src="{{$course->img}}">
 							<hr>

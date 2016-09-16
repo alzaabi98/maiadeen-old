@@ -16,7 +16,9 @@
 // });
 
 
-Route::get('/', 'CourseController@index');
+Route::get('/', 'CourseController@index')->name('course-home');;
+
+
 
 
 Route::get('/courses', 'CourseController@show')->name('course-browse');
@@ -27,3 +29,11 @@ Route::get('/test', function () {
 	$categories = App\Category::all();
 	return view('test',compact('categories'));
 });
+Route::auth();
+
+//Route::get('/home', 'HomeController@index');
+
+
+Route::get('/redirect', 'SocialAuthController@redirect');
+Route::get('/callback', 'SocialAuthController@callback');
+
