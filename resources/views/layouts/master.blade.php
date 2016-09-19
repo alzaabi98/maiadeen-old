@@ -7,23 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Maiadeen Homepage</title>
 
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
-  <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css" >
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css" >
   
-  <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="/assets/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="/assets/slick/slick-theme.css">
 
-  <link rel="stylesheet" href="assets/css/custom.css" >
+  <link rel="stylesheet" href="/assets/css/custom.css" >
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 
-  <script src="assets/js/bootstrap.min.js" ></script>
+  <script src="/assets/js/bootstrap.min.js" ></script>
   
   <link href="https://fonts.googleapis.com/css?family=Mirza:700" rel="stylesheet">
 
 
 
 
-  <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
 
 @yield('head') 
 </head>

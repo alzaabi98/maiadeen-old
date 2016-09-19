@@ -3,7 +3,10 @@
 @section('content')
 <div class="container">
     <div class="row">
+
+    
         <div class="col-md-8 col-md-offset-2">
+          
             <div class="panel panel-default panel-login">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
@@ -85,6 +88,12 @@
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-user"></i> Register
                                 </button>
+                                <p>
+                                  @if (Session::has('message'))
+
+                                    <div class="alert alert-success" > {{ Session::get('message') }}</div>
+                                @endif
+                                </p>
                             </div>
                         </div>
                     </form>

@@ -13,6 +13,10 @@
 
             <div class="panel panel-default panel-login">
                 <div class="panel-heading">Login</div>
+                    @if (Session::has('message'))
+
+                        <div class="alert alert-success" > {{ Session::get('message') }}</div>
+                    @endif
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}

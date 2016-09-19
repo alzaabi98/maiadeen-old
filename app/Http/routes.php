@@ -37,3 +37,6 @@ Route::auth();
 Route::get('/redirect', 'SocialAuthController@redirect');
 Route::get('/callback', 'SocialAuthController@callback');
 
+//  confirm account :
+
+Route::get('register/confirm/{token}','Auth\AuthController@confirmEmail');

@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'firstname','lastname', 'email', 'password','social',
+        'firstname','lastname', 'email', 'password','social','verified',
     ];
 
     /**
@@ -28,4 +28,22 @@ class User extends Authenticatable
         
         return $this->hasMany('App\Course');
     }
+    // events 
+    public static function boot() {
+        parent::boot();
+        static::creating(function($user) {
+            $user->token = str_random(30);
+
+        });
+    }
+
+
+    public function confirmEmail() {
+
+        $this->verified = true;
+        $this->token = null;
+        $this->save();  
+        
+    }
+    
 }

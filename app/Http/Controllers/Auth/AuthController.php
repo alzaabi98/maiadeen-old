@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Validator;
+use Illuminate\Http\Request;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Mail;
 
 class AuthController extends Controller
 {
@@ -70,5 +73,50 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+        //Session::flash('message', 'Please confirm you email address !!'); 
+
+
     }
+    // add by abdulaziz 
+    // to oover register methid.. so user will not login
+    public function register(Request $request)
+    {
+        $validator = $this->validator($request->all());
+        $input = $request->all();
+
+        if ($validator->fails()) {
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+
+        $user = $this->create($input)->toArray();
+        //Auth::guard($this->getGuard())->login($this->create($request->all()));
+        //$user = $this->create($request->all());
+        \Session::flash('message', 'Please confirm your email !!');
+
+        Mail::send('auth.emails.activation', $user, function($message) use ($user) {
+                //$message->to($user['email']);
+                //$message->subject('Site - Activation Code');
+                $message->to($user['email'])->subject('Maiadeen - Activation Code!');
+
+            });
+
+        //return redirect($this->redirectPath());
+        return redirect()->back();
+    }
+
+
+      
+      public function confirmEmail($token) {
+
+        $user = User::whereToken($token)->firstOrFail()->confirmEmail();
+
+
+        \Session::flash('message', 'You are now confirmed , please login ');
+        return redirect('login');
+
+          
+      }
+      
 }
