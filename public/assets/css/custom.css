@@ -50,6 +50,8 @@
 body{
 font-family: 'Mirza', cursive;
   margin: 0;
+  direction: rtl;
+  font-size: 16pt;
 
   //background-color: #eee;
   //background-image: url('../img/light-bg.png'); 

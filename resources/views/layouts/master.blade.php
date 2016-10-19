@@ -43,7 +43,7 @@
             </a>
           </div>
           <ul class="nav navbar-nav collapse navbar-collapse pull-right" id="example">
-             <li><a href="#">تواصل معنا</a></li>
+             <li><a href="/contactus">تواصل معنا</a></li>
              <li><a href="/faq">الاسئلة المتكررة</a></li>
              <li><a href="#">الدورات</a></li>
              <li><a href="/contactus">المحاضرون</a></li>
@@ -101,6 +101,22 @@
         </div>
         <div>
            <p class="text-center footer-text">   حقوق الطبع محفوظة - ميادين &copy; 2016 </p>  
+        </div>
+        <div class="pull-right">
+
+         <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/privacy">سياسة الخصوصية</a>
+            </li>
+
+             <li class="nav-item">
+              <a class="nav-link" href="/terms">الشروط والاحكام</a>
+            </li>
+
+
+          
+          </ul>
+          
         </div>
 
         
