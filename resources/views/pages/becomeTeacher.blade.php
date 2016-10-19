@@ -13,6 +13,7 @@
 <!-- intro start -->
 <div class="lecturer mirza text-right">
 <div class="intro white-bg grey-color">
+        <div class="container">
             <div class="col-sm-5 animatedParent">
                 <img src="/assets/pages/img/intro-img.png" class="img-responsive block m-auto intro-img m-m-b animated fadeInLeft" >
             </div>
@@ -34,7 +35,6 @@
 <!-- planning start -->
 <div class="grey-bg grey-dark">
 	<div class="setup-content text-right">
-	<div class="container">
 	<div class="planning-con">
     	<div class="planning-header">
 		        <div class="col-sm-6 animatedParent">
