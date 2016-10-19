@@ -186,7 +186,7 @@
 	<div class="container ">
         <div class="col-sm-8 animatedParent">
         	<h1 class="yellow animated fadeInLeft">الموافقة</h1>
-        	<p class="m-m-b animated fadeInLeft">بعد عملية الإرسال سيقوم فريق ميادين بفحص الجودة على حسب تقييم الجودة وبعد الموافقة
+        	<p class="m-m-b animated fadeInLeft">بعد عملية الإرسال سيقوم فريق ميادين بفحص الجودة على <span style="color:brown;"><a href="/quality">حسب تقييم الجودة </a></span> وبعد الموافقة
         	سيتم اخطار المحاضر انه تمت الموافقة واذا كان هناك امر اخر فسيتم ايضا اخبار المحاضر.</p>
         </div>
         <div class="col-sm-4 animatedParent">
