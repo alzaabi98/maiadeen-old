@@ -17,7 +17,9 @@
 
 
 Route::get('/', 'CourseController@index')->name('course-home');;
+//pages ..
 
+Route::get('/faq','PagesController@faq');
 
 
 
