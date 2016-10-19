@@ -89,7 +89,7 @@
   
  <footer>
     <div class="container-fluid">
-      <div class="navbar navbar-default navbar-fixed-bottom">
+      <div class="navbar navbar-default ">
       
         
         <div class="social-icons">  
