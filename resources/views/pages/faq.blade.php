@@ -10,9 +10,8 @@
 <body dir="rtl" class="mirza">
 <img src="/assets/pages/img/faq.jpg" alt="FAQ" class="img-responsive width100 m-b" >
 <div class="absolute">
-    <div class="container">
     	<h1 class="yellow text-right">الاسئلة المتكررة</h1>
-    </div>
+
 </div>
 
 <!-- Bootstrap FAQ - START -->

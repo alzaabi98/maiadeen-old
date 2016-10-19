@@ -13,7 +13,6 @@
 <!-- intro start -->
 <div class="lecturer mirza text-right">
 <div class="intro white-bg grey-color">
-        <div class="container">
             <div class="col-sm-5 animatedParent">
                 <img src="/assets/pages/img/intro-img.png" class="img-responsive block m-auto intro-img m-m-b animated fadeInLeft" >
             </div>

@@ -12,7 +12,7 @@
 <body dir="rtl" class="mirza">
  <img src="/assets/pages/img/rules.jpg" class="img-responsive" width="100%">    
     <div id="about">
-        <div class="container">
+        
             <div class="row">
                 <div class="col-lg-12">
                 	<div class="page-header">
