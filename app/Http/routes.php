@@ -24,6 +24,7 @@ Route::get('/quality','PagesController@quality');
 
 
 
+
 Route::get('/courses', 'CourseController@show')->name('course-browse');
 
 
