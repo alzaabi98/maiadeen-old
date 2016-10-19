@@ -21,6 +21,7 @@ Route::get('/', 'CourseController@index')->name('course-home');;
 
 Route::get('/faq','PagesController@faq');
 Route::get('/quality','PagesController@quality');
+Route::get('/becomeTeacher','PagesController@becomeTeacher');
 
 
 

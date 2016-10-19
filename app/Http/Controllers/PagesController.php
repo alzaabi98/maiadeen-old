@@ -14,4 +14,14 @@ class PagesController extends Controller
     	return view('pages.faq');
     }
     
+
+    public function quality() {
+    	
+    	return view('pages.quality');
+    }
+
+    public function becomeTeacher() {
+    	
+    	return view('pages.becomeTeacher');
+    }
 }
