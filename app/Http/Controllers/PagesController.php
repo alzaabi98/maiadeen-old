@@ -24,4 +24,19 @@ class PagesController extends Controller
     	
     	return view('pages.becomeTeacher');
     }
+
+        public function terms() {
+    	
+    	return view('pages.terms');
+    }
+
+        public function privacy() {
+    	
+    	return view('pages.privacy');
+    }
+
+          public function contactus() {
+    	
+    	return view('pages.contactus');
+    }
 }

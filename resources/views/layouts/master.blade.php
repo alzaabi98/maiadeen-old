@@ -46,7 +46,7 @@
              <li><a href="#">تواصل معنا</a></li>
              <li><a href="/faq">الاسئلة المتكررة</a></li>
              <li><a href="#">الدورات</a></li>
-             <li><a href="#">المحاضرون</a></li>
+             <li><a href="/contactus">المحاضرون</a></li>
             
 
 

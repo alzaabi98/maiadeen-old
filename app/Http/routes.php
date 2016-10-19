@@ -19,6 +19,9 @@
 Route::get('/', 'CourseController@index')->name('course-home');;
 //pages ..
 
+Route::get('/terms','PagesController@terms');
+Route::get('/privacy','PagesController@privacy');
+Route::get('/contactus','PagesController@contactus');
 Route::get('/faq','PagesController@faq');
 Route::get('/quality','PagesController@quality');
 Route::get('/becomeTeacher','PagesController@becomeTeacher');
