@@ -13,38 +13,65 @@
 
 @section('content')
 
-<h1> contact us </h1>
 
-<form action="">
-	
-	<div class="form-group">
-	  <label for="name">Name:</label>
-	  <input type="text" name="name" id="name" class="form-control" value="{{old('name')}}">
+<div class="row">
+
+	<div class="col-md-3">
+		
 	</div>
 
-	<div class="form-group">
-	  <label for="email">Email:</label>
-	  <input type="text" name="email" id="email" class="form-control" value="{{old('email')}}">
-	</div>
-	
-	<div class="form-group">
-	  <label for="message">Message:</label>
-	  <textarea name="message" id="message" class="form-control" rows="5">
-	
-		{{old('message')}}
-	  </textarea>
-	</div>
 
-	<hr>
+	
+	<div class="col-md-6">
+	   @if (session()->has('flash_message') )
+            <div class="alert alert-success">
+                {{session('flash_message')}}    
+            </div>
+            
+    @endif
+		<h1> تواصل معنا </h1>
+		<hr>
+		<form method ="POST" action="/contactemail">
+			{{csrf_field()}}
+			<div class="form-group">
+			  <label for="name">الاسم:</label>
+			  <input type="text" name="name" id="name" class="form-control" value="{{old('name')}}">
+			</div>
 
-	  <div class="form-group">			
-	  <button type="submit" class="btn btn-primary">Send</button>
+			<div class="form-group">
+			  <label for="email">البريد الالكتروني:</label>
+			  <input type="text" name="email" id="email" class="form-control" value="{{old('email')}}">
+			</div>
+			
+			<div class="form-group">
+			  <label for="content">الموضوع:</label>
+			  <textarea name="content" id="content" class="form-control" rows="5">{{old('content')}}</textarea>
+			</div>
+			<br>
+
+			<hr>
+
+			  <div class="form-group">			
+			  <button type="submit" class="btn btn-primary">الارسال</button>
+			</div>
+			
+			
+			
+			
+			
+		</form>
+
+		@if (count($errors))
+			<ul class="alert alert-danger">
+			@foreach($errors->all() as $error)
+			<li>
+			{{ $error}}
+			</li>
+			@endforeach
+			</ul>
+		@endif
+
 	</div>
-	
-	
-	
-	
-	
-</form>
+</div>
 
 @stop

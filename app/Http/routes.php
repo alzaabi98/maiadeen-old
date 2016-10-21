@@ -26,6 +26,9 @@ Route::get('/faq','PagesController@faq');
 Route::get('/quality','PagesController@quality');
 Route::get('/becomeTeacher','PagesController@becomeTeacher');
 
+///contact us route
+Route::post('/contactemail','PagesController@send');
+
 
 
 
