@@ -8,8 +8,7 @@
 @stop
 
 @section('content')
-<body dir="rtl">
-<img src="images/header.jpg" style="width: 100%;">
+
 <!-- intro start -->
 <div class="lecturer mirza text-right">
 <div class="intro white-bg grey-color">
