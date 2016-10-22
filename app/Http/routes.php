@@ -29,7 +29,10 @@ Route::get('/becomeTeacher','PagesController@becomeTeacher');
 ///contact us route
 Route::post('/contactemail','PagesController@send');
 
+Route::get('/testfooter', function() {
 
+	return view('pages.footer') ;
+});
 
 
 Route::get('/courses', 'CourseController@show')->name('course-browse');

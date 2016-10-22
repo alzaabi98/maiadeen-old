@@ -12,6 +12,8 @@
   
   <link rel="stylesheet" type="text/css" href="/assets/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="/assets/slick/slick-theme.css">
+<!--  this is for footer  -->
+  <link rel="stylesheet" href="/assets/css/footer-distributed.css">
 
   <link rel="stylesheet" href="/assets/css/custom.css" >
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
@@ -86,48 +88,38 @@
 @yield('content') 
 
 
-  
- <footer>
-    <div class="container-fluid">
-      <div class="navbar navbar-default ">
-      
+  </div>
+    <footer class="footer-distributed">
+
+      <div class="footer-right">
+
+        <a href="https://www.facebook.com/maiadeen"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/maiadeen"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/maiadeen"><i class="fa fa-instagram"></i></a>
         
-        <div class="social-icons">  
-          <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
-          <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
-          <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
-         
 
-        </div>
-        <div>
-           <p class="text-center footer-text">   حقوق الطبع محفوظة - ميادين &copy; 2016 </p>  
-        </div>
-        <div class="pull-right">
-
-         <ul class="nav navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="/privacy">سياسة الخصوصية</a>
-            </li>
-
-             <li class="nav-item">
-              <a class="nav-link" href="/terms">الشروط والاحكام</a>
-            </li>
-
-
-          
-          </ul>
-          
-        </div>
-
-        
       </div>
-      
-      
-            
-    </div>
- </footer>
 
-</div>
+      <div class="footer-left">
+
+        <p class="footer-links">
+          <a href="/terms">الشروط والأحكام</a>
+          ·
+          <a href="/privacy">سياسة الخصوصية</a>
+          ·
+          <a href="/contactus">تواصل معنا</a>
+          ·
+          <a href="#">من نحن؟</a>
+          ·
+        
+        </p>
+
+        <p> ميادين &copy; 2016</p>
+      </div>
+
+    </footer>
+
+
 
 @yield('javascript') 
     
