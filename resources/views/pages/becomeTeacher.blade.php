@@ -3,7 +3,7 @@
 @section('head')
 
     <link href="/assets/pages/css/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="/assets/pages/css/animations.css" type="text/css">
+	<!-- <link rel="stylesheet" href="/assets/pages/css/animations.css" type="text/css"> -->
 
 @stop
 
@@ -13,12 +13,12 @@
 <div class="lecturer mirza text-right">
 <div class="intro white-bg grey-color">
         <div class="container">
-            <div class="col-sm-5 animatedParent">
-                <img src="/assets/pages/img/intro-img.png" class="img-responsive block m-auto intro-img m-m-b animated fadeInLeft" >
+            <div class="col-sm-5">
+                <img src="/assets/pages/img/intro-img.png" class="img-responsive block m-auto intro-img m-m-b" >
             </div>
-            <div class="col-md-7 text-right animatedParent">
-                <h1 class="yellow animated fadeInRight">كيف تصبح محاضرا؟</h1>
-                <div class="text-right animated fadeInRight">
+            <div class="col-md-7 text-right">
+                <h1 class="yellow">كيف تصبح محاضرا؟</h1>
+                <div class="text-right">
                         التعليم والعلم هو أساس تطور الأمم و له أثر بالغ في حياة الناس وفي تسابق الأمم نحو الانجاز ومساعدة 
                          البشرية في جميع نواحي الحياة.  كما يبدو للجميع أن طرق العلم تطورت كثيرا من السابق خصوصا مع بداية ثورة المعلومات والتغيير السريع في مجال التكنوولجيا. مع ازياد سرعات الانترنت وظهور شبكات التواصل الاجتماعي و الهواتف الذكية كان لا بد من تطور الحصول على المعلومات والتدريب ونشر المعرفة.
                         أنت في المكان الصحيح , موقع ميادين يأمل لنشر العلم والتعلم للناس بشكل سهل وبأقل جهد وفي أي مكان وأي وقت.
@@ -34,53 +34,55 @@
 <!-- planning start -->
 <div class="grey-bg grey-dark">
 	<div class="setup-content text-right">
-	<div class="planning-con">
-    	<div class="planning-header">
-		        <div class="col-sm-6 animatedParent">
-		        	<img src="/assets/pages/img/planning.png" class="img-responsive m-auto animated fadeInLeft" width="200" alt="Teacher">
-		        </div>
-		        <div class="col-md-6 animatedParent">
-		            <h1 class="yellow animated fadeInRight">التخطيط</h1>
-		            <div class="animated fadeInRight">التخطيط السليم هو أساس النجاح وهو ما سيساعدك على وضع الفكرة في أطر واضحة مما سيسهل عليك
-		            الخطوات القادمة.</div>
-		        </div>
-		        <div class="clearfix"></div>
-		</div>
+	<div class="container">
+    	<div class="planning-con">
+                <div class="planning-header">
+    		        <div class="col-sm-6">
+    		        	<img src="/assets/pages/img/planning.png" class="img-responsive m-auto animated fadeInLeft" width="200" alt="Teacher">
+    		        </div>
+    		        <div class="col-md-6">
+    		            <h1 class="yellow">التخطيط</h1>
+    		            <div class="">التخطيط السليم هو أساس النجاح وهو ما سيساعدك على وضع الفكرة في أطر واضحة مما سيسهل عليك
+    		            الخطوات القادمة.</div>
+    		        </div>
+    		        <div class="clearfix"></div>
+                </div>
+		
 	    <div class="grid">
-	    
-        <div class="col-sm-6 animatedParent">
+	    <div class="container">
+        <div class="col-sm-6 m-b">
         	<img src="/assets/pages/img/select-grey.png" class="animated fadeInLeft"alt="Select" width="41px">
-        	<h2 class="animated fadeInLeft">المجال أو الموضوع الذي تود أن تبدع فيه</h2>
-        	<p class="animated fadeInLeft">>أنت أنسب شخص لمعرفة الموضوع الذي تود أن تدرسه. ربما يكون شي تحبه أو شي أنت محترف
+        	<h2>المجال أو الموضوع الذي تود أن تبدع فيه</h2>
+        	<p>أنت أنسب شخص لمعرفة الموضوع الذي تود أن تدرسه. ربما يكون شي تحبه أو شي أنت محترف
         	فيه. ما هي الفئة المستهدفة من الدورة؟  كيف ستكون دورتك متميزة بين جميع الدورات الاخرى.</p>
         </div>
 
-        <div class="col-sm-6 animatedParent">
+        <div class="col-sm-6 m-b">
         	<img src="/assets/pages/img/target.png" class="animated fadeInRight" alt="Select" width="65px">
-        	<h2 class="animated fadeInRight">>الأهداف العامة في المجال</h2>
-        	<p class="animated fadeInRight">>بعد تحديد الموضوع من المهم وضع أهداف للموضوع. ما هي الأشياء التي سيستفيد منها المتعلم.
+        	<h2>الأهداف العامة في المجال</h2>
+        	<p>بعد تحديد الموضوع من المهم وضع أهداف للموضوع. ما هي الأشياء التي سيستفيد منها المتعلم.
         	ما هي المهارات التي سيكتسبها المتعلم في نهاية الدورة. ما هي الافكار التي تريد ايصالها  وكيف
         	يمكنك ايصالها.</p>
         </div>
 
-        <div class="col-sm-12 animatedParent">
-        	<img src="/assets/pages/img/method1.png" class="animated fadeInRight" alt="Select" width="68px">
-        	<h2 class="animated fadeInRight">كيف تريد أن تدرس هذا المجال</h2>
-        	<p class="animated fadeInRight">بعد تحديد الأهداف من الدورة الان تأتي مرحلة وضع الاجندة والتصور مثل عدد الدروس في
+        <div class="col-sm-12 m-b">
+        	<img src="/assets/pages/img/method1.png" alt="Select" width="68px">
+        	<h2>كيف تريد أن تدرس هذا المجال</h2>
+        	<p>بعد تحديد الأهداف من الدورة الان تأتي مرحلة وضع الاجندة والتصور مثل عدد الدروس في
         	الدورة  والافكار لكل درس. وماذا تريد أن توصل للمتعلم لكل درس. مهم جدا ان يعرف المتعلم
         	الخطة من الدورة بشكل واضح وأن يرى تسلسل المواضيع وأن يشعر بالفائدة من الدورة. </p>
 
-        	<p class="animated fadeInRight">المقدمة للدورة جدا مهمة لتوضيح الهدف من الدورة وماذا سيتعلم . فهي الفرضة الذهبية لجذب
+        	<p>المقدمة للدورة جدا مهمة لتوضيح الهدف من الدورة وماذا سيتعلم . فهي الفرضة الذهبية لجذب
         	الناس واقناعهم ان يتقدموا الى الخطوة التالية ويسجلوا في الدورة. ركز على فكرة أو مهارة معينة في
         	كل مرحلة. الترتيب وتسلسل الافكار جدا من مهم حتى لا يشعر المتعلم بعدم التركيز أو عدم
         	الوصول للهدف من الدورة. يفضل في بداية كل درس أو مرحلة مراجعة ما تم اخذه في السابق وما
         	هو قادم في الدرس الحالي حتى يحدث الترابط المنطقي للدورة.</p>
 
-        	<p class="animated fadeInRight">يجب أن يجتاز المحاضر فحص الجودة قبل أن يتم ادراج الدورة في الموقع.</p>
+        	<p>يجب أن يجتاز المحاضر فحص الجودة قبل أن يتم ادراج الدورة في الموقع.</p>
 
-        	<p class="animated fadeInRight">أيضا ما هو نوع الدرس الذي ستقوم به في كل مرحلة. هناك أنواع للدروس مثلا:</p>
+        	<p>أيضا ما هو نوع الدرس الذي ستقوم به في كل مرحلة. هناك أنواع للدروس مثلا:</p>
 
-        	<ul dir="rtl" class="animated fadeInRight">
+        	<ul dir="rtl">
         		<li>فيديو</li>
         		<li>فيديو مع ملف عرض</li>
         		<li>موضوع كتابي</li>
@@ -88,23 +90,25 @@
         	</ul>
         </div>
 
-        <div class="col-sm-6 animatedParent">
-        	<img src="/assets/pages/img/method.png" class="animated fadeInLeft" alt="Select" width="69px">
-        	<h2 class="animated fadeInLeft">الأسلوب</h2>
-        	<p class="animated fadeInLeft">لا تنسى انك الدورة ستكون عن بعد عبر الاجهزة .  لن ترى تعابير الرضى او عدمه وهنا اسلوب
+        <div class="col-sm-6 m-b">
+        	<img src="/assets/pages/img/method.png" alt="Select" width="69px">
+        	<h2>الأسلوب</h2>
+        	<p>لا تنسى انك الدورة ستكون عن بعد عبر الاجهزة .  لن ترى تعابير الرضى او عدمه وهنا اسلوب
         	المحاضر ومدى استعداده يكون من الاهمية القصوى في التعليم عن بعد. حضر جيدا المادة
         	العليمة .  استخدام درجات الصوت المختلفة لجذب المتعلم وتنويع الدروس والانشطه ايضا
         	مهم جدا</p>
         </div>
 
-        <div class="col-sm-6 animatedParent">
+        <div class="col-sm-6 m-b">
         	<img src="/assets/pages/img/quiz.png" class="animated fadeInRight" alt="Select" width="68px">
-        	<h2 class="animated fadeInRight">الانشطة المتعلقة بالدورة</h2>
-        	<p class="animated fadeInRight">لزيادة الفائدة وايضا لخلق الشغف والتحدي من الجيد أن تخطط لبعض الاختبارات البسيطة أو
+        	<h2>الانشطة المتعلقة بالدورة</h2>
+        	<p>لزيادة الفائدة وايضا لخلق الشغف والتحدي من الجيد أن تخطط لبعض الاختبارات البسيطة أو
         	مشاريع عملية خلال الدرس أو بعد الانتهاء من كل درس. حتى يتسنى للمتعلم ان يطبق ما تعلمه.</p>
         </div>
         <div class="clearfix"></div>
+        </div>
 	</div>
+    </div>
 </div>
     </div>
 
@@ -113,8 +117,8 @@
 <!-- planning end -->
 
 <!-- Filming Start -->
-<div class="filming grey-color white-bg animatedParent">
-	<div class="container animated fadeInRight">
+<div class="filming grey-color white-bg">
+	<div class="container">
         <!-- <img src="/assets/pages/img/film.png" alt="Select" width="68px"> -->
         <img src="/assets/pages/img/filming-tool.png" alt="Select" width="250px" class="img-responsive">
         	<h1 class="yellow">التصوير والانتاج</h1>
@@ -152,15 +156,15 @@
 <!-- upload start -->
 <div class="upload grey-bg grey-dark">
 	<div class="container ">
-		<div class="col-sm-5 animatedParent">
+		<div class="col-sm-5">
 			<img src="/assets/pages/img/video-upload.png" alt="Select" width="350px" class="m-auto img-responsive block m-m-b animated fadeInLeft">
 		</div>
-        <div class="col-md-7 animatedParent">
-        	<h1 class="yellow animated fadeInRight">الارسال</h1>
-        	<p class="animated fadeInRight">>بعد الانتهاء من التصوير تاتي الخطوة التالية وهي رفع الملفات على موقع ميادين بعد عمل حساب محاضر.
+        <div class="col-md-7">
+        	<h1 class="yellow">الارسال</h1>
+        	<p>بعد الانتهاء من التصوير تاتي الخطوة التالية وهي رفع الملفات على موقع ميادين بعد عمل حساب محاضر.
         	ستحتاج الى الاشياء التالية:</p>
 
-        	<ul dir="rtl" class="animated fadeInRight">
+        	<ul dir="rtl">
         		<li>مقاطع الفيديو</li>
         		<li>مقدمة عن الدورة أو فيديو دعائي قصير عن ما تحتويه الدورة وماهي المهارات التي سكنسبها المتعلم
         		بعد الا نتهاء من الدورة</li>
@@ -170,7 +174,7 @@
         		<li>عند رفع الفيديو يجب كتابة بيانات بسيطه مثل عنوان الدرس ووصف عام</li>
         	</ul>
 
-        	<p class="animated fadeInRight">بعد الانتهاء من عملية الرفع يجب عليك ارسال الدورة الى الموافقة ليتسنى لادارة الموقع فحص الدورة والرد
+        	<p>بعد الانتهاء من عملية الرفع يجب عليك ارسال الدورة الى الموافقة ليتسنى لادارة الموقع فحص الدورة والرد
         	عليك </p>
         </div>
         <div class="clearfix"></div>
@@ -182,13 +186,13 @@
 <!-- approval start -->
 <div class="approval grey-color white-bg ">
 	<div class="container ">
-        <div class="col-sm-8 animatedParent">
-        	<h1 class="yellow animated fadeInLeft">الموافقة</h1>
-        	<p class="m-m-b animated fadeInLeft">بعد عملية الإرسال سيقوم فريق ميادين بفحص الجودة على <span style="color:brown;"><a href="/quality">حسب تقييم الجودة </a></span> وبعد الموافقة
+        <div class="col-sm-8">
+        	<h1 class="yellow">الموافقة</h1>
+        	<p class="m-m-b">بعد عملية الإرسال سيقوم فريق ميادين بفحص الجودة على <span style="color:brown;"><a href="/quality">حسب تقييم الجودة </a></span> وبعد الموافقة
         	سيتم اخطار المحاضر انه تمت الموافقة واذا كان هناك امر اخر فسيتم ايضا اخبار المحاضر.</p>
         </div>
-        <div class="col-sm-4 animatedParent">
-        	<img src="/assets/pages/img/approve.png" alt="Select" width="180px" class="m-auto img-responsive block animated fadeInRight">
+        <div class="col-sm-4">
+        	<img src="/assets/pages/img/approve.png" alt="Select" width="180px" class="m-auto img-responsive block">
         </div>
 	</div>
 </div>
@@ -197,12 +201,12 @@
 <!-- promotion start -->
 <div class="promotion grey-bg grey-dark ">
 	<div class="container ">
-		<div class="col-sm-5 animatedParent">
-        	<img src="/assets/pages/img/Social.png" alt="Select" width="168px" class="m-auto img-responsive block m-m-b animated fadeInLeft">
+		<div class="col-sm-5">
+        	<img src="/assets/pages/img/Social.png" alt="Select" width="168px" class="m-auto img-responsive block m-m-b">
         </div>
-        <div class="col-sm-7 animatedParent">
-        	<h1 class="yellow animated fadeInRight">التسويق</h1>
-        	<p class="animated fadeInRight">بعد عملية الإرسال سيقوم فريق ميادين الاعلامي بارسال الدورة على حسابه الخاص في تويتر
+        <div class="col-sm-7">
+        	<h1 class="yellow">التسويق</h1>
+        	<p>بعد عملية الإرسال سيقوم فريق ميادين الاعلامي بارسال الدورة على حسابه الخاص في تويتر
         	وانستجرام . ومن المهم جدا من المحاضر ايضا يعمل مشاركة لدورته على مواقع التواصل الاجتماعي
         	لكي يكون نطاق الانتشار اوسع .</p>
         </div>
@@ -219,32 +223,32 @@
     
 
     <div class="row setup-content step ">
-        <div class="col-sm-6 animatedParent">
-        	<h1 class="yellow animated fadeInLeft">ما هي الادوات التي تساعدك لعمل دورة متميزة؟</h1>
-	        <p class="m-m-b animated fadeInLeft">
+        <div class="col-sm-6">
+        	<h1 class="yellow">ما هي الادوات التي تساعدك لعمل دورة متميزة؟</h1>
+	        <p class="m-m-b">
 	        	العوامل الاساسية لعملية التسجيل هي الصورة والصوت والاضاءة وأيضا كيفية التقاط الصورة من الكمبيوتر .
 	                فسنحاول هنا ان نبسط الفكرة وان نبين انه بامكان كل شخص عادي غير محترف ان يعمل دورة مميزة بالقليل
 	                من الجهد والمال .
 	        </p>
 	    </div>
-	    <div class="col-sm-6 animatedParent">
+	    <div class="col-sm-6">
         	<img src="/assets/pages/img/filming-cover2.png" class="img-responsive m-auto m-b animated fadeInRight" width="400" alt="Teacher">
         </div>
         <div class="clearfix"></div>
 <div class="text-right col-sm-12  ">
-<div class="border-grey bg-white m-b animatedParent">
-        <p class="animated fadeIn">
+<div class="border-grey bg-white m-b">
+        <p>
         	<h3 class="block yellow">ادوات الفيديو:</h3>
         	جودة الفيديو لابد الا تقل عن 720p HD   كما هو واضح من الجدول التالي للمعايير التي يفضل ان تستخدمها
         	أثناء التصوير.  ومن هنا بامكانك التصوير بالادوات التالية :
         </p>
-        	<ul class="animated fadeIn">
+        	<ul>
         		<li>جهاز الهاتف مثل الايفون والايباد وما شابه من أنظمة التشغيل للاندرويد وغيره</li>
         		<li>الكاميرات الرياضيه مثل Gopro</li>
         		<li>كاميرات الويب webcam</li>
         		<li>وهذا الجدول يحتوي على الضبط المثالي الذي يمكنك ان تستخدمه خلال التسجيل :</li>
         	</ul>
-<table class="table table-bordered custom-table m-t animated fadeIn" dir="ltr">
+<table class="table table-bordered custom-table m-t" dir="ltr">
   <tbody>
     <tr>
       <td>H.264</td>
@@ -273,14 +277,14 @@
       <td>Audio</td>
     </tr>
   </tbody>
-</table>
+</table> 
 </div>
 
-<div class="m-b animatedParent">
-<div class="col-sm-6  animated fadeInLeft ">
+<div class="m-b">
+<div class="col-sm-6">
     <img src="/assets/pages/img/mic2.png" class="img-responsive m-auto m-m-b " width="250" alt="Mic">
 </div>
-<div class="col-sm-6 animated fadeInRight">
+<div class="col-sm-6">
 	<h3 class="yellow">أدوات التقاط الصوت:</h3>
 	<p>لا نحبذ التسجيل الصوتي بالمايكروون الموجود في جهاز اللابتوب لعدم وضوح الصوت لكن بامكانك استخدام
 	اي مايكرفون مثل USB  لكي يكون الصوت واضحا ونقيا .</p>
@@ -290,9 +294,9 @@
 <div class="clearfix"></div>
 </div>
 
-<div class="border-grey bg-white m-b animatedParent ">
-    <h3 class="block yellow animated fadeIn ">ادوات التقاط الصورة من الكمبيوتر والتعديل:</h3>
-<table class="table table-bordered custom-table m-t animated fadeIn " dir="ltr">
+<div class="border-grey bg-white m-b">
+    <h3 class="block yellow">ادوات التقاط الصورة من الكمبيوتر والتعديل:</h3>
+<table class="table table-bordered custom-table m-t" dir="ltr">
   <tbody>
     <tr>
       <td align="center">الماك<br />Mac</td>
@@ -324,7 +328,7 @@ screencast-</td>
       <td>تطبيقات التعديل</td>
     </tr>
   </tbody>
-</table>
+</table> 
 </div>
 
         </div>
@@ -337,13 +341,13 @@ screencast-</td>
 
 
 @section('javascript')
-<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+<!-- <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <script
   src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"
   integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script> 
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src='/assets/pages/js/css3-animate-it.js'></script>
+<script src='/assets/pages/js/css3-animate-it.js'></script> -->
 @stop
 
 @stop
