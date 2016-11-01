@@ -7,14 +7,15 @@
 @stop
 
 @section('content')
-<body dir="rtl" class="mirza">
 <img src="/assets/pages/img/faq.jpg" alt="FAQ" class="img-responsive width100 m-b" >
 <div class="absolute">
+    <div class="container">
     	<h1 class="yellow text-right">الاسئلة المتكررة</h1>
-
+    </div>
 </div>
 
 <!-- Bootstrap FAQ - START -->
+<div class="container">
     <div class="panel-group" id="accordion">
         
         <div class="panel panel-default">
@@ -215,14 +216,8 @@ Paypal
             </div>
         </div>
     </div>
-
+</div>
 @section('javascript')
-<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script
-  src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"
-  integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw="
-  crossorigin="anonymous"></script>
 @stop
 
 @stop

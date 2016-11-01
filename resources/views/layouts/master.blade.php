@@ -83,7 +83,7 @@
 
 @yield('header') 
     
-<div class="container">
+<div class="m-t">
 
 @yield('content') 
 
