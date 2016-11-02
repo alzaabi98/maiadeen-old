@@ -6,7 +6,7 @@
 @section('header')
 <div class="custom-header">
 	
-</div>
+</div> 
 @endsection
  
  <div class="row">
