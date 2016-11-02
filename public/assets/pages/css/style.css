@@ -3,9 +3,13 @@ body{
 }
 ul {
   list-style: inside !important;
+  padding-right: 0px;
 }
 ul.timeline {
   list-style: outside none none !important;
+}
+h4.panel-title a.accordion-toggle {
+  margin-right: 15px;
 }
 .planning-header {
   background: #dfdfdf;
@@ -83,9 +87,10 @@ ul.timeline {
   padding-bottom: 20px;
   padding-top: 20px;
 }
+
 .custom-table {
   margin: 0 auto;
-  width: 600px;
+  max-width: 600px;
   background: #fff;
 }
 .bg-white {
@@ -229,6 +234,9 @@ h1.yellow {
 
 @media (max-width:480px) {
 .absolute {
-  top: 20px;
+  top: 40px;
+}
+.custom-table {
+  font-size: 16px;
 }
 }
