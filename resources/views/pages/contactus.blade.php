@@ -29,7 +29,7 @@
             </div>
             
     @endif
-		<h1> تواصل معنا </h1>
+		<h1 style="color:blue;"> تواصل معنا </h1>
 		<hr>
 		<form method ="POST" action="/contactemail">
 			{{csrf_field()}}
