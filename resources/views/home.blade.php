@@ -87,32 +87,6 @@
     
     <section class="responsive slider">
 
-    <?php $teacher_ids = DB::table('courses')->distinct()->get(['teacher_id']); ?>
-    @foreach ($teacher_ids as $record)
-    <?php $teacher = DB::table('users')->where('id', '=', $record->teacher_id)->first();?>
-    <a href="">
-        <div>
-          <img src="{{$teacher->avator}}">
-        </div>
-        <div class="course-title">
-            {{ $teacher->firstname . ' ' . $teacher->lastname }}
-          </div>
-          <div class="course-summary">
-           webd prgramming using many languages.. such as ..
-          </div>
-          <div class="price">
-            $20
-          </div>
-         <div class="stars">
-          <span>★</span>
-          <span>★</span>
-          <span>★</span>
-          <span class="start-grey">★</span>
-          <span class="start-grey">★</span>
-
-        </div>
-    </a>
-    @endforeach
 
  
   </section>

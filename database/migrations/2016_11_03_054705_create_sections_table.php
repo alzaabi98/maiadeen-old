@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEnrollmentTable extends Migration
+class CreateSectionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,10 @@ class CreateEnrollmentTable extends Migration
      */
     public function up()
     {
-        Schema::create('enrollment', function (Blueprint $table) {
-            // $table->engine = "InnoDB";
+        Schema::create('sections', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned()->default(0);
             $table->integer('course_id')->unsigned()->default(0);
+            $table->string('section');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateEnrollmentTable extends Migration
      */
     public function down()
     {
-        Schema::drop('enrollment');
+        Schema::drop('sections');
     }
 }
