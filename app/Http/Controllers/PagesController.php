@@ -81,5 +81,11 @@ class PagesController extends Controller
 
 	    //return response()->json(['message' => 'Request completed']);
     }
+
+
+    public function createcourse() {
+        
+        return view('pages.createcourse');
+    }
     
 }
