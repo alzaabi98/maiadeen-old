@@ -10,48 +10,29 @@
 
 @section('content')
 
-	<div class="white-bg">
 		<div class="container">
 			<div class="row main">
 				
 				<div class="main-login main-center">
-					<form class="form-horizontal">
-						
-					
-
-						<div class="form-group">
+				<div class="form-group">
 						<div class="mylabel">
-							<label class="yellow">?Ready to Create a Course</label>
+							<label>?Ready to Create a Course</label>
 							<p>:Start by entering the title of a course</p>
 							</div>
 							<div class="cols-sm-10">
-								<div class="input-group">
-									
-									<input type="text" class="form-control text" name="email" id="email"  placeholder="Enter the name of course"/>
-								</div>
+								
+								{!! Form::open(['route' => ['writer_path']]) !!}
+								{!! Form::text('profession', '',array('required', 
+								'class'=>'form-control text', 
+								'placeholder'=>'Enter the name of course')) !!}
+								{!! Form::submit('Create course', array('class' => ' form-group btn btn-primary btn-lg btn-block login-button')) !!}
+								{!! Form::close() !!}
+								
 							</div>
 						</div>
-
-						
-
-						
-
-						
-						<div class="form-group ">
-							<button type="button" name="submit" id="mybtn" class="btn btn-primary btn-lg btn-block login-button">Create course</button>
 						</div>
-				
-					</form>
-				</div>
 			</div>
 		</div>
-	</div>
-<script>
-$( "#mybtn" ).click(function() {
-	var course = $( "#email" ).val();
-  alert(course);
-});
-		</script>
 
 		
 @stop

@@ -26,6 +26,12 @@ Route::get('/faq','PagesController@faq');
 Route::get('/quality','PagesController@quality');
 Route::get('/becomeTeacher','PagesController@becomeTeacher');
 Route::get('/createcourse','PagesController@createcourse');
+Route::get('/courseview','PagesController@courseview');
+Route::get('/create','mycourseController@create');
+Route::post('auth/register', [
+'as' => 'writer_path',
+'uses' => 'PagesController@courseview'
+]);
 
 ///contact us route
 Route::post('/contactemail','PagesController@send');
@@ -55,3 +61,4 @@ Route::get('/callback', 'SocialAuthController@callback');
 //  confirm account :
 
 Route::get('register/confirm/{token}','Auth\AuthController@confirmEmail');
+Route::resource('mycourse', 'mycourseController');

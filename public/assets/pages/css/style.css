@@ -1,6 +1,5 @@
 body{
   overflow-x:hidden;
-  background: white;
 }
 ul {
   list-style: inside !important;
@@ -49,10 +48,10 @@ ul.timeline {
   display: block;
 }
 .mirza {
-  font-family: "Mirza",cursive;
+	font-family: "Mirza",cursive;
 }
 .small-icon {
-  font-size: 18px !important;
+	font-size: 18px !important;
 }
 .right-text {
   text-align: right;
@@ -233,77 +232,37 @@ h1.yellow {
   top: 20px;
 }
 }
-/* new css*/
 
-.mypanel {
- background-image:linear-gradient(to bottom, #ffa500 15px, #cb7100 100%);
- padding:10px;
- color: #fff;
- text-align: center;
- font-size: 27px;
- width: 793px;
- font-weight: bold;
-}
-.mycolor{
-  background-image:linear-gradient(to bottom, #ffa500 15px, #cb7100 100%);
-}
-.customfont
-{
-    color: #fff;
-    font-size: 27px;
-    font-weight: bold;
-}
-.myborder
-{
-  border:2px solid #F29800;
-}
-.panel-body {
-    background-color: #ffffd6;
-}
-.side-nav-wrapper
-{
-  background:#f4f4f4 none repeat scroll 0 0;
-}
-.mybtn
-{
-  background-image:linear-gradient(to bottom, #ffa500 15px, #cb7100 100%);
-  color:#fff;
-  font-weight:bold;
-  font-size:20px;
-}
-.inputborder
-{
-  border: 1px solid #ed9300;
-}
+
+
 body, html{
      height: 100%;
-  background-repeat: no-repeat;
-  background-color: #d3d3d3;
-  font-family: 'Oxygen', sans-serif;
+ 	background-repeat: no-repeat;
+ 	background-color: #d3d3d3;
+ 	font-family: 'Oxygen', sans-serif;
 }
 
-.main {
-    margin-top: 65px;
-    margin-bottom: 85px;
+.main{
+ 	margin-top: 70px;
 }
 
 h1.title { 
-  font-size: 50px;
-  font-family: 'Passion One', cursive; 
-  font-weight: 400; 
+	font-size: 50px;
+	font-family: 'Passion One', cursive; 
+	font-weight: 400; 
 }
 
 hr{
-  width: 10%;
-  color: #fff;
+	width: 10%;
+	color: #fff;
 }
 
 .form-group{
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 label{
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 input,
@@ -313,7 +272,7 @@ input::-webkit-input-placeholder {
 }
 
 .main-login{
-  background-color: #fff;
+ 	background-color: #fff;
     /* shadows and rounded borders */
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -328,7 +287,7 @@ input::-webkit-input-placeholder {
     background-color: #1e2c35;
     color: #fff;
     margin: 0 auto;
-    max-width: 406px;
+     max-width: 436px;
     padding: 40px;
 }
 .input-group {
@@ -336,27 +295,27 @@ input::-webkit-input-placeholder {
 }
 
 .login-button{
-  margin-top: 5px;
+	margin-top: 5px;
 }
 
 .login-register{
-  font-size: 11px;
-  text-align: center;
+	font-size: 11px;
+	text-align: center;
 }
 .mylabel {
     text-align: center;
 }
 .text{
-  text-align:center;
+	text-align:center;
 }
 /* tab css */
 div.bhoechie-tab-container{
   z-index: 10;
-  background-color: #ffffff;
+  background-color: #fefed6;
   padding: 0 !important;
   border-radius: 4px;
   -moz-border-radius: 4px;
-  border:1px solid #ddd;
+  
   margin-top: 20px;
   margin-left: 50px;
   -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
@@ -374,6 +333,8 @@ div.bhoechie-tab-menu{
 }
 div.bhoechie-tab-menu div.list-group{
   margin-bottom: 0;
+  min-height: 614px;
+  background: #385C72 none repeat scroll 0 0;
 }
 div.bhoechie-tab-menu div.list-group>a{
   margin-bottom: 0;
@@ -393,7 +354,7 @@ div.bhoechie-tab-menu div.list-group>a:last-child{
 div.bhoechie-tab-menu div.list-group>a.active,
 div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
 div.bhoechie-tab-menu div.list-group>a.active .fa{
-background-image:linear-gradient(to bottom, #ffa500 15px, #cb7100 100%);
+ background-image: linear-gradient(to bottom, #80a3b9 5px, #00152b 100%);
   color: #ffffff;
 }
 div.bhoechie-tab-menu div.list-group>a.active:after{
@@ -405,16 +366,71 @@ div.bhoechie-tab-menu div.list-group>a.active:after{
   border-left: 0;
   border-bottom: 13px solid transparent;
   border-top: 13px solid transparent;
-  border-left: 10px solid #5A55A3;
+  border-left: 10px solid #D47C06;
+  
 }
 
 div.bhoechie-tab-content{
   background-color: #ffffff;
   /* border: 1px solid #eeeeee; */
   padding-left: 20px;
-  padding-top: 10px;
+  
 }
 
 div.bhoechie-tab div.bhoechie-tab-content:not(.active){
   display: none;
+}
+/*new css*/
+.mypanel {
+ background-image:linear-gradient(to bottom, #ffa500 15px, #cb7100 100%);
+ padding:10px;
+ color: #fff;
+ text-align: center;
+ font-size: 27px;
+width: 865px;
+ font-weight: bold;
+}
+.mycolor{
+	background-image:linear-gradient(to bottom, #ffa500 5px, #cb7100 100%);
+}
+.customfont
+{
+	  color: #fff;
+    font-size: 27px;
+    font-weight: bold;
+}
+.myborder
+{
+	border:2px solid #F29800;
+}
+.panel-body {
+    background-color: #ffffd6;
+}
+
+.mybtn
+{
+	background-image:linear-gradient(to bottom, #ffa500 5px, #cb7100 100%);
+	color:#fff;
+	font-weight:bold;
+	font-size:20px;
+}
+.inputborder
+{
+	border: 1px solid #ed9300;
+}
+.list-group-item {
+    background-color: #ddd;
+}
+.mybootclass
+{
+	
+   
+    padding-left: 0;
+    padding-right: 0px;
+	width:76%;
+    
+}
+.coursehead {
+   margin-left: 154px;
+    text-align: left;
 }
