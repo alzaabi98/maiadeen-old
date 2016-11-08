@@ -111,7 +111,7 @@
 					
                       <div class="col-md-12">
                 <div class="row">
-                    <div class=" mypanel"><span class="fa fa-file-video-o"></span> Create New video</div>
+                    <div class=" mypanel"><span class="fa fa-file-video-o"></span> <?php echo $profession;?> Course</div>
                     <div class="panel-body">
 
                         @if ($errors->any())
