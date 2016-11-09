@@ -158,7 +158,7 @@ ul.timeline {
 */
 .panel-body {
     font-size: 20px;
-  text-align:right;
+  text-align:left;
 }
 .absolute {
   left: 0;
@@ -238,7 +238,7 @@ h1.yellow {
 body, html{
      height: 100%;
  	background-repeat: no-repeat;
- 	background-color: #d3d3d3;
+ 	
  	font-family: 'Oxygen', sans-serif;
 }
 
@@ -290,9 +290,6 @@ input::-webkit-input-placeholder {
      max-width: 436px;
     padding: 40px;
 }
-.input-group {
-    width: 350px;
-}
 
 .login-button{
 	margin-top: 5px;
@@ -311,7 +308,7 @@ input::-webkit-input-placeholder {
 /* tab css */
 div.bhoechie-tab-container{
   z-index: 10;
-  background-color: #fefed6;
+  
   padding: 0 !important;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -333,8 +330,8 @@ div.bhoechie-tab-menu{
 }
 div.bhoechie-tab-menu div.list-group{
   margin-bottom: 0;
-  min-height: 614px;
-  background: #385C72 none repeat scroll 0 0;
+  min-height: 931px;
+  background: #ddd none repeat scroll 0 0;
 }
 div.bhoechie-tab-menu div.list-group>a{
   margin-bottom: 0;
@@ -354,7 +351,7 @@ div.bhoechie-tab-menu div.list-group>a:last-child{
 div.bhoechie-tab-menu div.list-group>a.active,
 div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
 div.bhoechie-tab-menu div.list-group>a.active .fa{
- background-image: linear-gradient(to bottom, #80a3b9 5px, #00152b 100%);
+ background: #b3b3b3 none repeat scroll 0 0;
   color: #ffffff;
 }
 div.bhoechie-tab-menu div.list-group>a.active:after{
@@ -366,7 +363,7 @@ div.bhoechie-tab-menu div.list-group>a.active:after{
   border-left: 0;
   border-bottom: 13px solid transparent;
   border-top: 13px solid transparent;
-  border-left: 10px solid #D47C06;
+  border-left: 10px solid #000;
   
 }
 
@@ -382,43 +379,35 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
 }
 /*new css*/
 .mypanel {
- background-image:linear-gradient(to bottom, #ffa500 15px, #cb7100 100%);
+
  padding:10px;
- color: #fff;
+ color: #000;
 
  font-size: 27px;
  font-weight: bold;
 }
-.mycolor{
-	background-image:linear-gradient(to bottom, #ffa500 5px, #cb7100 100%);
-}
+
 .customfont
 {
 	  color: #fff;
     font-size: 27px;
     font-weight: bold;
 }
-.myborder
-{
-	border:2px solid #F29800;
-}
+
 .panel-body {
-    background-color: #ffffd6;
+    background-color: #fff;
 }
 
 .mybtn
 {
-	background-image:linear-gradient(to bottom, #ffa500 5px, #cb7100 100%);
+	background-image: linear-gradient(to bottom, #b1b1b1 5px, #1d1d1d 100%);
 	color:#fff;
 	font-weight:bold;
 	font-size:20px;
 }
-.inputborder
-{
-	border: 1px solid #ed9300;
-}
+
 .list-group-item {
-    background-color: #ddd;
+    background-color: #ececec;
 }
 .mybootclass
 {
@@ -438,4 +427,127 @@ div.bhoechie-tab-menu div.list-group{
 	min-height:auto;
     
   }
+}
+.form-header {
+    border-bottom: 1px solid #bfbfbf;
+    padding: 30px 45px;
+    position: relative;
+	text-align:left;
+}
+
+.add-form-wrapper .add-form-input-wrapper input {
+    border: 1px solid #bfbfbf;
+    color: #000000;
+    padding: 11px 25px;
+    width: 100%;
+}
+
+.add-btn {
+    border-bottom-left-radius: 0;
+    border-left: 0 none;
+    border-top-left-radius: 0;
+    padding: 11px 25px;
+}
+.pb30 {
+    padding-bottom: 30px;
+	text-align:left;
+}
+.labeled
+{
+	padding-bottom:40px;
+}
+.add-form-wrapper {
+    -moz-box-align: center;
+    align-items: stretch;
+    display: flex;
+}
+.add-form-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+.new-align{
+	text-align:left;
+}
+.new-padding
+{
+	padding-left:0px;
+	padding-right:0px;
+	  margin-top: 50px;
+}
+.course-detail
+{
+	text-align:left;
+	margin-left:300px;
+	padding-top:40px;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.flex-wrapper {
+    -moz-box-align: center;
+    align-items: flex-start;
+    display: flex;
+}
+.test-video-uploader-wrapper {
+    padding: 0 15px;
+    position: relative;
+}
+.fx {
+    -moz-box-flex: 1;
+    flex: 1 1 0;
+    min-width: 1px;
+}
+#test-video-form .labeled {
+    padding-bottom: 15px;
+}
+input-group[class*="col-"] {
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+.input-group {
+    border-collapse: separate;
+    display: table;
+    position: relative;
+}
+
+.input-group .form-control {
+    float: left;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+.ch-count-field {
+    text-align:left;
+}
+.p30 {
+    padding: 30px;
+}
+.form-actions {
+   
+    margin: 0 -45px;
+    padding: 20px 45px 0 0;
+    text-align: right;
+}
+#test-video-form .form-actions {
+    border-top: medium none;
+    margin: 0;
+    padding: 0;
+}
+.pb20 {
+    padding-bottom: 20px;
+}
+.blockLabel {
+    font-weight: 600;
+    margin-top: 0;
+}
+label, .blockLabel {
+    display: inline-block;
+    font-weight: initial;
+    margin-bottom: 5px;
+    max-width: 100%;
 }
