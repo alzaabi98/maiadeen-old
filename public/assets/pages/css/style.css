@@ -330,7 +330,7 @@ div.bhoechie-tab-menu{
 }
 div.bhoechie-tab-menu div.list-group{
   margin-bottom: 0;
-  min-height: 931px;
+   min-height: 972px;
     background: #B1B1B1 none repeat scroll 0 0;
 }
 div.bhoechie-tab-menu div.list-group>a{
@@ -363,7 +363,7 @@ div.bhoechie-tab-menu div.list-group>a.active:after{
   border-left: 0;
   border-bottom: 13px solid transparent;
   border-top: 13px solid transparent;
-  border-left: 10px solid #000;
+  border-left: 10px solid #4BA34B;
   
 }
 
@@ -454,7 +454,7 @@ div.bhoechie-tab-menu div.list-group{
 }
 .labeled
 {
-	padding-bottom:40px;
+	padding-bottom:38px;
 }
 .add-form-wrapper {
     -moz-box-align: center;
@@ -500,9 +500,7 @@ div.bhoechie-tab-menu div.list-group{
     flex: 1 1 0;
     min-width: 1px;
 }
-#test-video-form .labeled {
-    padding-bottom: 15px;
-}
+
 input-group[class*="col-"] {
     float: none;
     padding-left: 0;
@@ -565,8 +563,8 @@ ul {
 }
 .cfi-chapter-container {
     background-color: #f4f4f4;
-    border: 1px solid rgba(0, 0, 0, 0.55);
-    margin: 60px 0 20px;
+    border: 3px solid #49A149;
+    margin: 100px 0 20px;
 }
 .content {
     -moz-box-align: center;
@@ -594,4 +592,42 @@ ul {
 .content.ui-state-default.add-chapter-btn {
     margin-top: 10px;
     padding-top: 30px;
+}
+.custominput{
+	width:50%;
+	text-align:center;
+}
+.custompannel
+{
+	width:75%;
+}
+.price-drop-down > select {
+    padding: 10px;
+	width:100px;
+}
+.section-btn{
+	float:right;
+}
+.height100 {
+    height: 55px;
+}
+.btn-color{
+	background-color:#fff;
+	border: 3px solid #49A149;
+}
+.custom-btn{
+	background:#49A149;
+	color:#fff;
+}
+.form-in
+{
+	 font-size: 0px;
+    height: 0px;
+}
+.coursecoupons {
+    margin-top: 20px;
+}
+.newpadding
+{
+	padding:20px;
 }
