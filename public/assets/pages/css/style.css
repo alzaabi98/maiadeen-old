@@ -331,7 +331,7 @@ div.bhoechie-tab-menu{
 div.bhoechie-tab-menu div.list-group{
   margin-bottom: 0;
   min-height: 931px;
-  background: #ddd none repeat scroll 0 0;
+    background: #B1B1B1 none repeat scroll 0 0;
 }
 div.bhoechie-tab-menu div.list-group>a{
   margin-bottom: 0;
@@ -351,7 +351,7 @@ div.bhoechie-tab-menu div.list-group>a:last-child{
 div.bhoechie-tab-menu div.list-group>a.active,
 div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
 div.bhoechie-tab-menu div.list-group>a.active .fa{
- background: #b3b3b3 none repeat scroll 0 0;
+ background: #49a149 none repeat scroll 0 0;
   color: #ffffff;
 }
 div.bhoechie-tab-menu div.list-group>a.active:after{
@@ -550,4 +550,48 @@ label, .blockLabel {
     font-weight: initial;
     margin-bottom: 5px;
     max-width: 100%;
+}
+ .cfi-sortables-list{
+    border: 0 none;
+    margin: auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.cfi-chapter-container {
+    background-color: #f4f4f4;
+    border: 1px solid rgba(0, 0, 0, 0.55);
+    margin: 60px 0 20px;
+}
+.content {
+    -moz-box-align: center;
+    align-items: center;
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.55);
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    height: 100%;
+    padding: 10px;
+    position: relative;
+}
+ .collapse-btn {
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+    margin-top: -2px;
+    position: relative;
+}
+.df, .fx-flex {
+    display: flex;
+}
+.content.ui-state-default.add-chapter-btn {
+    margin-top: 10px;
+    padding-top: 30px;
 }

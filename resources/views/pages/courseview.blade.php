@@ -209,6 +209,55 @@
 				    <div class="panel-body new-align">
 					<div class="form_container">
 					<div class="pb20"> Start putting together your course by creating sections, lectures and practice (quizzes and coding exercises) below. </div>
+				
+
+<ul class="cfi-sortables-list">
+<ul class="cfi-chapter-container ui-sortable">
+<div class="cfi-content opened">
+<span class="content ui-state-default">
+<span class="cfi-item-type">Lecture</span>
+<span class="cfi-item-number">:</span>
+<span class="cfi-item-title" data-purpose="lecture-title-shown">Introduction</span>
+<i class="edit-handle udi udi-pencil"></i>
+<span class="action-buttons">
+<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+   <i class="fa fa-plus" aria-hidden="true"></i>
+ </a>
+<span class="cfi-item-previewable" style="display: none;">(Preview enabled)</span>
+<span class="collapse-btn container-switch"></span>
+<i class="sort-handle udi udi-reorder"></i>
+</span>
+</span>
+</div>
+<div class="collapse" id="collapseExample">
+  <div class="card card-block">
+  <a class="btn btn-primary">
+    Add description
+  </a>
+  <a class="btn btn-primary" >
+    Add Resources
+  </a>
+    
+  </div>
+</div>
+</ul>
+</ul>
+ <div class="panel-group ">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">Add lecture</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <ul class="list-group">
+        <li class="list-group-item"><label>New Lecture:</label><input type="text" placeholder="Enter the title"></li>
+        
+      </ul>
+      
+  </div>
+</div>
+
 					</div>
 					</div>
 				   </div>
@@ -230,7 +279,7 @@
 					<div id="form-item-title" class="labeled ">
 					<label class="">Course Title</label>
 					<div id="tooltip-reference-title" class="tooltip-reference form-field ">
-					<input id="id_title" class=" text-input ch-count-field ud-textinput form-field-watcher textinput textInput form-control" data-max-length="60" data-purpose="edit-course-title" data-show-counter="true" maxlength="60" name="title" placeholder="Insert your course title." value="test" type="text">
+					<input id="id_title" class=" text-input ch-count-field ud-textinput form-field-watcher textinput textInput form-control" data-max-length="60" data-purpose="edit-course-title" data-show-counter="true" maxlength="60" name="title" placeholder="Insert your course title." value="" type="text">
 					
 					</div>
 					</div>
