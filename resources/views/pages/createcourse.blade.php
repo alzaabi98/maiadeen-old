@@ -15,7 +15,7 @@
 				
 				<div class="main-login main-center">
 				<div class="form-group">
-						<div class="mylabel">
+						<div class="mylabel lh">
 							<label>?Ready to Create a Course</label>
 							<p>:Start by entering the title of a course</p>
 							</div>
@@ -23,9 +23,9 @@
 								
 								{!! Form::open(['route' => ['writer_path']]) !!}
 								{!! Form::text('profession', '',array('required', 
-								'class'=>'form-control text', 
+								'class'=>'form-control text inheight', 
 								'placeholder'=>'Enter the name of course')) !!}
-								{!! Form::submit('Create course', array('class' => ' form-group btn btn-primary btn-lg btn-block login-button')) !!}
+								{!! Form::submit('Create course', array('class' => ' form-group btn btn-warning btn-lg btn-block login-button')) !!}
 								{!! Form::close() !!}
 								
 							</div>

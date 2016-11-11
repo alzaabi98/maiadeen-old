@@ -143,28 +143,28 @@
 					<div id="form-item-microphone" class="labeled ">
 					<label class="col-xs-12 col-sm-2 ">:Microphone</label>
 					<div id="tooltip-reference-microphone" class="tooltip-reference form-field col-xs-12 col-sm-10 input-group  ">
-					<input id="id_microphone" class=" ch-count-field btn-color form-control " data-max-length="75" data-show-counter="true" maxlength="75" name="microphone" placeholder="e.g. Built in mic, Blue Yeti (Optional)" type="text">
+					<input id="id_microphone" class=" custom-height ch-count-field btn-color form-control " data-max-length="75" data-show-counter="true" maxlength="75" name="microphone" placeholder="e.g. Built in mic, Blue Yeti (Optional)" type="text">
 					
 					</div>
 					</div>
 					<div id="form-item-camera" class="labeled ">
 					<label class="col-xs-12 col-sm-2 control-label">:Camera</label>
 					<div id="tooltip-reference-camera" class="tooltip-reference form-field col-xs-12 col-sm-10 input-group ">
-					<input id="id_camera" class="ch-count-field btn-color form-control" data-max-length="75" data-show-counter="true" maxlength="75" name="camera" placeholder="e.g. Canon T3I, Webcam (Optional)" type="text">
+					<input id="id_camera" class="custom-height ch-count-field btn-color form-control" data-max-length="75" data-show-counter="true" maxlength="75" name="camera" placeholder="e.g. Canon T3I, Webcam (Optional)" type="text">
 					
 					</div>
 					</div>
 					<div id="form-item-light" class="labeled ">
 					<label class="col-xs-12 col-sm-2 control-label">:Lighting</label>
 					<div id="tooltip-reference-light" class="tooltip-reference form-field col-xs-12 col-sm-10 input-group ">
-					<input id="id_light" class=" ch-count-field btn-color form-control" data-max-length="75" data-show-counter="true" maxlength="75" name="light" placeholder="e.g. Lightbox, Overhead lamp (Optional)" type="text">
+					<input id="id_light" class="custom-height ch-count-field btn-color form-control" data-max-length="75" data-show-counter="true" maxlength="75" name="light" placeholder="e.g. Lightbox, Overhead lamp (Optional)" type="text">
 					
 					</div>
 					</div>
 					<div id="form-item-software" class="labeled ">
 					<label class="col-xs-12 col-sm-2 control-label">:Editing Software</label>
 					<div id="tooltip-reference-software" class="tooltip-reference form-field col-xs-12 col-sm-10 input-group ">
-					<input  class=" ch-count-field btn-color form-control" data-max-length="75" data-show-counter="true" maxlength="75" name="software" placeholder="e.g. Camtasia (Optional)" type="text">
+					<input  class="custom-height ch-count-field btn-color form-control" data-max-length="75" data-show-counter="true" maxlength="75" name="software" placeholder="e.g. Camtasia (Optional)" type="text">
 					
 					</div>
 					</div>
@@ -380,20 +380,184 @@
 					<div id="form-item-title" class="labeled ">
 					<label class="">Course Title</label>
 					<div id="tooltip-reference-title" class=" btn-color tooltip-reference form-field ">
-					<input id="id_title" class=" text-input ch-count-field ud-textinput form-field-watcher textinput textInput form-control" data-max-length="60" data-purpose="edit-course-title" data-show-counter="true" maxlength="60" name="title" placeholder=".Insert your course title" value="" type="text">
+					<input id="id_title" class="custom-height text-input ch-count-field ud-textinput form-field-watcher textinput textInput form-control" data-max-length="60" data-purpose="edit-course-title" data-show-counter="true" maxlength="60" name="title" placeholder=".Insert your course title" value="" type="text">
 					
 					</div>
 					</div>
 					<div id="form-item-headline" class="labeled ">
 					<label class="">Course Subtitle</label>
 					<div id="tooltip-reference-headline" class=" btn-color tooltip-reference form-field ">
-					<input id="id_headline" class=" text-input ch-count-field ud-textinput form-field-watcher textinput textInput form-control" data-max-length="120" data-purpose="course-headline" data-show-counter="true" maxlength="120" name="headline" placeholder=".Insert your course subtitle" style="resize:none;overflow:auto;" type="text">
+					<input id="id_headline" class="custom-height text-input ch-count-field ud-textinput form-field-watcher textinput textInput form-control" data-max-length="120" data-purpose="course-headline" data-show-counter="true" maxlength="120" name="headline" placeholder=".Insert your course subtitle" style="resize:none;overflow:auto;" type="text">
+					</div>
+					</div>
+					<div id="form-item-headline" class="labeled ">
+					
+					<div class="col-md-6"><label class="">Course Image</label>
+					
+					<img src="/assets/pages/img/courseimage.png "  style="width:400px;height:300px;">
+					</div>
+					<div class="col-md-6"><p>
+					Please review our
+					<a target="_blank">course image quality standards</a>
+					carefully to ensure your image is approved. Required dimensions: 2048x1152 pixels. Required format: .jpg, .jpeg, .gif, .bmp or .png.
+					</p>
+					<p>
+					If you would like some help, fill out this
+					<a target="_blank"> simple request form</a>
+					and our team of designers can create a custom image for you.
+					</p>
+					<div class="inputfile ">
+					<input type="file">
+					</div>
+					</div>
+					</div>
+					<label class="">Basic info</label>
+					<div id="form-item-title" class="labeled ">
+					
+					<div class="col-md-4 ">
+					<select id="id_locale" class="form-field-watcher select form-control user-success" data-purpose="course-language" name="locale">
+<option value="af_ZA">Afrikaans</option>
+<option value="sq_AL">Shqip</option>
+<option value="ar_AR">العربية</option>
+<option value="hy_AM">Հայերեն</option>
+<option value="ay_BO">Aymar aru</option>
+<option value="az_AZ">Azərbaycan dili</option>
+<option value="eu_ES">Euskara</option>
+<option value="bn_IN">Bangla</option>
+<option value="bs_BA">Bosanski</option>
+<option value="bg_BG">Български</option>
+<option value="ca_ES">Català</option>
+<option value="ck_US">Cherokee</option>
+<option value="hr_HR">Hrvatski</option>
+<option value="cs_CZ">Čeština</option>
+<option value="da_DK">Dansk</option>
+<option value="nl_NL">Nederlands</option>
+<option value="nl_BE">Nederlands (België)</option>
+<option value="en_IN">English (India)</option>
+<option value="en_GB">English (UK)</option>
+<option value="en_US" selected="selected">English (US)</option>
+<option value="et_EE">Eesti</option>
+<option value="fo_FO">Føroyskt</option>
+<option value="tl_PH">Filipino</option>
+<option value="fi_FI">Suomi</option>
+<option value="fr_CA">Français (Canada)</option>
+<option value="fr_FR">Français (France)</option>
+<option value="fy_NL">Frysk</option>
+<option value="gl_ES">Galego</option>
+<option value="ka_GE">ქართული</option>
+<option value="de_DE">Deutsch</option>
+<option value="el_GR">Ελληνικά</option>
+<option value="gn_PY">Avañe'ẽ</option>
+<option value="gu_IN">ગુજરાતી</option>
+<option value="ht_HT">Ayisyen</option>
+<option value="he_IL">‏עברית‏</option>
+<option value="hi_IN">हिन्दी</option>
+<option value="hu_HU">Magyar</option>
+<option value="is_IS">Íslenska</option>
+<option value="id_ID">Bahasa Indonesia</option>
+<option value="ga_IE">Gaeilge</option>
+<option value="it_IT">Italiano</option>
+<option value="ja_JP">日本語</option>
+<option value="jv_ID">Basa Jawa</option>
+<option value="kn_IN">Kannaḍa</option>
+<option value="kk_KZ">Қазақша</option>
+<option value="km_KH">Khmer</option>
+<option value="ko_KR">한국어</option>
+<option value="ku_TR">Kurdî</option>
+<option value="lv_LV">Latviešu</option>
+<option value="li_NL">Lèmbörgs</option>
+<option value="lt_LT">Lietuvių</option>
+<option value="mk_MK">Македонски</option>
+<option value="mg_MG">Malagasy</option>
+<option value="ms_MY">Bahasa Melayu</option>
+<option value="ml_IN">Malayāḷam</option>
+<option value="mt_MT">Malti</option>
+<option value="mr_IN">मराठी</option>
+<option value="mn_MN">Монгол</option>
+<option value="ne_NP">नेपाली</option>
+<option value="se_NO">Davvisámegiella</option>
+<option value="nb_NO">Norsk (bokmål)</option>
+<option value="nn_NO">Norsk (nynorsk)</option>
+<option value="ps_AF">پښتو</option>
+<option value="fa_IR">فارسی</option>
+<option value="pl_PL">Polski</option>
+<option value="pt_BR">Português (Brasil)</option>
+<option value="pt_PT">Português (Portugal)</option>
+<option value="pa_IN">ਪੰਜਾਬੀ</option>
+<option value="qu_PE">Qhichwa</option>
+<option value="ro_RO">Română</option>
+<option value="rm_CH">Rumantsch</option>
+<option value="ru_RU">Русский</option>
+<option value="sa_IN">संस्कृतम्</option>
+<option value="sr_RS">Српски</option>
+<option value="zh_CN">中文(简体)</option>
+<option value="sk_SK">Slovenčina</option>
+<option value="sl_SI">Slovenščina</option>
+<option value="so_SO">Soomaaliga</option>
+<option value="es_LA">Español</option>
+<option value="es_CL">Español (Chile)</option>
+<option value="es_CO">Español (Colombia)</option>
+<option value="es_MX">Español (México)</option>
+<option value="es_ES">Español (España)</option>
+<option value="es_VE">Español (Venezuela)</option>
+<option value="sw_KE">Kiswahili</option>
+<option value="sv_SE">Svenska</option>
+<option value="sy_SY">Leššānā Suryāyā</option>
+<option value="tg_TJ">тоҷикӣ, تاجیکی‎, tojikī</option>
+<option value="ta_IN">தமிழ்</option>
+<option value="tt_RU">татарча / Tatarça / تاتارچا</option>
+<option value="te_IN">Telugu</option>
+<option value="th_TH">ภาษาไทย</option>
+<option value="zh_HK">中文(香港)</option>
+<option value="zh_TW">中文 (繁體)</option>
+<option value="tr_TR">Türkçe</option>
+<option value="uk_UA">Українська</option>
+<option value="ur_PK">اردو</option>
+<option value="uz_UZ">O'zbek</option>
+<option value="vi_VN">Tiếng Việt</option>
+<option value="cy_GB">Cymraeg</option>
+<option value="xh_ZA">isiXhosa</option>
+<option value="yi_DE">ייִדיש</option>
+<option value="zu_ZA">isiZulu</option>
+</select>
+					</div>
+					<div class="col-md-4">
+					<select id="id_instructional_level" class="form-field-watcher select form-control user-success" inline-class="inline" name="instructional_level">
+<option value="" selected="selected">-- Select Level --</option>
+<option value="1">Beginner Level</option>
+<option value="2">Intermediate Level</option>
+<option value="3">Expert Level</option>
+<option value="0">All Levels</option>
+</select>
+					</div>
+					<div class="col-md-4 ">
+					<select id="primaryCourseCategoryId" class=" form-field-watcher select form-control user-success" data-purpose="course-category" name="category" onchange="$(this).trigger("course_category_changed")">
+<option value="" selected="selected">-- Select Category --</option>
+<option value="288">Development</option>
+<option value="268">Business</option>
+<option value="294">IT & Software</option>
+<option value="292">Office Productivity</option>
+<option value="296">Personal Development</option>
+<option value="269">Design</option>
+<option value="290">Marketing</option>
+<option value="274">Lifestyle</option>
+<option value="273">Photography</option>
+<option value="276">Health & Fitness</option>
+<option value="277">Teacher Training</option>
+<option value="278">Music</option>
+<option value="300">Academics</option>
+<option value="279">Language</option>
+<option value="298">Test Prep</option>
+</select>
 					
 					</div>
-		</div>
-					
-					
 					</div>
+					
+
+					
+					
+					
+			</div>
 					</form>
 					</div>
 					</div>

@@ -284,13 +284,17 @@ input::-webkit-input-placeholder {
 }
 
 .main-center {
-    background-color: #1e2c35;
+    background-color: #589b41;
     color: #fff;
     margin: 0 auto;
-     max-width: 436px;
+    max-width: 436px;
     padding: 40px;
 }
-
+.lh
+{
+	   line-height: 1.029;
+	    margin-bottom: 26px;
+}
 .login-button{
 	margin-top: 5px;
 }
@@ -330,7 +334,7 @@ div.bhoechie-tab-menu{
 }
 div.bhoechie-tab-menu div.list-group{
   margin-bottom: 0;
-   min-height: 972px;
+   min-height: 984px;
     background: #B1B1B1 none repeat scroll 0 0;
 }
 div.bhoechie-tab-menu div.list-group>a{
@@ -630,4 +634,24 @@ ul {
 .newpadding
 {
 	padding:20px;
+}
+
+.custom-height
+{
+	height: 48px;
+}
+.inheight
+{
+	 height: 42px;
+}
+textarea{ 
+  width: 850px; 
+  max-width:850px; 
+}
+
+.inputfile
+{
+	background-color: #f4f4f4;
+    border: 3px solid #49A149;
+	padding:15	px;
 }
