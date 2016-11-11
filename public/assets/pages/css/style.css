@@ -335,14 +335,14 @@ div.bhoechie-tab-menu{
 div.bhoechie-tab-menu div.list-group{
   margin-bottom: 0;
    min-height: 984px;
-    background: #B1B1B1 none repeat scroll 0 0;
+    background: #e8ffb3 none repeat scroll 0 0;
 }
 div.bhoechie-tab-menu div.list-group>a{
   margin-bottom: 0;
 }
 div.bhoechie-tab-menu div.list-group>a .glyphicon,
 div.bhoechie-tab-menu div.list-group>a .fa {
-  color: #5A55A3;
+  color: #fff;
 }
 div.bhoechie-tab-menu div.list-group>a:first-child{
   border-top-right-radius: 0;
@@ -355,7 +355,7 @@ div.bhoechie-tab-menu div.list-group>a:last-child{
 div.bhoechie-tab-menu div.list-group>a.active,
 div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
 div.bhoechie-tab-menu div.list-group>a.active .fa{
- background: #49a149 none repeat scroll 0 0;
+ background: #f8a227 none repeat scroll 0 0;
   color: #ffffff;
 }
 div.bhoechie-tab-menu div.list-group>a.active:after{
@@ -367,7 +367,7 @@ div.bhoechie-tab-menu div.list-group>a.active:after{
   border-left: 0;
   border-bottom: 13px solid transparent;
   border-top: 13px solid transparent;
-  border-left: 10px solid #4BA34B;
+  border-left: 10px solid #F8A52D;
   
 }
 
@@ -411,7 +411,10 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
 }
 
 .list-group-item {
-    background-color: #ececec;
+     background-color: #acc523;
+}
+a.list-group-item, button.list-group-item {
+    color: #fff;
 }
 .mybootclass
 {
@@ -603,10 +606,10 @@ ul {
 }
 .btn-color{
 	background-color:#fff;
-	border: 3px solid #49A149;
+	border: 3px solid #AEC729;
 }
 .custom-btn{
-	background:#49A149;
+	background:#AEC729;
 	color:#fff;
 }
 .form-in
@@ -645,7 +648,7 @@ textarea{
     margin-top:20px;
 }
 #imgInp {
-    border: 3px solid #49a049;
+    border: 3px solid #AEC729;
     border-radius: 5px;
 }
 .lecturepadding

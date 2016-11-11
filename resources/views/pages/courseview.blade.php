@@ -24,19 +24,19 @@
                   <h4 class="fa fa-book"></h4><br/>Course Landing Page 
                 </a>
                 <a href="#" class="list-group-item text-center">
-                  <h4></h4><br/>Course Image
+                  <h4 class="fa fa-picture-o"></h4><br/>Course Image
                 </a>
 				<a href="#" class="list-group-item text-center">
-                  <h4></h4><br/>Course Goals
+                  <h4 class="fa fa-bullseye"></h4><br/>Course Goals
                 </a>
 				<a href="#" class="list-group-item text-center">
-                  <h4></h4><br/>Content
+                  <h4 class="fa fa-youtube-play" ></h4><br/>Content
                 </a>
 				<a href="#" class="list-group-item text-center">
-                  <h4></h4><br/>Price
+                  <h4 class="fa fa-dollar"></h4><br/>Price
                 </a>
 				<a href="#" class="list-group-item text-center">
-                  <h4></h4><br/>Automatic Message
+                  <h4 class="fa fa-envelope"></h4><br/>Automatic Message
                 </a>
                 
               </div>
@@ -51,7 +51,7 @@
             <div class="col-md-12">
                 <div class="row">
                     
-					<div class="form-header"><span class="fa fa-book"></span> <?php echo $profession;?> Course </div>
+					<div class="form-header"><?php echo $profession;?> Course </div>
 <div class="panel-body new-align">
 
                         <div class="manage-fields-wrapper">
