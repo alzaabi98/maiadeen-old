@@ -335,7 +335,7 @@ div.bhoechie-tab-menu{
 }
 div.bhoechie-tab-menu div.list-group{
   margin-bottom: 0;
-   min-height: 984px;
+   min-height: 1091px;
     background: #e8ffb3 none repeat scroll 0 0;
 }
 div.bhoechie-tab-menu div.list-group>a{
@@ -646,9 +646,7 @@ textarea{
     border: 3px solid #49A149;
 	padding:15	px;
 }
-.container{
-    margin-top:20px;
-}
+
 #imgInp {
     border: 3px solid #AEC729;
     border-radius: 5px;
@@ -665,6 +663,18 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
     background-color: #f8a52d;
     color: #fff;
     text-decoration: none;
+}
+.file {
+  visibility: hidden;
+  position: absolute;
+  
+}
+.text-direction1{
+	direction:rtl;
+}
+.textdirection
+{
+	direction: ltr;
 }
 
 	 

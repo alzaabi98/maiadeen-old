@@ -107,8 +107,20 @@
 					and our team of designers can create a custom image for you.
 					</p>
 					
-					<input type='file' id="imgInp" />					
+					<!--<input type='file' id="imgInp" />-->					
+<div class="form-group textdirection">
+    <input type="file" id="imgInp" name="img[]" class="file">
+    <div class="input-group col-xs-12">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+      <input type="text" class="form-control input-lg" disabled placeholder="Upload Image">
+      <span class="input-group-btn">
+        <button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+      </span>
+    </div>
+  </div>
 
+
+					
 					
 					</div>
 					</div>
@@ -166,6 +178,9 @@
 </div>
 
 </div>
+
+   
+</div>
 					
 				<div><button class=" btn-lg custom-btn section-btn" type="button">Save</button></div>
 					
@@ -195,7 +210,52 @@
 				   
 				   <div class="addvideo newpadding ">
 				   <label>Add lecture video</label>
-				   <input class=" lecturepadding width100 mylabel btn-color " type="file">	
+				   <div class="form-group textdirection">
+    <input type="file"  name="img[]" class="file">
+    <div class="input-group col-xs-12">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+      <input type="text" class="form-control input-lg" disabled placeholder="Upload video">
+      <span class="input-group-btn">
+        <button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+      </span>
+    </div>
+  </div>
+  <div class="row textdirection">
+    <div class="col-sm-6 col-md-12">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <a class="panel-default" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+                <div class="lecturepadding right-text custom-btn">
+                    <h4 class="panel-title glyphicon glyphicon-chevron-down">
+					<i class="fa fa-bars"></i>
+                    
+                    </h4>
+                </div>
+                </a>
+                <div id="collapseOne" class="panel-collapse collapse">
+                    <div class="panel-body ">
+                    <button class="btn-lg btn-color fa fa-plus " type="button" data-toggle="collapse" data-parent="#accordion1" href="#collapsetwo"> Add description </button>
+					<button class="  btn-lg btn-color fa fa-plus " type="button"> Add resources</button>
+                    <div id="collapsetwo" class="panel-collapse collapse">
+					<div  class="text-direction1 coursecoupons">
+
+
+<div class="add-describe">
+<textarea></textarea>
+<button type="button" class="btn-lg btn-success section-btn coursecoupons " >Save</button>
+</div>
+					</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div id="add" class="adding-button">
+	<div id="add1" class="col-md-4"><button class=" width100 btn-lg btn-color fa fa-plus "> Add lecture</button></div>
+	<div id="add2" class="col-md-4"><button class=" width100 btn-lg btn-color fa fa-plus "> Add quiz</button></div>
+	<div id="add3" class="col-md-4"><button class=" width100 btn-lg btn-color fa fa-plus "> Add coding exercise</button></div>
+	</div>
+ 
 					</div>				   
 				   </div>
 					  </div>
@@ -204,7 +264,7 @@
                 <div class="bhoechie-tab-content">
                     <center>
 					<div class="col-md-12">
-                      <div class="row">
+                      <div class="row textdirection">
                    <div class="form-header">Price</div>
 				   <div class="panel-body new-align">
 				   <div class="form_container">
@@ -213,7 +273,7 @@
 				   <label>Course price</label>
 				   <div class="price-drop-down">
 				   
-				   <button class="btn-lg custom-btn " type="button">Save</button>
+				   
 				   <select>
 				   <option value="" selected="selected"></option>
 					<option value="20">$20</option>
@@ -244,20 +304,10 @@
 				   </select>
 				   <select>
 				   <option value="usd" selected="selected">USD</option>
-					<option value="eur">EUR</option>
-					<option value="gbp">GBP</option>
-					<option value="jpy">JPY</option>
-					<option value="sgd">SGD</option>
-					<option value="mxn">MXN</option>
-					<option value="brl">BRL</option>
-					<option value="cad">CAD</option>
-					<option value="aud">AUD</option>
-					<option value="thb">THB</option>
-					<option value="ils">ILS</option>
-					<option value="twd">TWD</option>
+				
 				   </select>
 					
-					
+					<button class="btn-lg custom-btn " type="button">Save</button>
 					<p>
 Please complete our premium instructor application found here in order to update your course price
 </p>
@@ -329,6 +379,20 @@ Please complete our premium instructor application found here in order to update
 
 @section('javascript')
 <script>
+$('#add1').click(function(){
+    //$(this).parent().find('#add').css('display','none');
+    $(this).css('display','none');
+});
+</script>
+
+<script>
+$(document).on('click', '.browse', function(){
+  var file = $(this).parent().parent().parent().find('.file');
+  file.trigger('click');
+});
+$(document).on('change', '.file', function(){
+  $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
+});
  function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
