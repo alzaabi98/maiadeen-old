@@ -321,6 +321,7 @@ div.bhoechie-tab-container{
  
   -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
   box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  
   -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
   background-clip: padding-box;
   opacity: 0.97;
@@ -412,6 +413,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
 
 .list-group-item {
      background-color: #acc523;
+	 border: 1px solid #e9ffb5;
 }
 a.list-group-item, button.list-group-item {
     color: #fff;
@@ -655,3 +657,14 @@ textarea{
 {
 	padding:10px;
 }
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    border-color: #f8a52d;
+}
+
+a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
+    background-color: #f8a52d;
+    color: #fff;
+    text-decoration: none;
+}
+
+	 
