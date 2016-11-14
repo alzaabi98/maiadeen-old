@@ -286,7 +286,7 @@ input::-webkit-input-placeholder {
 .main-center {
     background-color: #589b41;
     color: #fff;
-    margin: 0 auto;
+      margin: 73px auto;
     max-width: 436px;
     padding: 40px;
 }
