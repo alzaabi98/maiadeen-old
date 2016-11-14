@@ -28,10 +28,7 @@ Route::get('/becomeTeacher','PagesController@becomeTeacher');
 Route::get('/createcourse','PagesController@createcourse');
 Route::get('/courseview','PagesController@courseview');
 Route::get('/create','mycourseController@create');
-Route::post('auth/register', [
-'as' => 'writer_path',
-'uses' => 'PagesController@courseview'
-]);
+Route::post('/courseview', 'PagesController@courseview');
 
 ///contact us route
 Route::post('/contactemail','PagesController@send');

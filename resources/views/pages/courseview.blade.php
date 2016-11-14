@@ -10,7 +10,7 @@
 
 @section('content')
 <div class="course-detail">
-<h2><?php echo $profession;?></h2>
+
 
 </div>
 <div class="container new-padding ">
@@ -51,7 +51,7 @@
             <div class="col-md-12">
                 <div class="row">
                     
-					<div class="form-header"><?php echo $profession;?> Course </div>
+					<div class="form-header"> Course </div>
 <div class="panel-body new-align">
 
                         <div class="manage-fields-wrapper">
@@ -82,7 +82,7 @@
 					
                       <div class="col-md-12">
                 <div class="row">
-                    <div class="form-header"><?php echo $profession;?> Video</div>
+                    <div class="form-header"> Video</div>
                     <div class="panel-body new-align">
 					
 					
@@ -136,7 +136,7 @@
 					  <div class="col-md-12">
                 <div class="row">
                     
-					<div class="form-header"><span class="fa fa-book"></span> <?php echo $profession;?> Course </div>
+					<div class="form-header"><span class="fa fa-book"></span> Course </div>
 <div class="panel-body new-align">
 <p class="pb30">The first step to creating a great course is deciding who you are creating your course for and what those students are looking to accomplish. This is important information that will help students decide if your course is the right fit for their needs and will appear on your course landing page </p>
                         <div class="manage-fields-wrapper">
@@ -224,16 +224,20 @@
     <div class="col-sm-6 col-md-12">
         <div class="panel-group">
             <div class="panel panel-default">
-                <a class="panel-default" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+                
                 <div class="lecturepadding right-text custom-btn">
-                    <h4 class="panel-title glyphicon glyphicon-chevron-down">
+				 <button class="fa fa-plus btn btn-warning"> Add content</button>
+				 <a class="panel-default" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+                    <h4 class="panel-title glyphicon glyphicon-chevron-down"></h4>
+					</a>
 					<i class="fa fa-bars"></i>
                     
-                    </h4>
+                    
                 </div>
-                </a>
+                
                 <div id="collapseOne" class="panel-collapse collapse">
                     <div class="panel-body ">
+					
                     <button class="btn-lg btn-color fa fa-plus " type="button" data-toggle="collapse" data-parent="#accordion1" href="#collapsetwo"> Add description </button>
 					<button class="  btn-lg btn-color fa fa-plus " type="button"> Add resources</button>
                     <div id="collapsetwo" class="panel-collapse collapse">
@@ -251,11 +255,89 @@
         </div>
     </div>
 	<div id="add" class="adding-button">
-	<div id="add1" class="col-md-4"><button class=" width100 btn-lg btn-color fa fa-plus "> Add lecture</button></div>
-	<div id="add2" class="col-md-4"><button class=" width100 btn-lg btn-color fa fa-plus "> Add quiz</button></div>
-	<div id="add3" class="col-md-4"><button class=" width100 btn-lg btn-color fa fa-plus "> Add coding exercise</button></div>
+	
+	<div id="add1" class="col-md-4"><button class=" width100 btn-lg btn-color fa fa-plus add1"> Add lecture</button></div>
+	<div id="addlec" class="addlecture" style="display:none">
+	<div class="content ui-state-default">
+<span class="cfi-item-type">New Lecture:</span>
+<span class="cfi-item-title fx">
+<form class="ng-pristine ng-valid" method="post">
+
+<div class="manage-fields-wrapper">
+<div id="form-item-title" class="non-labeled ">
+<div id="tooltip-reference-title" class="tooltip-reference form-field ">
+<input id="id_title" class=" text-input ch-count-field ud-textinput textinput textInput form-control" data-max-length="80" data-purpose="lecture-title" data-show-counter="true" maxlength="80" name="title" placeholder="Enter a Title" value="" type="text">
+
+</div>
+</div>
+</div>
+<div class="form-actions">
+<div class="submit-row">
+<input id="submit-id-submit" class=" btn custom-btn" name="submit" value="Add Lecture" data-purpose="submit-lecture" type="submit">
+<span>or </span>
+<a class="cancel-link yellow">Cancel</a>
+</div>
+</div>
+</form>
+</span>
+</div>
+
+	</div>
+	<div id="add2" class="col-md-4"><button class=" width100 btn-lg btn-color fa fa-plus add1"> Add quiz</button></div>
+	<div id="addlec" class="addlecture" style="display:none">
+	<div class="content ui-state-default">
+<span class="cfi-item-type">New quiz:</span>
+<span class="cfi-item-title fx">
+<form class="ng-pristine ng-valid" method="post">
+
+<div class="manage-fields-wrapper">
+<div id="form-item-title" class="non-labeled ">
+<div id="tooltip-reference-title" class="tooltip-reference form-field ">
+<input id="id_title" class=" text-input ch-count-field ud-textinput textinput textInput form-control" data-max-length="80" data-purpose="lecture-title" data-show-counter="true" maxlength="80" name="title" placeholder="Enter a Title" value="" type="text">
+
+</div>
+</div>
+</div>
+<div class="form-actions">
+<div class="submit-row">
+<input id="submit-id-submit" class=" btn custom-btn" name="submit" value="Add quiz" data-purpose="submit-lecture" type="submit">
+<span>or </span>
+<a class="cancel-link yellow">Cancel</a>
+</div>
+</div>
+</form>
+</span>
+</div>
+	</div>
+	<div id="add3" class="col-md-4"><button class=" width100 btn-lg btn-color fa fa-plus add1"> Add coding exercise</button></div>
+	<div id="addlec" class="addlecture" style="display:none">
+	<div class="content ui-state-default">
+<span class="cfi-item-type">New Coding Exercise:</span>
+<span class="cfi-item-title fx">
+<form class="ng-pristine ng-valid" method="post">
+
+<div class="manage-fields-wrapper">
+<div id="form-item-title" class="non-labeled ">
+<div id="tooltip-reference-title" class="tooltip-reference form-field ">
+<input id="id_title" class=" text-input ch-count-field ud-textinput textinput textInput form-control" data-max-length="80" data-purpose="lecture-title" data-show-counter="true" maxlength="80" name="title" placeholder="Enter a Title" value="" type="text">
+
+</div>
+</div>
+</div>
+<div class="form-actions">
+<div class="submit-row">
+<input id="submit-id-submit" class=" btn custom-btn" name="submit" value="Add coding exercise" data-purpose="submit-lecture" type="submit">
+<span>or </span>
+<a class="cancel-link yellow">Cancel</a>
+</div>
+</div>
+</form>
+</span>
+</div>
+	</div>
 	</div>
  
+
 					</div>				   
 				   </div>
 					  </div>
@@ -379,9 +461,15 @@ Please complete our premium instructor application found here in order to update
 
 @section('javascript')
 <script>
-$('#add1').click(function(){
+$('.add1').click(function(){
     //$(this).parent().find('#add').css('display','none');
-    $(this).css('display','none');
+    $(".add1").css('display','none');
+	 $(this).parent().next(".addlecture").css('display','block');
+});
+$('.cancel-link').click(function(){
+    //$(this).parent().find('#add').css('display','none');
+    $('.add1').css('display','block');
+	 $('.addlecture').css('display','none');
 });
 </script>
 
@@ -390,6 +478,7 @@ $(document).on('click', '.browse', function(){
   var file = $(this).parent().parent().parent().find('.file');
   file.trigger('click');
 });
+
 $(document).on('change', '.file', function(){
   $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
 });

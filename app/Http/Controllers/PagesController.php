@@ -42,14 +42,13 @@ class PagesController extends Controller
     	return view('pages.contactus');
     }
 	 public function createcourse() {
-    	
+      	
     	return view('pages.createcourse');
     }
 	public function courseview() {
-	 	$input = Input::get();
-     $profession = $input['profession'];
-     return view('pages/courseview', ['profession' => $profession]);
-    	
+		
+    return view('pages.courseview');
+
     	//return view('pages.courseview');
     }
 

@@ -25,7 +25,7 @@
 							<div class="cols-sm-10">
 								
 								@if (Auth::check())
-								{!! Form::open(['route' => ['writer_path']]) !!}
+								{!! Form::open(array('action' => 'PagesController@courseview', 'method' => 'post')) !!}
 							     @else
 									 @section('javascript')
 								<script>
