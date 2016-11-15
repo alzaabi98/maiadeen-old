@@ -683,4 +683,10 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
 .fa.fa-bars {
     margin: 5px;
 }
-	 
+.entry:not(:first-of-type)
+{
+    margin-top: 10px;
+}
+.glyphicon {
+    font-size: 20px;
+}

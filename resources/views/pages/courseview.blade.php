@@ -222,10 +222,25 @@
   </div>
   <div class="row textdirection">
     <div class="col-sm-6 col-md-12">
-        <div class="panel-group">
-            <div class="panel panel-default">
+        <div class="panel-group ">
+            <div class="panel panel-default lecid">
                 
-                <div class="lecturepadding right-text custom-btn">
+                <div class="lecturepadding  right-text custom-btn">
+
+            <div class="controls"> 
+                <form role="form" autocomplete="off">
+                    <div class="entry width100 input-group col-xs-3">
+                        <span  class="form-control " name="fields[]" type="text" placeholder="Type something" >lecture <span id="output">1</span>:</span>
+                    	<span class="input-group-btn">
+                            <button class="btn btn-success btn-add" type="button">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            
+            </div>
+    
 				 <button class="fa fa-plus btn btn-warning"> Add content</button>
 				 <a class="panel-default" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
                     <h4 class="panel-title glyphicon glyphicon-chevron-down"></h4>
@@ -234,25 +249,28 @@
                     
                     
                 </div>
+					
                 
                 <div id="collapseOne" class="panel-collapse collapse">
                     <div class="panel-body ">
 					
-                    <button class="btn-lg btn-color fa fa-plus " type="button" data-toggle="collapse" data-parent="#accordion1" href="#collapsetwo"> Add description </button>
-					<button class="  btn-lg btn-color fa fa-plus " type="button"> Add resources</button>
-                    <div id="collapsetwo" class="panel-collapse collapse">
-					<div  class="text-direction1 coursecoupons">
+								<button class="btn-lg btn-color fa fa-plus " type="button" data-toggle="collapse" data-parent="#accordion1" href="#collapsetwo"> Add description </button>
+								<button class="  btn-lg btn-color fa fa-plus " type="button"> Add resources</button>
+						<div id="collapsetwo" class="panel-collapse collapse">
+							<div  class="text-direction1 coursecoupons">
 
 
-<div class="add-describe">
-<textarea></textarea>
-<button type="button" class="btn-lg btn-success section-btn coursecoupons " >Save</button>
-</div>
+								<div class="add-describe">
+									<textarea></textarea>
+									<button type="button" class="btn-lg btn-success section-btn coursecoupons " >Save</button>
+								</div>
+							</div>
+						</div>
 					</div>
-					</div>
-                </div>
-            </div>
+				</div>
+				
         </div>
+		<div class="second"></div>
     </div>
 	<div id="add" class="adding-button">
 	
@@ -266,14 +284,14 @@
 <div class="manage-fields-wrapper">
 <div id="form-item-title" class="non-labeled ">
 <div id="tooltip-reference-title" class="tooltip-reference form-field ">
-<input id="id_title" class=" text-input ch-count-field ud-textinput textinput textInput form-control" data-max-length="80" data-purpose="lecture-title" data-show-counter="true" maxlength="80" name="title" placeholder="Enter a Title" value="" type="text">
+<input id="addlecid" class=" text-input ch-count-field ud-textinput textinput textInput form-control" data-max-length="80" data-purpose="lecture-title" data-show-counter="true" maxlength="80" name="title" placeholder="Enter a Title" value="" type="text">
 
 </div>
 </div>
 </div>
 <div class="form-actions">
 <div class="submit-row">
-<input id="submit-id-submit" class=" btn custom-btn" name="submit" value="Add Lecture" data-purpose="submit-lecture" type="submit">
+<input class=" btn custom-btn btn-addlec" name="submit" value="Add Lecture">
 <span>or </span>
 <a class="cancel-link yellow">Cancel</a>
 </div>
@@ -350,7 +368,7 @@
                    <div class="form-header">Price</div>
 				   <div class="panel-body new-align">
 				   <div class="form_container">
-				   <div class="pb20"> Select the currency and price of your course below and click â€˜Saveâ€™. Once completed, you will be able to create instructor coupons based on your selected price. To create a Free course, select a price of â€˜Freeâ€˜ </div>
+				   <div class="pb20"> Select the currency and price of your course below and click ‘Save’. Once completed, you will be able to create instructor coupons based on your selected price. To create a Free course, select a price of ‘Free‘ </div>
 				   <div class="price-section">
 				   <label>Course price</label>
 				   <div class="price-drop-down">
@@ -471,6 +489,37 @@ $('.cancel-link').click(function(){
     $('.add1').css('display','block');
 	 $('.addlecture').css('display','none');
 });
+$(document).on('click', '.btn-addlec', function(){
+$( ".lecid:first" ).clone().appendTo( $( ".second" ) );
+$('#output').html(function(i, val) { return val*1+1 });
+});
+
+</script>
+<script>
+$(function()
+{
+    $(document).on('click', '.btn-add', function(e)
+    {
+        e.preventDefault();
+
+        var controlForm = $('.controls form:first'),
+            currentEntry = $('.btn-add').parents('.entry:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.entry:not(:last) .btn-add')
+            .removeClass('btn-add').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="glyphicon glyphicon-minus"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+		$(this).parents('.entry:first').remove();
+
+		e.preventDefault();
+		return false;
+	});
+});
+
 </script>
 
 <script>
