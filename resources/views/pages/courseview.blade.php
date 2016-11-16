@@ -199,38 +199,20 @@
                    <div class="form-header">Content </div>
 				   <div class="panel-body new-align">
 				   
-				   <div class="addlecture newpadding ">
-				   <label>Add lecture</label>
-				   <input class=" lecturepadding width100 mylabel btn-color " type="text" placeholder="Enter title of lecture"></div>
 				   
-				   <div class="lecturedescription newpadding ">
-				   <label>Add lecture decription</label>
-				   <textarea rows="8" class="width100 mylabel btn-color newpadding"></textarea>
-				   </div>
-				   
-				   <div class="addvideo newpadding ">
-				   <label>Add lecture video</label>
-				   <div class="form-group textdirection">
-    <input type="file"  name="img[]" class="file">
-    <div class="input-group col-xs-12">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
-      <input type="text" class="form-control input-lg" disabled placeholder="Upload video">
-      <span class="input-group-btn">
-        <button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
-      </span>
-    </div>
-  </div>
+				
   <div class="row textdirection">
     <div class="col-sm-6 col-md-12">
         <div class="panel-group ">
-            <div class="panel panel-default lecid">
+            <div class="panel panel-default lecid lecid1 login-button">
                 
                 <div class="lecturepadding  right-text custom-btn">
 
             <div class="controls"> 
                 <form role="form" autocomplete="off">
                     <div class="entry width100 input-group col-xs-3">
-                        <span  class="form-control " name="fields[]" type="text" placeholder="Type something" >lecture <span id="output">1</span>:</span>
+                        <span  class=" inner form-control " name="fields[]" type="text" placeholder="Type something" >lecture <span id="output">1</span>:<i class="icon fa fa-pencil" aria-hidden="true"></i>
+</span>
                     	<span class="input-group-btn">
                             <button class="btn btn-success btn-add" type="button">
                                 <span class="glyphicon glyphicon-plus"></span>
@@ -241,8 +223,8 @@
             
             </div>
     
-				 <button class="fa fa-plus btn btn-warning"> Add content</button>
-				 <a class="panel-default" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+				 <button class="fa fa-plus btn btn-warning contentbtn"> Add content</button>
+				 <a class="panel-default dd" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
                     <h4 class="panel-title glyphicon glyphicon-chevron-down"></h4>
 					</a>
 					<i class="fa fa-bars"></i>
@@ -251,7 +233,7 @@
                 </div>
 					
                 
-                <div id="collapseOne" class="panel-collapse collapse">
+                <div id="collapse" class="panel-collapse coll">
                     <div class="panel-body ">
 					
 								<button class="btn-lg btn-color fa fa-plus " type="button" data-toggle="collapse" data-parent="#accordion1" href="#collapsetwo"> Add description </button>
@@ -268,10 +250,26 @@
 						</div>
 					</div>
 				</div>
-				
-        </div>
-		<div class="second"></div>
+				<div class="text linkicon btn-color" style="display:none">
+			<a class="imgicon lecture-icons"><img src="/assets/pages/img/video.jpg" style="height:35px" ><span class="videobtn">Video</span></a>
+            <a class="imgicon lecture-icons"><img src="/assets/pages/img/article.jpg" style="height:35px" ><span class="articlebtn">Article</span></a>			
+						</div>
+	<div class="addvideo newpadding " style="display:none">
+		<label>Add lecture video</label>
+			<div class="form-group textdirection">
+				<input type="file"  name="img[]" class="file">
+					<div class="input-group col-xs-12">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+							<input type="text" class="form-control input-lg" disabled placeholder="Upload video">
+						<span class="input-group-btn">
+						<button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+						</span>
+					</div>
+			</div>
     </div>
+		</div>
+		<div class="second"></div>
+    
 	<div id="add" class="adding-button">
 	
 	<div id="add1" class="col-md-4"><button class=" width100 btn-lg btn-color fa fa-plus add1"> Add lecture</button></div>
@@ -284,14 +282,16 @@
 <div class="manage-fields-wrapper">
 <div id="form-item-title" class="non-labeled ">
 <div id="tooltip-reference-title" class="tooltip-reference form-field ">
-<input id="addlecid" class=" text-input ch-count-field ud-textinput textinput textInput form-control" data-max-length="80" data-purpose="lecture-title" data-show-counter="true" maxlength="80" name="title" placeholder="Enter a Title" value="" type="text">
+<input id="addlecid" class="lec text-input ch-count-field ud-textinput textinput textInput form-control" data-max-length="80" data-purpose="lecture-title" data-show-counter="true" maxlength="80" name="title" placeholder="Enter a Title"  type="text" required>
 
 </div>
 </div>
 </div>
 <div class="form-actions">
-<div class="submit-row">
-<input class=" btn custom-btn btn-addlec" name="submit" value="Add Lecture">
+<div  class="submit-row">
+
+<input type="button" class=" btn custom-btn btn-addlec" name="submit"  value="Add Lecture">
+
 <span>or </span>
 <a class="cancel-link yellow">Cancel</a>
 </div>
@@ -489,11 +489,34 @@ $('.cancel-link').click(function(){
     $('.add1').css('display','block');
 	 $('.addlecture').css('display','none');
 });
+$(document).on('click', '.dd', function(){    
+  $(this).parent().next().toggle();
+  });
+$(document).on('click', '.contentbtn', function(){
+	$(this).parent().next().next('.linkicon').toggle();
+});	
+$(document).on('click', '.videobtn', function(){
+	$(this).parents().next('.addvideo').css('display','block');
+	$('.linkicon').css('display','none');
+});
 $(document).on('click', '.btn-addlec', function(){
+ if ($("#addlecid").val() == "") {
+        return false;
+    }
+	else
+	{
 $( ".lecid:first" ).clone().appendTo( $( ".second" ) );
 $('#output').html(function(i, val) { return val*1+1 });
+$( ".inner:last" ).append($('.lec').val());
+$('.lecid1:first').css('display','none');	
+$('.lecid1:last').css('display','block');
+	}
 });
-
+$('.icon').click(function(){
+    
+	var $div=$('.inner'), isEditable=$div.is('.editable');
+    $('.inner').prop('contenteditable',!isEditable).toggleClass('editable')
+});
 </script>
 <script>
 $(function()

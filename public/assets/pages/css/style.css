@@ -690,3 +690,30 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
 .glyphicon {
     font-size: 20px;
 }
+.panel.panel-default.lecid.lecid1.login-button {
+    margin-top: 20px;
+}
+.imgicon {
+    margin: 10px;
+}
+.adding-button {
+    margin-top: 10px;
+}
+.lecture-icons {
+    background: #ececec none repeat scroll 0 0;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.45) inset;
+    display: inline-block;
+    height: 60px;
+    margin: 5px 15px 0;
+    overflow: hidden;
+    position: relative;
+    width: 70px;
+}
+.videobtn {
+    font-size: 15px;
+}
+.articlebtn
+{
+	font-size:15px;
+}
