@@ -4,6 +4,8 @@
 
     <link href="/assets/pages/css/style.css" rel="stylesheet">
 	<script src="/assets/pages/js/script.js"></script>
+	<link href="/assets/pages/css/bootstrap-editable.css" rel="stylesheet">
+    <script src="/assets/pages/js/bootstrap-editable.js"></script>
 
 
 @stop
@@ -214,10 +216,11 @@
                         <span  class=" inner form-control " name="fields[]" type="text" placeholder="Type something" >lecture <span id="output">1</span>:<i class="icon fa fa-pencil" aria-hidden="true"></i>
 </span>
                     	<span class="input-group-btn">
-                            <button class="btn btn-success btn-add" type="button">
+                            <button class="editbtn btn btn-success btn-add" type="button">
                                 <span class="glyphicon glyphicon-plus"></span>
                             </button>
                         </span>
+						<span class="saver"></span>
                     </div>
                 </form>
             
@@ -233,28 +236,26 @@
                 </div>
 					
                 
-                <div id="collapse" class="panel-collapse coll">
+                <div id="collapse" class="panel-collapse coll ">
                     <div class="panel-body ">
-					
-								<button class="btn-lg btn-color fa fa-plus " type="button" data-toggle="collapse" data-parent="#accordion1" href="#collapsetwo"> Add description </button>
-								<button class="  btn-lg btn-color fa fa-plus " type="button"> Add resources</button>
-						<div id="collapsetwo" class="panel-collapse collapse">
-							<div  class="text-direction1 coursecoupons">
+							<!--	<button class="  btn-lg btn-color fa fa-plus videobtn" type="button"> Add video </button>
+								<button class="btn-lg btn-color fa fa-plus articlebtn"type="button"> Add description </button>-->
+								
+								
+						<div  class="panel-collapse  addarticle">
+						<label class="coursecoupons">Add video title</label>
+						<div class="text-direction1 ">
+						<input type="input"><br>
+						</div>
+						<label class="coursecoupons">Add description</label>
+							<div  class="text-direction1 ">
 
 
-								<div class="add-describe">
-									<textarea></textarea>
-									<button type="button" class="btn-lg btn-success section-btn coursecoupons " >Save</button>
+								<div class="add-describe adding-button">
+									<textarea class="adding-button textareasave" rows="6"></textarea>
+									
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="text linkicon btn-color" style="display:none">
-			<a class="imgicon lecture-icons"><img src="/assets/pages/img/video.jpg" style="height:35px" ><span class="videobtn">Video</span></a>
-            <a class="imgicon lecture-icons"><img src="/assets/pages/img/article.jpg" style="height:35px" ><span class="articlebtn">Article</span></a>			
-						</div>
-	<div class="addvideo newpadding " style="display:none">
+							<div class="addvideo newpadding coursecoupons " >
 		<label>Add lecture video</label>
 			<div class="form-group textdirection">
 				<input type="file"  name="img[]" class="file">
@@ -267,6 +268,16 @@
 					</div>
 			</div>
     </div>
+	<div class= "action ">
+	<button type="button" class="btn-lg btn-success section-btn textsave" >Save</button>
+	<button type="button" class="btn-lg btn-warning section-btn textsave" >Cancel</button>
+	</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+	
 		</div>
 		<div class="second"></div>
     
@@ -301,59 +312,8 @@
 </div>
 
 	</div>
-	<div id="add2" class="col-md-4"><button class=" width100 btn-lg btn-color fa fa-plus add1"> Add quiz</button></div>
-	<div id="addlec" class="addlecture" style="display:none">
-	<div class="content ui-state-default">
-<span class="cfi-item-type">New quiz:</span>
-<span class="cfi-item-title fx">
-<form class="ng-pristine ng-valid" method="post">
-
-<div class="manage-fields-wrapper">
-<div id="form-item-title" class="non-labeled ">
-<div id="tooltip-reference-title" class="tooltip-reference form-field ">
-<input id="id_title" class=" text-input ch-count-field ud-textinput textinput textInput form-control" data-max-length="80" data-purpose="lecture-title" data-show-counter="true" maxlength="80" name="title" placeholder="Enter a Title" value="" type="text">
-
-</div>
-</div>
-</div>
-<div class="form-actions">
-<div class="submit-row">
-<input id="submit-id-submit" class=" btn custom-btn" name="submit" value="Add quiz" data-purpose="submit-lecture" type="submit">
-<span>or </span>
-<a class="cancel-link yellow">Cancel</a>
-</div>
-</div>
-</form>
-</span>
-</div>
-	</div>
-	<div id="add3" class="col-md-4"><button class=" width100 btn-lg btn-color fa fa-plus add1"> Add coding exercise</button></div>
-	<div id="addlec" class="addlecture" style="display:none">
-	<div class="content ui-state-default">
-<span class="cfi-item-type">New Coding Exercise:</span>
-<span class="cfi-item-title fx">
-<form class="ng-pristine ng-valid" method="post">
-
-<div class="manage-fields-wrapper">
-<div id="form-item-title" class="non-labeled ">
-<div id="tooltip-reference-title" class="tooltip-reference form-field ">
-<input id="id_title" class=" text-input ch-count-field ud-textinput textinput textInput form-control" data-max-length="80" data-purpose="lecture-title" data-show-counter="true" maxlength="80" name="title" placeholder="Enter a Title" value="" type="text">
-
-</div>
-</div>
-</div>
-<div class="form-actions">
-<div class="submit-row">
-<input id="submit-id-submit" class=" btn custom-btn" name="submit" value="Add coding exercise" data-purpose="submit-lecture" type="submit">
-<span>or </span>
-<a class="cancel-link yellow">Cancel</a>
-</div>
-</div>
-</form>
-</span>
-</div>
-	</div>
-	</div>
+	
+	
  
 
 					</div>				   
@@ -489,16 +449,20 @@ $('.cancel-link').click(function(){
     $('.add1').css('display','block');
 	 $('.addlecture').css('display','none');
 });
-$(document).on('click', '.dd', function(){    
-  $(this).parent().next().toggle();
-  });
+
 $(document).on('click', '.contentbtn', function(){
-	$(this).parent().next().next('.linkicon').toggle();
+	 $(this).parent().next('.coll').toggle();
 });	
-$(document).on('click', '.videobtn', function(){
-	$(this).parents().next('.addvideo').css('display','block');
-	$('.linkicon').css('display','none');
-});
+//$(document).on('click', '.videobtn', function(){
+//$(this).parents().next('.addvideo').toggle();
+//$(this).next().toggle();
+//});
+//$(document).on('click', '.articlebtn', function(){
+//$(this).next().toggle();
+//});
+//$(document).on('click', '.textsave', function(){
+//$( ".saver" ).append($('.textareasave').val());	
+//});
 $(document).on('click', '.btn-addlec', function(){
  if ($("#addlecid").val() == "") {
         return false;
@@ -513,9 +477,9 @@ $('.lecid1:last').css('display','block');
 	}
 });
 $('.icon').click(function(){
-    
-	var $div=$('.inner'), isEditable=$div.is('.editable');
-    $('.inner').prop('contenteditable',!isEditable).toggleClass('editable')
+       
+        $('.inner').editable();
+  
 });
 </script>
 <script>

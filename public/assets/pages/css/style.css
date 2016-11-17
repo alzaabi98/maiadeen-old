@@ -710,10 +710,8 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
     position: relative;
     width: 70px;
 }
-.videobtn {
-    font-size: 15px;
-}
-.articlebtn
-{
-	font-size:15px;
+
+
+.btn-lg.btn-color.fa.fa-plus {
+    width: 240px;
 }
