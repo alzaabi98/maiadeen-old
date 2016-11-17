@@ -208,31 +208,29 @@
         <div class="panel-group ">
             <div class="panel panel-default lecid lecid1 login-button">
                 
-                <div class="lecturepadding  right-text custom-btn">
+                <div class="lecturepadding  right-text ">
 
-            <div class="controls"> 
-                <form role="form" autocomplete="off">
-                    <div class="entry width100 input-group col-xs-3">
-                        <span  class=" inner form-control " name="fields[]" type="text" placeholder="Type something" >lecture <span id="output">1</span>:<i class="icon fa fa-pencil" aria-hidden="true"></i>
-</span>
-                    	<span class="input-group-btn">
-                            <button class="editbtn btn btn-success btn-add" type="button">
-                                <span class="glyphicon glyphicon-plus"></span>
-                            </button>
-                        </span>
-						<span class="saver"></span>
-                    </div>
-                </form>
             
-            </div>
-    
+                    <div class="entry  input-group col-md-4 ch-count-field">
+					<span  class=" inner form-control coursecoupons" name="fields[]" type="text" placeholder="Type something" >Lecture <span id="output">1</span>:</span>
+					 
+					 <span  class=" inner1 form-control coursecoupons  " name="fields[]" type="text" placeholder="Type something" >Section <span id="output1">1</span>:</span>
+					
+                        
+                    	
+						
+						
+					
+                    </div>
+                
+    <!--
 				 <button class="fa fa-plus btn btn-warning contentbtn"> Add content</button>
 				 <a class="panel-default dd" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
                     <h4 class="panel-title glyphicon glyphicon-chevron-down"></h4>
 					</a>
 					<i class="fa fa-bars"></i>
                     
-                    
+                    -->
                 </div>
 					
                 
@@ -268,9 +266,9 @@
 					</div>
 			</div>
     </div>
-	<div class= "action ">
-	<button type="button" class="btn-lg btn-success section-btn textsave" >Save</button>
-	<button type="button" class="btn-lg btn-warning section-btn textsave" >Cancel</button>
+	<div class= "section-btn ">
+	<button type="button" class="btn-lg btn-success  textsave" >Save</button>
+	<button type="button" class="btn-lg btn-warning  textsave" >Cancel</button>
 	</div>
 							</div>
 						</div>
@@ -279,45 +277,76 @@
 				
 	
 		</div>
-		<div class="second"></div>
+							<div class="second"></div>
     
-	<div id="add" class="adding-button">
-	
-	<div id="add1" class="col-md-4"><button class=" width100 btn-lg btn-color fa fa-plus add1"> Add lecture</button></div>
-	<div id="addlec" class="addlecture" style="display:none">
-	<div class="content ui-state-default">
-<span class="cfi-item-type">New Lecture:</span>
-<span class="cfi-item-title fx">
-<form class="ng-pristine ng-valid" method="post">
+				<div id="add" class="adding-button ">
+					<div id="add1"><button class="width100  btn-lg btn-color  add1">Add lecture</button></div>
+					<div id="add1"><button class="btn-color btn-lg width100 coursecoupons add2 ">Add section</button></div>
+					<div id="addlec" class="addlecture coursecoupons" style="display:none">
+							<div class="content ui-state-default">
+								<span class="cfi-item-type">New Lecture:</span>
+								<span class="cfi-item-title fx">
+									<form class="ng-pristine ng-valid" method="post">
 
-<div class="manage-fields-wrapper">
-<div id="form-item-title" class="non-labeled ">
-<div id="tooltip-reference-title" class="tooltip-reference form-field ">
-<input id="addlecid" class="lec text-input ch-count-field ud-textinput textinput textInput form-control" data-max-length="80" data-purpose="lecture-title" data-show-counter="true" maxlength="80" name="title" placeholder="Enter a Title"  type="text" required>
+											<div class="manage-fields-wrapper">
+												<div id="form-item-title" class="non-labeled ">
+													<div id="tooltip-reference-title" class="tooltip-reference form-field ">
+														<input id="addlecid" class="lec text-input ch-count-field ud-textinput textinput textInput form-control" data-max-length="80" data-purpose="lecture-title" data-show-counter="true" maxlength="80" name="title" placeholder="Enter a Title"  type="text" >
 
-</div>
-</div>
-</div>
-<div class="form-actions">
-<div  class="submit-row">
+													</div>
+												</div>
+											</div>
+										<div class="form-actions">
+											<div  class="submit-row">
 
-<input type="button" class=" btn custom-btn btn-addlec" name="submit"  value="Add Lecture">
+												<input type="button" class=" btn custom-btn btn-addlec" name="submit"  value="Add section">
 
-<span>or </span>
-<a class="cancel-link yellow">Cancel</a>
-</div>
-</div>
-</form>
-</span>
+													<span>or </span>
+													<a class="cancel-link yellow">Cancel</a>
+											</div>
+										</div>
+									</form>
+								</span>
+							</div>
+
+						</div>
+
+<div class="sectionadd" style="display:none">
+	<span class="cfi-item-type imgicon">New Section:</span>
+		
+				
+				<div class="manage-fields-wrapper imgicon">
+					<div id="form-item-title" class="non-labeled ">
+						<div id="tooltip-reference-title" class="tooltip-reference form-field ">
+							<input id="id_title" class="form-control sectiontitle" data-max-length="80" data-purpose="chapter-title" data-show-counter="true" maxlength="80" name="title" placeholder="Enter a Title" value="" type="text">
+							
+						</div>
+					</div>
+						<div id="form-item-description" class="labeled ">
+							<label class="">What will students be able to do at the end of this section?</label>
+							<div id="tooltip-reference-description" class="tooltip-reference form-field ">
+								<input id="id_description" class="  form-control" data-max-length="200" data-purpose="chapter-objective" data-show-counter="true" maxlength="200" name="description" placeholder="Enter a Learning Objective" value="" type="text">
+								
+							</div>
+						</div>
+				</div>
+					<div class="form-actions">
+						<div class="submit-row imgicon">
+							<input class=" btn custom-btn btn-addsec" name="submit" value="Add section" type="button">
+							<span>or </span>
+							<a class="cancel-link2 yellow">Cancel</a>
+						</div>
+					</div>
+			
 </div>
 
-	</div>
-	
+
 	
  
 
 					</div>				   
-				   </div>
+				</div>
+				
 					  </div>
                     </center>
                 </div>
@@ -442,7 +471,15 @@ Please complete our premium instructor application found here in order to update
 $('.add1').click(function(){
     //$(this).parent().find('#add').css('display','none');
     $(".add1").css('display','none');
-	 $(this).parent().next(".addlecture").css('display','block');
+	 $(this).parent().next().next().css('display','block');
+});
+$('.add2').click(function(){
+	$('.add2').css('display','none');
+	$('.sectionadd').css('display','block');
+});
+$('.cancel-link2').click(function(){
+	$('.add2').css('display','block');
+	$('.sectionadd').css('display','none');
 });
 $('.cancel-link').click(function(){
     //$(this).parent().find('#add').css('display','none');
@@ -469,18 +506,29 @@ $(document).on('click', '.btn-addlec', function(){
     }
 	else
 	{
-$( ".lecid:first" ).clone().appendTo( $( ".second" ) );
+$( ".inner:first" ).clone().appendTo( $( ".lecid" ) );
 $('#output').html(function(i, val) { return val*1+1 });
 $( ".inner:last" ).append($('.lec').val());
-$('.lecid1:first').css('display','none');	
-$('.lecid1:last').css('display','block');
+$('.inner:first').css('display','none');	
+$('.inner:last').css('display','block');
 	}
 });
-$('.icon').click(function(){
-       
-        $('.inner').editable();
-  
+$(document).on('click', '.btn-addsec', function(){
+ if ($(".sectiontitle").val() == "") {
+        return false;
+    }
+	else
+	{
+		
+$( ".inner1:first" ).clone().appendTo( $( ".lecid" ) );
+$('#output1').html(function(i, val) { return val*1+1 });
+$( ".inner1:last" ).append($('.sectiontitle').val());
+$('.inner1:first').css('display','none');	
+$('.inner1:last').css('display','block');
+
+	}
 });
+
 </script>
 <script>
 $(function()
