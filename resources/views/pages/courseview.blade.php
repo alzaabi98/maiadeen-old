@@ -236,7 +236,7 @@
                 </div>
 					
                 
-                <div id="collapse" class="panel-collapse coll ">
+                <div id="collapse" class="panel-collapse coll " style="display:none">
                     <div class="panel-body ">
 							<!--	<button class="  btn-lg btn-color fa fa-plus videobtn" type="button"> Add video </button>
 								<button class="btn-lg btn-color fa fa-plus articlebtn"type="button"> Add description </button>-->
