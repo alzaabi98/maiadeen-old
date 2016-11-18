@@ -202,7 +202,10 @@
 				   <div class="panel-body new-align">
 				   
 				   
-				
+		
+				<div class="panel panel-default lecid2  login-button">
+				</div>
+                      		
   <div class="row textdirection">
     <div class="col-sm-6 col-md-12">
         <div class="panel-group ">
@@ -211,12 +214,52 @@
                 <div class="lecturepadding  right-text ">
 
             
-                    <div class="entry  input-group col-md-4 ch-count-field">
-					<span  class=" inner form-control coursecoupons" name="fields[]" type="text" placeholder="Type something" >Lecture <span id="output">1</span>:</span>
+                    <div class="entry width100  input-group  ch-count-field">
+					<div  class=" inner1 form-control text p30 coursecoupons custom-btn " name="fields[]" type="text" placeholder="Type something" >Section <span id="output1">1</span>:</div>
+					<div  class=" inner form-control coursecoupons" name="fields[]" type="text" placeholder="Type something" >Lecture <span id="output">1</span>:<button type="button" class="f18 section-btn custom-btn fa fa-angle-down addcontentbtn"></button></div>
+					 <div id="collapse" class="panel-collapse coll " style="display:none">
+                    <div class="panel-body ">
+							<!--	<button class="  btn-lg btn-color fa fa-plus videobtn" type="button"> Add video </button>
+								<button class="btn-lg btn-color fa fa-plus articlebtn"type="button"> Add description </button>-->
+								
+								
+						<!--<div  class="panel-collapse  addarticle">
+							<label class="coursecoupons">Add video title</label>
+							<div class="text-direction1 ">
+								<input type="input"><br>
+							</div> -->
+								<label class="coursecoupons">Add description</label>
+								<div class="text-direction1 ">
+
+
+									<div class="add-describe adding-button">
+										<textarea class="adding-button textareasave" rows="6"></textarea>
+										
+									</div>
+									<div class="addvideo newpadding coursecoupons " >
+										<label>Add lecture video</label>
+										<div class="form-group textdirection">
+											<input type="file"  name="img[]" class="file">
+											<div class="input-group col-xs-12">
+												<span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+												<input type="text" class="form-control input-lg" disabled placeholder="Upload video">
+												<span class="input-group-btn">
+												<button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+												</span>
+											</div>
+										</div>
+									</div>
+										<div class= "section-btn ">
+										<button type="button" class="btn-lg btn-success  textsave" >Save</button>
+										<button type="button" class="btn-lg btn-warning  textsave" >Cancel</button>
+										</div>
+								</div>
+						</div>
+					</div>
+				</div>
 					 
-					 <span  class=" inner1 form-control coursecoupons  " name="fields[]" type="text" placeholder="Type something" >Section <span id="output1">1</span>:</span>
 					
-                        
+                     					 
                     	
 						
 						
@@ -234,50 +277,12 @@
                 </div>
 					
                 
-                <div id="collapse" class="panel-collapse coll " style="display:none">
-                    <div class="panel-body ">
-							<!--	<button class="  btn-lg btn-color fa fa-plus videobtn" type="button"> Add video </button>
-								<button class="btn-lg btn-color fa fa-plus articlebtn"type="button"> Add description </button>-->
-								
-								
-						<div  class="panel-collapse  addarticle">
-						<label class="coursecoupons">Add video title</label>
-						<div class="text-direction1 ">
-						<input type="input"><br>
-						</div>
-						<label class="coursecoupons">Add description</label>
-							<div  class="text-direction1 ">
-
-
-								<div class="add-describe adding-button">
-									<textarea class="adding-button textareasave" rows="6"></textarea>
-									
-								</div>
-							<div class="addvideo newpadding coursecoupons " >
-		<label>Add lecture video</label>
-			<div class="form-group textdirection">
-				<input type="file"  name="img[]" class="file">
-					<div class="input-group col-xs-12">
-						<span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
-							<input type="text" class="form-control input-lg" disabled placeholder="Upload video">
-						<span class="input-group-btn">
-						<button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
-						</span>
-					</div>
-			</div>
-    </div>
-	<div class= "section-btn ">
-	<button type="button" class="btn-lg btn-success  textsave" >Save</button>
-	<button type="button" class="btn-lg btn-warning  textsave" >Cancel</button>
-	</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                
 				
 	
 		</div>
-							<div class="second"></div>
+							
+							
     
 				<div id="add" class="adding-button ">
 					<div id="add1"><button class="width100  btn-lg btn-color  add1">Add lecture</button></div>
@@ -299,7 +304,7 @@
 										<div class="form-actions">
 											<div  class="submit-row">
 
-												<input type="button" class=" btn custom-btn btn-addlec" name="submit"  value="Add section">
+												<input type="button" class=" btn custom-btn btn-addlec" name="submit"  value="Add lecture">
 
 													<span>or </span>
 													<a class="cancel-link yellow">Cancel</a>
@@ -486,9 +491,9 @@ $('.cancel-link').click(function(){
     $('.add1').css('display','block');
 	 $('.addlecture').css('display','none');
 });
-
-$(document).on('click', '.contentbtn', function(){
-	 $(this).parent().next('.coll').toggle();
+    
+$(document).on('click', '.addcontentbtn', function(){
+	 $(this).parents().next('.coll').toggle();
 });	
 //$(document).on('click', '.videobtn', function(){
 //$(this).parents().next('.addvideo').toggle();
@@ -500,10 +505,14 @@ $(document).on('click', '.contentbtn', function(){
 //$(document).on('click', '.textsave', function(){
 //$( ".saver" ).append($('.textareasave').val());	
 //});
+
 $(document).on('click', '.btn-addlec', function(){
- if ($("#addlecid").val() == "") {
-        return false;
-    }
+ if ($("#addlecid").val() == ""){
+	 //if ( $("#collapse").css('display') == 'block'){
+		return false;
+	 }
+   
+    
 	else
 	{
 $( ".inner:first" ).clone().appendTo( $( ".lecid" ) );
@@ -511,20 +520,26 @@ $('#output').html(function(i, val) { return val*1+1 });
 $( ".inner:last" ).append($('.lec').val());
 $('.inner:first').css('display','none');	
 $('.inner:last').css('display','block');
+$( ".coll" ).clone().appendTo( $( ".lecid" ) );
+
+
 	}
 });
+
 $(document).on('click', '.btn-addsec', function(){
  if ($(".sectiontitle").val() == "") {
         return false;
     }
 	else
 	{
-		
+$( ".lecid2:first" ).clone().appendTo( $( ".lecid " ) );
 $( ".inner1:first" ).clone().appendTo( $( ".lecid" ) );
 $('#output1').html(function(i, val) { return val*1+1 });
 $( ".inner1:last" ).append($('.sectiontitle').val());
-$('.inner1:first').css('display','none');	
+$('.inner1:first').css('display','none');
+$('.inner:first').css('display','none');	
 $('.inner1:last').css('display','block');
+$(".lecid").append("<br>");
 
 	}
 });
