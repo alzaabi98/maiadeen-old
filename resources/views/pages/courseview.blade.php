@@ -216,7 +216,7 @@
             
                     <div class="entry width100  input-group  ch-count-field">
 					<div  class=" inner1 form-control text p30 coursecoupons custom-btn " name="fields[]" type="text" placeholder="Type something" >Section <span id="output1">1</span>:</div>
-					<div  class=" inner form-control coursecoupons" name="fields[]" type="text" placeholder="Type something" >Lecture <span id="output">1</span>:<button type="button" class="f18 section-btn custom-btn fa fa-angle-down addcontentbtn"></button></div>
+					<div  class=" inner form-control coursecoupons " name="fields[]" type="text" placeholder="Type something" >Lecture <span id="output">1</span>:<button type="button" class="f18 section-btn custom-btn fa fa-angle-down addcontentbtn " disabled=""></button></div>
 					 <div id="collapse" class="panel-collapse coll " style="display:none">
                     <div class="panel-body ">
 							<!--	<button class="  btn-lg btn-color fa fa-plus videobtn" type="button"> Add video </button>
@@ -473,6 +473,7 @@ Please complete our premium instructor application found here in order to update
 
 @section('javascript')
 <script>
+
 $('.add1').click(function(){
     //$(this).parent().find('#add').css('display','none');
     $(".add1").css('display','none');
@@ -520,8 +521,8 @@ $('#output').html(function(i, val) { return val*1+1 });
 $( ".inner:last" ).append($('.lec').val());
 $('.inner:first').css('display','none');	
 $('.inner:last').css('display','block');
-$( ".coll" ).clone().appendTo( $( ".lecid" ) );
-
+$( ".coll:first" ).clone().appendTo( $( ".lecid" ) );
+$('.addcontentbtn').removeAttr('disabled');
 
 	}
 });
