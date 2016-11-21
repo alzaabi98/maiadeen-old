@@ -6,6 +6,7 @@
 	<script src="/assets/pages/js/script.js"></script>
 	<link href="/assets/pages/css/bootstrap-editable.css" rel="stylesheet">
     <script src="/assets/pages/js/bootstrap-editable.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 
 
 @stop
@@ -203,9 +204,9 @@
 				   
 				   
 		
-				<div class="panel panel-default lecid2  login-button">
+				<div class=" lecid2  login-button">
 				</div>
-                      		
+                  <p>Add section first</p>    		
   <div class="row textdirection">
     <div class="col-sm-6 col-md-12">
         <div class="panel-group ">
@@ -213,10 +214,10 @@
                 
                 <div class="lecturepadding  right-text ">
 
-            
+					
                     <div class="entry width100  input-group  ch-count-field">
 					<div  class=" inner1 form-control text p30 coursecoupons custom-btn " name="fields[]" type="text" placeholder="Type something" >Section <span id="output1">1</span>:</div>
-					<div  class=" inner form-control coursecoupons " name="fields[]" type="text" placeholder="Type something" >Lecture <span id="output">1</span>:<button type="button" class="f18 section-btn custom-btn fa fa-angle-down addcontentbtn " disabled=""></button></div>
+					<div class=" inner form-control coursecoupons " name="fields[]" type="text" placeholder="Type something" >Lecture <span id="output">1</span>:<span class="lecedit fa fa-pencil"><span class="abc"></span> </span><button type="button" class="f18 section-btn custom-btn fa fa-angle-down addcontentbtn " disabled=""></button></div>
 					 <div id="collapse" class="panel-collapse coll " style="display:none">
                     <div class="panel-body ">
 							<!--	<button class="  btn-lg btn-color fa fa-plus videobtn" type="button"> Add video </button>
@@ -285,7 +286,7 @@
 							
     
 				<div id="add" class="adding-button ">
-					<div id="add1"><button class="width100  btn-lg btn-color  add1">Add lecture</button></div>
+					<div id="add1"><button class="width100  btn-lg btn-color  add1" style="display:none">Add lecture</button></div>
 					<div id="add1"><button class="btn-color btn-lg width100 coursecoupons add2 ">Add section</button></div>
 					<div id="addlec" class="addlecture coursecoupons" style="display:none">
 							<div class="content ui-state-default">
@@ -296,7 +297,7 @@
 											<div class="manage-fields-wrapper">
 												<div id="form-item-title" class="non-labeled ">
 													<div id="tooltip-reference-title" class="tooltip-reference form-field ">
-														<input id="addlecid" class="lec text-input ch-count-field ud-textinput textinput textInput form-control" data-max-length="80" data-purpose="lecture-title" data-show-counter="true" maxlength="80" name="title" placeholder="Enter a Title"  type="text" >
+														<input id="addlecid" class="lec text-input ch-count-field ud-textinput textinput textInput form-control"  name="title" placeholder="Enter a Title"  type="text" >
 
 													</div>
 												</div>
@@ -507,22 +508,41 @@ $(document).on('click', '.addcontentbtn', function(){
 //$( ".saver" ).append($('.textareasave').val());	
 //});
 
+  
+ 
+$(document).on('click','.lecedit',function(){
+	
+	
+
+	$('.abc').editable();
+});
+$(document).ready(function(){
+	$('.inner').css('display','none');
+	$('.inner1').css('display','none');
+	$('.lecid2').css('display','none');
+	$('.lecturepadding').css('display','none');
+
+});
+
 $(document).on('click', '.btn-addlec', function(){
  if ($("#addlecid").val() == ""){
-	 //if ( $("#collapse").css('display') == 'block'){
+	
 		return false;
 	 }
    
     
 	else
 	{
-$( ".inner:first" ).clone().appendTo( $( ".lecid" ) );
+
+$( ".inner:first" ).clone().appendTo( $( ".lecid2" ) );
 $('#output').html(function(i, val) { return val*1+1 });
-$( ".inner:last" ).append($('.lec').val());
+$( ".abc:last" ).append($('.lec').val());
 $('.inner:first').css('display','none');	
 $('.inner:last').css('display','block');
-$( ".coll:first" ).clone().appendTo( $( ".lecid" ) );
+$( ".coll:first" ).clone().appendTo( $( ".lecid2" ) );
 $('.addcontentbtn').removeAttr('disabled');
+
+
 
 	}
 });
@@ -534,13 +554,16 @@ $(document).on('click', '.btn-addsec', function(){
 	else
 	{
 $( ".lecid2:first" ).clone().appendTo( $( ".lecid " ) );
-$( ".inner1:first" ).clone().appendTo( $( ".lecid" ) );
+$( ".inner1:first" ).clone().appendTo( $( ".lecid2" ) );
 $('#output1').html(function(i, val) { return val*1+1 });
 $( ".inner1:last" ).append($('.sectiontitle').val());
 $('.inner1:first').css('display','none');
 $('.inner:first').css('display','none');	
 $('.inner1:last').css('display','block');
 $(".lecid").append("<br>");
+$('.lecid2').css('display','block');
+$('.lecturepadding').css('display','block');
+$('.add1').css('display','block');
 
 	}
 });
