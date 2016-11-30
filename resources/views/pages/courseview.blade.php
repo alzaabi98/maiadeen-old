@@ -204,9 +204,9 @@
 				   
 				   
 		
-				<div class=" lecid2  login-button">
-				</div>
-                  <p>Add section first</p>    		
+				<!-- <div class=" lecid2  login-button">
+				</div> -->
+        		
   <div class="row textdirection">
     <div class="col-sm-6 col-md-12">
         <div class="panel-group ">
@@ -215,48 +215,9 @@
                 <div class="lecturepadding  right-text ">
 
 					
-                    <div class="entry width100  input-group  ch-count-field">
-					<div  class=" inner1 form-control text p30 coursecoupons custom-btn " name="fields[]" type="text" placeholder="Type something" >Section <span id="output1">1</span>:</div>
-					<div class=" inner form-control coursecoupons " name="fields[]" type="text" placeholder="Type something" >Lecture <span id="output">1</span>:<span class="lecedit fa fa-pencil"><span class="abc"></span> </span><button type="button" class="f18 section-btn custom-btn fa fa-angle-down addcontentbtn " disabled=""></button></div>
-					 <div id="collapse" class="panel-collapse coll " style="display:none">
-                    <div class="panel-body ">
-							<!--	<button class="  btn-lg btn-color fa fa-plus videobtn" type="button"> Add video </button>
-								<button class="btn-lg btn-color fa fa-plus articlebtn"type="button"> Add description </button>-->
-								
-								
-						<!--<div  class="panel-collapse  addarticle">
-							<label class="coursecoupons">Add video title</label>
-							<div class="text-direction1 ">
-								<input type="input"><br>
-							</div> -->
-								<label class="coursecoupons">Add description</label>
-								<div class="text-direction1 ">
-
-
-									<div class="add-describe adding-button">
-										<textarea class="adding-button textareasave" rows="6"></textarea>
-										
-									</div>
-									<div class="addvideo newpadding coursecoupons " >
-										<label>Add lecture video</label>
-										<div class="form-group textdirection">
-											<input type="file"  name="img[]" class="file">
-											<div class="input-group col-xs-12">
-												<span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
-												<input type="text" class="form-control input-lg" disabled placeholder="Upload video">
-												<span class="input-group-btn">
-												<button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
-												</span>
-											</div>
-										</div>
-									</div>
-										<div class= "section-btn ">
-										<button type="button" class="btn-lg btn-success  textsave" >Save</button>
-										<button type="button" class="btn-lg btn-warning  textsave" >Cancel</button>
-										</div>
-								</div>
-						</div>
-					</div>
+                <div class="entry width100  input-group  ch-count-field">
+					
+					 Add first section
 				</div>
 					 
 					
@@ -267,14 +228,7 @@
 					
                     </div>
                 
-    <!--
-				 <button class="fa fa-plus btn btn-warning contentbtn"> Add content</button>
-				 <a class="panel-default dd" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
-                    <h4 class="panel-title glyphicon glyphicon-chevron-down"></h4>
-					</a>
-					<i class="fa fa-bars"></i>
-                    
-                    -->
+
                 </div>
 					
                 
@@ -286,12 +240,16 @@
 							
     
 				<div id="add" class="adding-button ">
-					<div id="add1"><button class="width100  btn-lg btn-color  add1" style="display:none">Add lecture</button></div>
-					<div id="add1"><button class="btn-color btn-lg width100 coursecoupons add2 ">Add section</button></div>
+					<div id="add1"><button class="width100  btn-lg btn-color  add1" style="display:none">
+					<i class="fa fa-plus" aria-hidden="true" ></i> Add lecture</button></div>
+					<div id="add1">
+						<button class="btn-color btn-lg width100 coursecoupons add2">
+						<i class="fa fa-plus" aria-hidden="true" ></i> Add section</button>
+					</div>
 					<div id="addlec" class="addlecture coursecoupons" style="display:none">
 							<div class="content ui-state-default">
-								<span class="cfi-item-type">New Lecture:</span>
-								<span class="cfi-item-title fx">
+								<div class="">New Lecture:</div>
+								<div class="fx">
 									<form class="ng-pristine ng-valid" method="post">
 
 											<div class="manage-fields-wrapper">
@@ -312,7 +270,7 @@
 											</div>
 										</div>
 									</form>
-								</span>
+								</div>
 							</div>
 
 						</div>
@@ -495,7 +453,7 @@ $('.cancel-link').click(function(){
 });
     
 $(document).on('click', '.addcontentbtn', function(){
-	 $(this).parents().next('.coll').toggle();
+	 $(this).next('.coll').toggle();
 });	
 //$(document).on('click', '.videobtn', function(){
 //$(this).parents().next('.addvideo').toggle();
@@ -515,36 +473,34 @@ $(document).on('click','.lecedit',function(){
 
 	$('.abc').editable();
 });
-$(document).ready(function(){
-	$('.inner').css('display','none');
-	$('.inner1').css('display','none');
-	$('.lecid2').css('display','none');
-	$('.lecturepadding').css('display','none');
+// $(document).ready(function(){
+// 	$('.inner').css('display','none');
+// 	$('.inner1').css('display','none');
+// 	$('.lecid2').css('display','none');
+// 	$('.lecturepadding').css('display','none');
 
+// });
+
+
+
+$(document).on('click', '.btn-addlec', function() {
+    var x = $('<div class=" inner form-control coursecoupons ">Lecture <span class="output">1</span>:<span class="lecedit fa fa-pencil"><span class="abc"></span> </span><button type="button" class="f18 section-btn custom-btn fa fa-angle-down addcontentbtn "></button><div id="collapse" class="panel-collapse coll " style="display:none"><div class="panel-body "><label class="coursecoupons">Add description</label><div class="text-direction1 "><div class="add-describe adding-button"><textarea class="adding-button textareasave" rows="6"></textarea></div><div class="addvideo newpadding coursecoupons " ><label>Add lecture video</label><div class="form-group textdirection"><input type="file"  name="img[]" class="file"><div class="input-group col-xs-12"><span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span><input type="text" class="form-control input-lg" disabled placeholder="Upload video"><span class="input-group-btn"><button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button></span></div></div></div><div class= "section-btn "><button type="button" class="btn-lg btn-success  textsave" >Save</button><button type="button" class="btn-lg btn-warning  textsave" >Cancel</button></div></div></div></div></div>');
+if($(".inner1:last").next().is('.inner')) {
+	var a = $('.output:last').html();
+    x.insertAfter('.inner:last');
+    $('.output:last').html(parseInt(a) + 1);
+}
+else {    
+    x.appendTo('.lecid2:last');
+}  
+
+ $( ".abc:last" ).append($('.lec').val());
 });
 
-$(document).on('click', '.btn-addlec', function(){
- if ($("#addlecid").val() == ""){
-	
-		return false;
-	 }
-   
-    
-	else
-	{
 
-$( ".inner:first" ).clone().appendTo( $( ".lecid2" ) );
-$('#output').html(function(i, val) { return val*1+1 });
-$( ".abc:last" ).append($('.lec').val());
-$('.inner:first').css('display','none');	
-$('.inner:last').css('display','block');
-$( ".coll:first" ).clone().appendTo( $( ".lecid2" ) );
-$('.addcontentbtn').removeAttr('disabled');
-
-
-
-	}
-});
+$("span").sortable({
+    connectWith: ".con"
+}).disableSelection();
 
 $(document).on('click', '.btn-addsec', function(){
  if ($(".sectiontitle").val() == "") {
@@ -552,12 +508,21 @@ $(document).on('click', '.btn-addsec', function(){
     }
 	else
 	{
-$( ".lecid2:first" ).clone().appendTo( $( ".lecid " ) );
-$( ".inner1:first" ).clone().appendTo( $( ".lecid2" ) );
-$('#output1').html(function(i, val) { return val*1+1 });
-$( ".inner1:last" ).append($('.sectiontitle').val());
-$('.inner1:first').css('display','none');
-$('.inner:first').css('display','none');	
+
+var x = $('<div class=" lecid2 con login-button"></div>');
+x.appendTo( $( ".lecid" ) );
+var x1 = $('<div  class="inner1 form-control text p30 coursecoupons custom-btn ">Section <span class="output1">1</span>:</div>');
+x1.appendTo( $( ".lecid2:last" ) );
+
+if($('.lecturepadding').css('display') == 'none') {
+var sectionNumber = $('.output1:last').html();
+alert(sectionNumber);
+    $('.output1:last').html(parseInt(a) + 1);
+}
+else {    
+	$('.output1:last').html(1);
+}
+$( ".inner1:last" ).append($('.sectiontitle').val());	
 $('.inner1:last').css('display','block');
 $(".lecid").append("<br>");
 $('.lecid2').css('display','block');
@@ -565,6 +530,10 @@ $('.lecturepadding').css('display','block');
 $('.add1').css('display','block');
 
 	}
+$(x).sortable({
+    connectWith: ".con"
+}).disableSelection();
+$('.lecturepadding').css('display','none');
 });
 
 </script>

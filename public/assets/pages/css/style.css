@@ -712,16 +712,15 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
     width: 70px;
 }
 
-
+.inner.form-control {
+  height: auto;
+}
 .btn-lg.btn-color.fa.fa-plus {
     width: 240px;
 }
 .sectionadd {
     border: 1px solid;
     margin-top: 10px;
-}
-.lecid2,.lecid3{
-	border:1px solid;
 }
 .addcontentbtn{
 	cursor:pointer;
@@ -732,4 +731,7 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
 }
 .lecedit {
     cursor: pointer;
+}
+.panel.panel-default.login-button {
+  padding: 0 10px;
 }
