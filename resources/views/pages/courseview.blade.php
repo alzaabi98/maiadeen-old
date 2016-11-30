@@ -508,7 +508,6 @@ $(document).on('click', '.addcontentbtn', function(){
 //$( ".saver" ).append($('.textareasave').val());	
 //});
 
-  
  
 $(document).on('click','.lecedit',function(){
 	
