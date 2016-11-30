@@ -240,8 +240,12 @@
 							
     
 				<div id="add" class="adding-button ">
-					<div id="add1"><button class="width100  btn-lg btn-color  add1" style="display:none">Add lecture</button></div>
-					<div id="add1"><button class="btn-color btn-lg width100 coursecoupons add2 ">Add section</button></div>
+					<div id="add1"><button class="width100  btn-lg btn-color  add1" style="display:none">
+					<i class="fa fa-plus" aria-hidden="true" ></i> Add lecture</button></div>
+					<div id="add1">
+						<button class="btn-color btn-lg width100 coursecoupons add2">
+						<i class="fa fa-plus" aria-hidden="true" ></i> Add section</button>
+					</div>
 					<div id="addlec" class="addlecture coursecoupons" style="display:none">
 							<div class="content ui-state-default">
 								<div class="">New Lecture:</div>
@@ -495,7 +499,6 @@ else {
 });
 
 
-
 $("span").sortable({
     connectWith: ".con"
 }).disableSelection();
@@ -513,8 +516,9 @@ var x1 = $('<div  class="inner1 form-control text p30 coursecoupons custom-btn "
 x1.appendTo( $( ".lecid2:last" ) );
 
 if($('.lecturepadding').css('display') == 'none') {
-var sectionNumer = $('.output1:last').html();
-    $('.output1:last').html(parseInt(sectionNumer) + 1);
+var sectionNumber = $('.output1:last').html();
+alert(sectionNumber);
+    $('.output1:last').html(parseInt(a) + 1);
 }
 else {    
 	$('.output1:last').html(1);

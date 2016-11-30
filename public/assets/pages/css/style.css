@@ -732,3 +732,6 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
 .lecedit {
     cursor: pointer;
 }
+.panel.panel-default.login-button {
+  padding: 0 10px;
+}
