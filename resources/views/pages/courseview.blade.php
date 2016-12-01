@@ -466,6 +466,7 @@ $(document).on('click', '.addcontentbtn', function(){
 //$( ".saver" ).append($('.textareasave').val());	
 //});
 
+  
  
 $(document).on('click','.lecedit',function(){
 	
@@ -484,23 +485,32 @@ $(document).on('click','.lecedit',function(){
 
 
 $(document).on('click', '.btn-addlec', function() {
-    var x = $('<div class=" inner form-control coursecoupons ">Lecture <span class="output">1</span>:<span class="lecedit fa fa-pencil"><span class="abc"></span> </span><button type="button" class="f18 section-btn custom-btn fa fa-angle-down addcontentbtn "></button><div id="collapse" class="panel-collapse coll " style="display:none"><div class="panel-body "><label class="coursecoupons">Add description</label><div class="text-direction1 "><div class="add-describe adding-button"><textarea class="adding-button textareasave" rows="6"></textarea></div><div class="addvideo newpadding coursecoupons " ><label>Add lecture video</label><div class="form-group textdirection"><input type="file"  name="img[]" class="file"><div class="input-group col-xs-12"><span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span><input type="text" class="form-control input-lg" disabled placeholder="Upload video"><span class="input-group-btn"><button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button></span></div></div></div><div class= "section-btn "><button type="button" class="btn-lg btn-success  textsave" >Save</button><button type="button" class="btn-lg btn-warning  textsave" >Cancel</button></div></div></div></div></div>');
-if($(".inner1:last").next().is('.inner')) {
+	 if ($(".lec").val() == "") {
+        return false;
+    }
+	else
+	{
+    var x = $('<div class=" inner form-control coursecoupons ">Lecture <span class="output">1</span>:<span class="lecedit fa fa-pencil"><span class="abc"></span> </span><button type="button" class="f18 section-btn custom-btn fa fa-angle-down addcontentbtn "></button><div id="collapse" class="panel-collapse coll " style="display:none"><div class="panel-body "><label class="coursecoupons">Add description</label><div class="text-direction1 "><div class="add-describe adding-button"><textarea class="adding-button textareasave" rows="6"></textarea></div><div class="addvideo newpadding coursecoupons " ><label>Add lecture video</label><div class="form-group textdirection"><input type="file"  name="img[]" class="file"><div class="input-group col-xs-12"><span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span><input type="text" class="form-control input-lg" disabled placeholder="Upload video"><span class="input-group-btn"><button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button></span></div></div></div><div class="document"><input type="file"></div><div class= "section-btn "><button type="button" class="btn-lg btn-success  textsave" >Save</button><button type="button" class="btn-lg btn-warning  textsave" >Cancel</button></div></div></div></div></div>');
+//if($(".inner1:last").next().is('.inner')) {
 	var a = $('.output:last').html();
     x.insertAfter('.inner:last');
     $('.output:last').html(parseInt(a) + 1);
-}
-else {    
+	
+//}
+//else {    
     x.appendTo('.lecid2:last');
-}  
+//}  
 
  $( ".abc:last" ).append($('.lec').val());
-});
-
-
+ $('#addlecid').val("");
+ 
 $("span").sortable({
     connectWith: ".con"
 }).disableSelection();
+	}
+});
+
+
 
 $(document).on('click', '.btn-addsec', function(){
  if ($(".sectiontitle").val() == "") {
@@ -511,29 +521,34 @@ $(document).on('click', '.btn-addsec', function(){
 
 var x = $('<div class=" lecid2 con login-button"></div>');
 x.appendTo( $( ".lecid" ) );
-var x1 = $('<div  class="inner1 form-control text p30 coursecoupons custom-btn ">Section <span class="output1">1</span>:</div>');
-x1.appendTo( $( ".lecid2:last" ) );
+var x1 = $('<div  class="inner1 form-control text p30 coursecoupons custom-btn ">Section <span  class="output1">1</span>:</div>');
+var b = $('.output1:last').html(); 
+//if($('.lecturepadding').css('display') == 'none') {
+ x1.insertAfter('.inner1:last');
+$('.output1:last').html(parseInt(b) + 1);
 
-if($('.lecturepadding').css('display') == 'none') {
-var sectionNumber = $('.output1:last').html();
-alert(sectionNumber);
-    $('.output1:last').html(parseInt(a) + 1);
-}
-else {    
-	$('.output1:last').html(1);
-}
-$( ".inner1:last" ).append($('.sectiontitle').val());	
-$('.inner1:last').css('display','block');
-$(".lecid").append("<br>");
-$('.lecid2').css('display','block');
-$('.lecturepadding').css('display','block');
-$('.add1').css('display','block');
+//}
+//else { 
+    x1.appendTo ( '.lecid2:last' );   
+	//$('.output1:last').html(1);
+//}
 
-	}
 $(x).sortable({
     connectWith: ".con"
 }).disableSelection();
-$('.lecturepadding').css('display','none');
+$( ".inner1:last" ).append($('.sectiontitle').val());
+
+	
+/*$('.inner1:last').css('display','block');
+$(".lecid").append("<br>");
+$('.lecid2').css('display','block');
+$('.lecturepadding').css('display','block');*/
+$('.add1').css('display','block');
+$('#id_title').val("");
+
+	}
+
+//$('.lecturepadding').css('display','none');
 });
 
 </script>
