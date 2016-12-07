@@ -22,7 +22,7 @@
         <div class="col-lg-12 bhoechie-tab-container ">
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 bhoechie-tab-menu ">
 			
-              <div class="list-group ">
+              <div class="list-group row ">
                 <a href="#" class="list-group-item active text-center ">
                   <h4 class="fa fa-book"></h4><br/>Course Landing Page 
                 </a>
@@ -490,25 +490,35 @@ $(document).on('click', '.btn-addlec', function() {
     }
 	else
 	{
-    var x = $('<div class=" inner form-control coursecoupons ">Lecture <span class="output">1</span>:<span class="lecedit fa fa-pencil"><span class="abc"></span> </span><button type="button" class="f18 section-btn custom-btn fa fa-angle-down addcontentbtn "></button><div id="collapse" class="panel-collapse coll " style="display:none"><div class="panel-body "><label class="coursecoupons">Add description</label><div class="text-direction1 "><div class="add-describe adding-button"><textarea class="adding-button textareasave" rows="6"></textarea></div><div class="addvideo newpadding coursecoupons " ><label>Add lecture video</label><div class="form-group textdirection"><input type="file"  name="img[]" class="file"><div class="input-group col-xs-12"><span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span><input type="text" class="form-control input-lg" disabled placeholder="Upload video"><span class="input-group-btn"><button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button></span></div></div></div><div class="addvideo newpadding coursecoupons "><label>Add File</label><div class="form-group textdirection"><input class="file" name="img[]" type="file"><div class="input-group col-xs-12"><span class="input-group-addon ui-sortable"><i class="glyphicon glyphicon-picture"></i></span><input class="form-control input-lg" disabled="" placeholder="Upload file" type="text"><span class="input-group-btn ui-sortable"><button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i>Browse</button></span></div></div></div></div><div class= "section-btn "><button type="button" class="btn-lg btn-success  textsave" >Save</button><button type="button" class="btn-lg btn-warning  textsave" >Cancel</button></div></div></div></div></div>');
+    var y = $('<div class=" inner form-control coursecoupons ">Lecture <span data-position="1" class="output">1</span>:<span class="lecedit fa fa-pencil"><span class="abc"></span> </span><button type="button" class="f18 section-btn custom-btn fa fa-angle-down addcontentbtn "></button><div id="collapse" class="panel-collapse coll " style="display:none"><div class="panel-body "><label class="coursecoupons">Add description</label><div class="text-direction1 "><div class="add-describe adding-button"><textarea class="adding-button textareasave" rows="6"></textarea></div><div class="addvideo newpadding coursecoupons " ><label>Add lecture video</label><div class="form-group textdirection"><input type="file"  name="img[]" class="file"><div class="input-group col-xs-12"><span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span><input type="text" class="form-control fc input-lg" disabled placeholder="Upload video"><span class="input-group-btn"><button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button></span></div></div></div><div class="addvideo newpadding coursecoupons "><label>Add File</label><div class="form-group textdirection"><input class="file" name="img[]" type="file"><div class="input-group col-xs-12"><span class="input-group-addon ui-sortable"><i class="fa fa-file-pdf-o"></i></span><input class="form-control fc input-lg" disabled="" placeholder="Upload file" type="text"><span class="input-group-btn ui-sortable"><button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i>Browse</button></span></div></div></div></div><div class= "section-btn "><button type="button" class="btn-lg btn-success  textsave" >Save</button><button type="button" class="btn-lg btn-warning  textsave" >Cancel</button></div></div></div></div></div>');
 //if($(".inner1:last").next().is('.inner')) {
 	var a = $('.output:last').html();
-    x.insertAfter('.inner:last');
+    y.insertAfter('.inner:last');
     $('.output:last').html(parseInt(a) + 1);
+	
+	 
 	
 //}
 //else {    
-    x.appendTo('.lecid2:last');
+    y.appendTo('.inner1:last');
 //}  
 
  $( ".abc:last" ).append($('.lec').val());
  $('#addlecid').val("");
+// var a = $('.output:last').html();
+//alert(a);
+
+
  
-$("span").sortable({
+/*$("span").sortable({
     connectWith: ".con"
-}).disableSelection();
+}).disableSelection();*/
+
 	}
 });
+
+
+
 
 
 
@@ -521,35 +531,45 @@ $(document).on('click', '.btn-addsec', function(){
 
 var x = $('<div class=" lecid2 con login-button"></div>');
 x.appendTo( $( ".lecid" ) );
-var x1 = $('<div  class="inner1 form-control text p30 coursecoupons custom-btn ">Section <span  class="output1">1</span>:</div>');
+var x1 = $('<div id="sortable" class=" connectedSortable inner1 form-control text p30 coursecoupons custom-btn ">Section <span  class="output1">1</span>:</div>');
 var b = $('.output1:last').html(); 
 //if($('.lecturepadding').css('display') == 'none') {
  x1.insertAfter('.inner1:last');
 $('.output1:last').html(parseInt(b) + 1);
 
-//}
-//else { 
-    x1.appendTo ( '.lecid2:last' );   
-	//$('.output1:last').html(1);
-//}
 
-$(x).sortable({
-    connectWith: ".con"
-}).disableSelection();
+    x1.appendTo ( '.lecid2:last' );   
+
+
+$('.connectedSortable').sortable({
+    connectWith: ".connectedSortable",
+	
+	 
+});
 $( ".inner1:last" ).append($('.sectiontitle').val());
 
 	
-/*$('.inner1:last').css('display','block');
-$(".lecid").append("<br>");
-$('.lecid2').css('display','block');
-$('.lecturepadding').css('display','block');*/
+
 $('.add1').css('display','block');
 $('#id_title').val("");
 
-	}
 
+	}
+	/* c =$('.output:first').html();
+ if (( $('.output:first').html()) > ( $('.output:last').html())) {
+   c -= 1;
+  $('.output:first').html(c);
+  $('.output:last').html(c);
+   
+  alert(c);
+ }
+ else{
+	 alert('a');
+ }*/
 //$('.lecturepadding').css('display','none');
 });
+ 
+ 
 
 </script>
 <script>

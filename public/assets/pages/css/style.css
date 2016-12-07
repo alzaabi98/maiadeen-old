@@ -231,6 +231,13 @@ h1.yellow {
 .absolute {
   top: 20px;
 }
+.browse{
+	font-size:0px;
+	padding:5px;
+}
+.fc{
+	font-size:15px;
+}
 }
 
 
@@ -327,12 +334,12 @@ div.bhoechie-tab-container{
   opacity: 0.97;
   filter: alpha(opacity=97);
 }
-div.bhoechie-tab-menu{
+/*div.bhoechie-tab-menu{
   padding-right: 0;
   padding-left: 0;
   padding-bottom: 0;
   
-}
+}*/
 div.bhoechie-tab-menu div.list-group{
   margin-bottom: 0;
    min-height: 1173px;
@@ -737,4 +744,10 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
 }
 .document > input {
     margin: 15px;
+}
+.fa.fa-file-pdf-o {
+    font-size: 25px;
+}
+.lecid2 .form-control {
+    height: auto;
 }
