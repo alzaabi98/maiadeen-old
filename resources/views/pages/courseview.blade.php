@@ -490,7 +490,7 @@ $(document).on('click', '.btn-addlec', function() {
     }
 	else
 	{
-    var y = $('<div class=" inner form-control coursecoupons ">Lecture <span data-position="1" class="output">1</span>:<span class="lecedit fa fa-pencil"><span class="abc"></span> </span><button type="button" class="f18 section-btn custom-btn fa fa-angle-down addcontentbtn "></button><div id="collapse" class="panel-collapse coll " style="display:none"><div class="panel-body "><label class="coursecoupons">Add description</label><div class="text-direction1 "><div class="add-describe adding-button"><textarea class="adding-button textareasave" rows="6"></textarea></div><div class="addvideo newpadding coursecoupons " ><label>Add lecture video</label><div class="form-group textdirection"><input type="file"  name="img[]" class="file"><div class="input-group col-xs-12"><span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span><input type="text" class="form-control fc input-lg" disabled placeholder="Upload video"><span class="input-group-btn"><button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button></span></div></div></div><div class="addvideo newpadding coursecoupons "><label>Add File</label><div class="form-group textdirection"><input class="file" name="img[]" type="file"><div class="input-group col-xs-12"><span class="input-group-addon ui-sortable"><i class="fa fa-file-pdf-o"></i></span><input class="form-control fc input-lg" disabled="" placeholder="Upload file" type="text"><span class="input-group-btn ui-sortable"><button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i>Browse</button></span></div></div></div></div><div class= "section-btn "><button type="button" class="btn-lg btn-success  textsave" >Save</button><button type="button" class="btn-lg btn-warning  textsave" >Cancel</button></div></div></div></div></div>');
+    var y = $('<div class=" inner form-control coursecoupons ">Lecture <span data-order="" class="output">1</span>:<span class="lecedit fa fa-pencil"><span class="abc"></span> </span><button type="button" class="f18 section-btn custom-btn fa fa-angle-down addcontentbtn "></button><div id="collapse" class="panel-collapse coll " style="display:none"><div class="panel-body "><label class="coursecoupons">Add description</label><div class="text-direction1 "><div class="add-describe adding-button"><textarea class="adding-button textareasave" rows="6"></textarea></div><div class="addvideo newpadding coursecoupons " ><label>Add lecture video</label><div class="form-group textdirection"><input type="file"  name="img[]" class="file"><div class="input-group col-xs-12"><span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span><input type="text" class="form-control fc input-lg" disabled placeholder="Upload video"><span class="input-group-btn"><button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button></span></div></div></div><div class="addvideo newpadding coursecoupons "><label>Add File</label><div class="form-group textdirection"><input class="file" name="img[]" type="file"><div class="input-group col-xs-12"><span class="input-group-addon ui-sortable"><i class="fa fa-file-pdf-o"></i></span><input class="form-control fc input-lg" disabled="" placeholder="Upload file" type="text"><span class="input-group-btn ui-sortable"><button class="browse btn btn-success input-lg" type="button"><i class="glyphicon glyphicon-search"></i>Browse</button></span></div></div></div></div><div class= "section-btn "><button type="button" class="btn-lg btn-success  textsave" >Save</button><button type="button" class="btn-lg btn-warning  textsave" >Cancel</button></div></div></div></div></div>');
 //if($(".inner1:last").next().is('.inner')) {
 	var a = $('.output:last').html();
     y.insertAfter('.inner:last');
@@ -519,12 +519,22 @@ $(document).on('click', '.btn-addlec', function() {
 
 
 
+var $ord = $('[data-order]');
 
+          $ord.each(function(){
+      var $ordSib = $('.'+ this.className );
+      return $(this).text( $ordSib.index(this) +1  );
+           });
 
 
 $(document).on('click', '.btn-addsec', function(){
  if ($(".sectiontitle").val() == "") {
-        return false;
+         var $ord = $('[data-order]');
+
+          $ord.each(function(){
+      var $ordSib = $('.'+ this.className );
+      return $(this).text( $ordSib.index(this) +1  );
+           });
     }
 	else
 	{
@@ -540,12 +550,27 @@ $('.output1:last').html(parseInt(b) + 1);
 
     x1.appendTo ( '.lecid2:last' );   
 
-
 $('.connectedSortable').sortable({
     connectWith: ".connectedSortable",
-	
+	 update : function(event, ui) {
+		 
+          var ord = $('[data-order]');
+		  
+          ord.each(function(){	 
+      var $ordSib = $('.'+ this.className );
+      return $(this).text( $ordSib.index(this) +1  );
 	 
-});
+           });
+                        
+                    },
+});	
+/*var $ord = $('[data-order]');
+
+          $ord.each(function(){
+      var $ordSib = $('.'+ this.className );
+      return $(this).text( $ordSib.index(this) +1  );
+	  
+           });*/
 $( ".inner1:last" ).append($('.sectiontitle').val());
 
 	
@@ -555,17 +580,18 @@ $('#id_title').val("");
 
 
 	}
-	/* c =$('.output:first').html();
+	 /*c =$('.output:first').html();
  if (( $('.output:first').html()) > ( $('.output:last').html())) {
    c -= 1;
   $('.output:first').html(c);
-  $('.output:last').html(c);
+  $('.output:last').html(c+1);
    
   alert(c);
  }
  else{
 	 alert('a');
  }*/
+
 //$('.lecturepadding').css('display','none');
 });
  
