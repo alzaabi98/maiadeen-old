@@ -539,9 +539,9 @@ $(document).on('click', '.btn-addsec', function(){
 	else
 	{
 
-var x = $('<div class=" lecid2 con login-button"></div>');
+var x = $('<div id="sorting" class=" lecid2 con login-button"></div>');
 x.appendTo( $( ".lecid" ) );
-var x1 = $('<div id="sortable" class=" connectedSortable inner1 form-control text p30 coursecoupons custom-btn ">Section <span  class="output1">1</span>:</div>');
+var x1 = $('<div id="sortable" class=" connectedSortable inner1 form-control text p30 coursecoupons custom-btn ">Section <span data-order1="" class="output1">1</span>:</div>');
 var b = $('.output1:last').html(); 
 //if($('.lecturepadding').css('display') == 'none') {
  x1.insertAfter('.inner1:last');
@@ -564,13 +564,7 @@ $('.connectedSortable').sortable({
                         
                     },
 });	
-/*var $ord = $('[data-order]');
 
-          $ord.each(function(){
-      var $ordSib = $('.'+ this.className );
-      return $(this).text( $ordSib.index(this) +1  );
-	  
-           });*/
 $( ".inner1:last" ).append($('.sectiontitle').val());
 
 	
@@ -580,22 +574,29 @@ $('#id_title').val("");
 
 
 	}
-	 /*c =$('.output:first').html();
- if (( $('.output:first').html()) > ( $('.output:last').html())) {
-   c -= 1;
-  $('.output:first').html(c);
-  $('.output:last').html(c+1);
-   
-  alert(c);
- }
- else{
-	 alert('a');
- }*/
+$( function() {
+	   
+    $( ".lecid2" ).sortable({
+    connectWith: ".lecid2",
+	 update : function(event, ui) {
+		 
+          var ord = $('[data-order1]');
+		  
+          ord.each(function(){	 
+      var $ordSib = $('.'+ this.className );
+      return $(this).text( $ordSib.index(this) +1  );
+	 
+           });
+                        
+                    },
+	});
+    //$( ".lecid2" ).disableSelection();
+  } );
 
 //$('.lecturepadding').css('display','none');
 });
  
- 
+   
 
 </script>
 <script>

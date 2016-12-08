@@ -721,6 +721,7 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
 
 .inner.form-control {
   height: auto;
+  text-align:left;
 }
 .btn-lg.btn-color.fa.fa-plus {
     width: 240px;
