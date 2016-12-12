@@ -321,7 +321,7 @@
                    <div class="form-header">Price</div>
 				   <div class="panel-body new-align">
 				   <div class="form_container">
-				   <div class="pb20"> Select the currency and price of your course below and click ‘Save’. Once completed, you will be able to create instructor coupons based on your selected price. To create a Free course, select a price of ‘Free‘ </div>
+				   <div class="pb20"> Select the currency and price of your course below and click ?Save?. Once completed, you will be able to create instructor coupons based on your selected price. To create a Free course, select a price of ?Free? </div>
 				   <div class="price-section">
 				   <label>Course price</label>
 				   <div class="price-drop-down">
@@ -432,7 +432,6 @@ Please complete our premium instructor application found here in order to update
 
 @section('javascript')
 <script>
-
 $('.add1').click(function(){
     //$(this).parent().find('#add').css('display','none');
     $(".add1").css('display','none');
@@ -465,13 +464,11 @@ $(document).on('click', '.addcontentbtn', function(){
 //$(document).on('click', '.textsave', function(){
 //$( ".saver" ).append($('.textareasave').val());	
 //});
-
   
  
 $(document).on('click','.lecedit',function(){
 	
 	
-
 	$('.abc').editable();
 });
 // $(document).ready(function(){
@@ -479,11 +476,7 @@ $(document).on('click','.lecedit',function(){
 // 	$('.inner1').css('display','none');
 // 	$('.lecid2').css('display','none');
 // 	$('.lecturepadding').css('display','none');
-
 // });
-
-
-
 $(document).on('click', '.btn-addlec', function() {
 	 if ($(".lec").val() == "") {
         return false;
@@ -502,54 +495,36 @@ $(document).on('click', '.btn-addlec', function() {
 //else {    
     y.appendTo('.inner1:last');
 //}  
-
  $( ".abc:last" ).append($('.lec').val());
  $('#addlecid').val("");
 // var a = $('.output:last').html();
 //alert(a);
-
-
  
 /*$("span").sortable({
     connectWith: ".con"
 }).disableSelection();*/
-
 	}
 });
-
-
-
 var $ord = $('[data-order]');
-
           $ord.each(function(){
       var $ordSib = $('.'+ this.className );
       return $(this).text( $ordSib.index(this) +1  );
            });
-
-
 $(document).on('click', '.btn-addsec', function(){
  if ($(".sectiontitle").val() == "") {
-         var $ord = $('[data-order]');
-
-          $ord.each(function(){
-      var $ordSib = $('.'+ this.className );
-      return $(this).text( $ordSib.index(this) +1  );
-           });
+         return false;
     }
 	else
 	{
-
 var x = $('<div id="sorting" class=" lecid2 con login-button"></div>');
 x.appendTo( $( ".lecid" ) );
-var x1 = $('<div id="sortable" class=" connectedSortable inner1 form-control text p30 coursecoupons custom-btn ">Section <span data-order1="" class="output1">1</span>:</div>');
-var b = $('.output1:last').html(); 
+var x1 = $('<div class="dragdrop"> <span class="in" > Section <span data-order1="" class="output1">1</span>:</span></div><div id="sortable" class=" connectedSortable inner1 form-control text p30 coursecoupons custom-btn "></div>');
+var b = $('.output1:last').html();
+ 
 //if($('.lecturepadding').css('display') == 'none') {
  x1.insertAfter('.inner1:last');
 $('.output1:last').html(parseInt(b) + 1);
-
-
     x1.appendTo ( '.lecid2:last' );   
-
 $('.connectedSortable').sortable({
     connectWith: ".connectedSortable",
 	 update : function(event, ui) {
@@ -564,40 +539,63 @@ $('.connectedSortable').sortable({
                         
                     },
 });	
-
-$( ".inner1:last" ).append($('.sectiontitle').val());
-
+$( ".in:last" ).append($('.sectiontitle').val());
 	
-
 $('.add1').css('display','block');
 $('#id_title').val("");
 
 
 	}
-$( function() {
-	   
-    $( ".lecid2" ).sortable({
-    connectWith: ".lecid2",
-	 update : function(event, ui) {
-		 
-          var ord = $('[data-order1]');
+	jQuery.fn.swap = function(b){ 
+    // method from: http://blog.pengoworks.com/index.cfm/2008/9/24/A-quick-and-dirty-swap-method-for-jQuery
+    b = jQuery(b)[0]; 
+    var a = this[0]; 
+    var t = a.parentNode.insertBefore(document.createTextNode(''), a); 
+    b.parentNode.insertBefore(a, b); 
+    t.parentNode.insertBefore(b, t); 
+    t.parentNode.removeChild(t); 
+    return this; 
+};
+
+
+$( ".dragdrop" ).draggable({ revert: true, helper: "clone" });
+
+$( ".dragdrop" ).droppable({
+    accept: ".dragdrop",
+    activeClass: "ui-state-hover",
+    hoverClass: "ui-state-active",
+    drop: function( event, ui ) {
+
+        var draggable = ui.draggable, droppable = $(this),
+            dragPos = draggable.position(), dropPos = droppable.position();
+        
+        draggable.css({
+            left: dropPos.left+'px',
+            top: dropPos.top+'px'
+        });
+
+        droppable.css({
+            left: dragPos.left+'px',
+            top: dragPos.top+'px'
+        });
+        draggable.swap(droppable);
+		setTimeout( function(){ 
+    var ord = $('[data-order1]');
 		  
-          ord.each(function(){	 
+          ord.each(function(){	
+		  
       var $ordSib = $('.'+ this.className );
       return $(this).text( $ordSib.index(this) +1  );
 	 
            });
-                        
-                    },
-	});
-    //$( ".lecid2" ).disableSelection();
-  } );
-
-//$('.lecturepadding').css('display','none');
+  }  , 1000 );
+		
+    }
 });
- 
-   
 
+
+});
+ 	   
 </script>
 <script>
 $(function()
@@ -605,11 +603,9 @@ $(function()
     $(document).on('click', '.btn-add', function(e)
     {
         e.preventDefault();
-
         var controlForm = $('.controls form:first'),
             currentEntry = $('.btn-add').parents('.entry:first'),
             newEntry = $(currentEntry.clone()).appendTo(controlForm);
-
         newEntry.find('input').val('');
         controlForm.find('.entry:not(:last) .btn-add')
             .removeClass('btn-add').addClass('btn-remove')
@@ -618,12 +614,10 @@ $(function()
     }).on('click', '.btn-remove', function(e)
     {
 		$(this).parents('.entry:first').remove();
-
 		e.preventDefault();
 		return false;
 	});
 });
-
 </script>
 
 <script>
@@ -631,7 +625,6 @@ $(document).on('click', '.browse', function(){
   var file = $(this).parent().parent().parent().find('.file');
   file.trigger('click');
 });
-
 $(document).on('change', '.file', function(){
   $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
 });
