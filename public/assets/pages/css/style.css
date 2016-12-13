@@ -722,6 +722,7 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
 .inner.form-control {
   height: auto;
   text-align:left;
+   cursor: all-scroll;
 }
 .btn-lg.btn-color.fa.fa-plus {
     width: 240px;
@@ -758,4 +759,34 @@ background:lightyellow;
 }
 .ui-state-active {
 background:lightgray   
+}
+.dragdrop {
+    cursor: all-scroll;
+     margin-top:10px;
+     height: 30px;
+}
+.editable-unsaved {
+    font-weight: lighter !important;
+}
+
+.editable-click, a.editable-click, a.editable-click:hover {
+    border-bottom: medium none !important;
+    text-decoration: none;
+}
+.curs {
+    cursor: pointer;
+}
+.dragdrop.ui-draggable.ui-droppable .in > .fa {
+    display: none !important;
+}
+.dragdrop.ui-draggable.ui-droppable:hover .in > .fa {
+    display: inline-block !important;
+}
+.inner.form-control.coursecoupons .fa-pencil ,
+.inner.form-control.coursecoupons .fa.fa-trash-o {
+    display: none;
+}
+.inner.form-control.coursecoupons:hover .fa-pencil ,
+.inner.form-control.coursecoupons:hover .fa.fa-trash-o {
+    display: inline-block;
 }
