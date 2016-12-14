@@ -96,7 +96,7 @@
 					<form id="form1" runat="server">
 						
 			
-			<img class="col-md-6" id="blah" src="/assets/pages/img/courseimage.png" style="width:400px;height:300px;" alt="your image" />
+			<img class="col-md-6" id="blah" src="/assets/pages/img/imagecourse.png" style="width:400px;height:300px;" alt="your image" />
 		</form>
 					
 					<div class="col-md-6"><p>
