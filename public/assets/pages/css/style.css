@@ -419,7 +419,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
 }
 
 .list-group-item {
-     background-color: #acc523;
+     background-color: #3A6076;
 	 border: 1px solid #e9ffb5;
 }
 a.list-group-item, button.list-group-item {
@@ -559,6 +559,7 @@ label, .blockLabel {
     font-weight: initial;
     margin-bottom: 5px;
     max-width: 100%;
+     margin-left: 15px;
 }
  .cfi-sortables-list{
     border: 0 none;
@@ -577,10 +578,10 @@ ul {
     border: 3px solid #49A149;
     margin: 100px 0 20px;
 }
-.content.ui-state-default {
+/*.content.ui-state-default {
     background: #5cadb2 none repeat scroll 0 0;
     color: #fff;
-}
+}*/
 .content {
     -moz-box-align: center;
     align-items: center;
@@ -619,10 +620,10 @@ ul {
 }
 .btn-color{
 	background-color:#fff;
-	border: 3px solid #AEC729;
+	border: 3px solid #5299A3;
 }
 .custom-btn{
-	background:#AEC729;
+	background:#5299A3;
 	color:#fff;
 }
 .form-in
@@ -732,9 +733,10 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
     width: 240px;
 }
 .sectionadd {
-    background: rgb(87, 171, 176) none repeat scroll 0 0;
+    /*background: rgb(87, 171, 176) none repeat scroll 0 0;
+    
+    color: #fff;*/
     border: 1px solid;
-    color: #fff;
     margin-top: 10px;
 }
 .addcontentbtn{

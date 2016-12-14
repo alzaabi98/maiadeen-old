@@ -364,6 +364,7 @@
 					<p>
 Please complete our premium instructor application found here in order to update your course price
 </p>
+<p><a href="">Click here </a>for  free courses.</p>
 <div class="form-header"></div>
 				   
 				   </div>
