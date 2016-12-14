@@ -343,7 +343,7 @@ div.bhoechie-tab-container{
 div.bhoechie-tab-menu div.list-group{
   margin-bottom: 0;
    min-height: 1173px;
-    background: #e8ffb3 none repeat scroll 0 0;
+    background: #87ccd6 none repeat scroll 0 0;
 }
 div.bhoechie-tab-menu div.list-group>a{
   margin-bottom: 0;
@@ -420,7 +420,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
 
 .list-group-item {
      background-color: #57A8AE;
-	 border: 1px solid #e9ffb5;
+	 border: 1px solid #87ccd6;
 }
 a.list-group-item, button.list-group-item {
     color: #fff;
