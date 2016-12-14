@@ -263,7 +263,7 @@
 										<div class="form-actions">
 											<div  class="submit-row">
 
-												<input type="button" class=" btn custom-btn btn-addlec" name="submit"  value="Add lecture">
+												<input type="button" class=" btn btn-primary btn-addlec" name="submit"  value="Add lecture">
 
 													<span>or </span>
 													<a class="cancel-link yellow">Cancel</a>
@@ -296,7 +296,7 @@
 				</div>
 					<div class="form-actions">
 						<div class="submit-row imgicon">
-							<input class=" btn custom-btn btn-addsec" name="submit" value="Add section" type="button">
+							<input class=" btn btn-primary btn-addsec" name="submit" value="Add section" type="button">
 							<span>or </span>
 							<a class="cancel-link2 yellow">Cancel</a>
 						</div>
@@ -474,10 +474,25 @@ $(document).on('click','.secedit',function(){
 	$(this).siblings('.sec').editable();
 });
 $(document).on('click','.secdel',function(){
-$(this).siblings('.sec').remove();
+$(this).parent().remove();
+var ord = $('[data-order1]');
+		  
+          ord.each(function(){	
+		  
+      var $ordSib = $('.'+ this.className );
+      return $(this).text( $ordSib.index(this) +1  );
+	 
+           });
 });
 $(document).on('click','.lecdel',function(){
-$(this).siblings('.abc').remove();
+$(this).parent().remove();
+var ord = $('[data-order]');
+		  
+          ord.each(function(){	 
+      var $ordSib = $('.'+ this.className );
+      return $(this).text( $ordSib.index(this) +1  );
+	 
+           });
 });
 // $(document).ready(function(){
 // 	$('.inner').css('display','none');
@@ -513,11 +528,7 @@ $(document).on('click', '.btn-addlec', function() {
 }).disableSelection();*/
 	}
 });
-var $ord = $('[data-order]');
-          $ord.each(function(){
-      var $ordSib = $('.'+ this.className );
-      return $(this).text( $ordSib.index(this) +1  );
-           });
+
 $(document).on('click', '.btn-addsec', function(){
  if ($(".sectiontitle").val() == "") {
          return false;

@@ -577,6 +577,10 @@ ul {
     border: 3px solid #49A149;
     margin: 100px 0 20px;
 }
+.content.ui-state-default {
+    background: #5cadb2 none repeat scroll 0 0;
+    color: #fff;
+}
 .content {
     -moz-box-align: center;
     align-items: center;
@@ -728,7 +732,9 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
     width: 240px;
 }
 .sectionadd {
+    background: rgb(87, 171, 176) none repeat scroll 0 0;
     border: 1px solid;
+    color: #fff;
     margin-top: 10px;
 }
 .addcontentbtn{
