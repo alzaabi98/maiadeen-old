@@ -27,9 +27,10 @@ Route::get('/quality','PagesController@quality');
 Route::get('/becomeTeacher','PagesController@becomeTeacher');
 Route::get('/createcourse','PagesController@createcourse');
 Route::get('/courseview','PagesController@courseview');
-Route::get('/create','mycourseController@create');
+//Route::get('/create','mycourseController@create');
 Route::post('/courseview', 'PagesController@courseview');
 
+Route::get('/mycourses', array('uses' => 'PagesController@mycourse', 'as' => 'pages.mycourse'));
 ///contact us route
 Route::post('/contactemail','PagesController@send');
 
