@@ -27,6 +27,8 @@ Route::get('/quality','PagesController@quality');
 Route::get('/becomeTeacher','PagesController@becomeTeacher');
 Route::get('/createcourse','PagesController@createcourse');
 Route::get('/courseview','PagesController@courseview');
+Route::get('/hello','PagesController@instruct');
+Route::get('/profile','PagesController@profile');
 //Route::get('/create','mycourseController@create');
 Route::post('/courseview', 'PagesController@courseview');
 

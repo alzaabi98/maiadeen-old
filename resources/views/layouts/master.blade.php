@@ -76,7 +76,7 @@
                             <span class="caret"></span>
                           </button>
                           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#">User Profile</a></li>
+                            <li><a href="{{url('/profile')}}">User Profile</a></li>
                             <li><a href="#">Teacher</a></li>
                             <li><a href="{{url('/logout')}}">Logout</a></li>
                          

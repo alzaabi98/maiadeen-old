@@ -314,7 +314,7 @@ input::-webkit-input-placeholder {
     text-align: center;
 }
 .text{
-	text-align:center;
+	text-align:center!important;
 }
 /* tab css */
 div.bhoechie-tab-container{
@@ -536,6 +536,9 @@ input-group[class*="col-"] {
 .p30 {
     padding: 30px;
 }
+.p10{
+  padding:10px;
+}
 .form-actions {
    
     margin: 0 -45px;
@@ -681,6 +684,9 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
   visibility: hidden;
   position: absolute;
   
+}
+.hgt{
+  height:40px;
 }
 .text-direction1{
 	direction:rtl;
@@ -880,10 +886,122 @@ body {
   background-color: #428bca;
   padding : 5px 15px;
 }
-
-
-
-
-
-
 /* end user profile */
+
+/* instruct page css start */
+.instruct-head {
+    background: #3399ff none repeat scroll 0 0;
+    height: 120px;
+    width: 100%;
+}
+.ml{
+  margin-left:150px;
+}
+.nav {
+    list-style: outside none none;
+}
+/* end instruct page */
+/* profile page css */
+.nav-tabs {
+
+    float: left;
+
+    border-bottom: 0;
+
+  }
+
+   
+
+  .nav-tabs li {
+
+    float: none;
+
+    margin: 0;
+
+  }
+
+   
+
+  .nav-tabs li a {
+
+  margin-right: 0;
+
+    border: 0;
+    color: #fff;
+
+    background-color: #5CAAB0;
+    
+      padding: 8px;
+       text-align: center;
+         box-shadow: 1px 1px #ccc inset, 0 -1px #ccc inset;
+
+  }
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+  
+    background-color: #F8A52D;
+    color: #FFF;
+    
+}
+   .nav > li > a:focus, .nav > li > a:hover {
+    background-color: #f8a52d;
+  }
+
+  .nav-tabs li a:hover {}
+
+   
+
+  .nav-tabs .glyphicon { color: #fff; }
+
+   
+
+  .nav-tabs .active .glyphicon { color: #333; }
+
+   
+
+  .nav-tabs > li.active > a,
+
+  .nav-tabs > li.active > a:hover,
+
+  .nav-tabs > li.active > a:focus { border: 0; }
+  .tab-content .tab-pane {
+
+    display: none;
+
+    background-color: #fff;
+
+    padding: 1.6rem;
+
+    
+  }
+  .tab-content .active { display: block; }
+  .nav.nav-tabs {
+    border: 1px solid #ccc;
+    padding:0px;
+}
+.nav.nav-tabs.row.col-md-3 {
+    border: 1px solid #ccc;
+    min-height: 702px;
+       background: #8acdd7 none repeat scroll 0 0;
+}
+.container.textdirection {
+    border: 1px solid #ccc;
+     
+}
+
+.container.col-md-12.notification {
+    border: 1px solid #ccc;
+    padding: 89px;
+    background: #D4EAF6;
+    position: absolute;
+}
+.col-md-12.personal-info {
+    position: absolute;
+}
+.input-group.col-md-12 {
+    margin-bottom: 13px;
+}
+
+  
+/* profile page end */ 
+
+

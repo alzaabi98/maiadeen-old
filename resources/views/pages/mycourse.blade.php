@@ -12,12 +12,8 @@
 @section('content')
 <div class="my-courses-header">
 	<div class="container">
-		<div class="pos-r my-courses-heading"> My Courses </div>
-			<ul class="pos-r nav nav-tabs tabs mt10" role="tablist">
-				<li class="nv1 mr20">All courses</li>
-				<li class="nv2 mr20">Wishlist</li>
-				<li class="nv3 mr20">Archived</li>
-			</ul>
+		<div class="pos-r my-courses-heading"> {{Auth::user()->firstname}} {{Auth::user()->lastname}}</div>
+			
 		</div>
 	</div>	
 			<div class="clearfix"></div>

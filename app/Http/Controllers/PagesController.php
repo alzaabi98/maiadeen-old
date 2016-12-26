@@ -57,6 +57,16 @@ class PagesController extends Controller
 
         //return view('pages.courseview');
     }
+     public function profile() {
+        
+    return view('pages.profile');
+
+        //return view('pages.courseview');
+    }
+    public function instruct() {
+        
+    return view('pages.test');
+    }
 
 
     public function send(Request $request) {
