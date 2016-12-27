@@ -1026,9 +1026,10 @@ body {
   margin: 0;
   padding: 10px 0 10px 10px;
 }
-=======
-  
->>>>>>> 82488f1746838294720c72bb09857f25976f1fc4
+.image-section-wrapper {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
 /* profile page end */ 
 
 
