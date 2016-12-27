@@ -684,10 +684,17 @@ a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, 
   visibility: hidden;
   position: absolute;
   
+<<<<<<< HEAD
 }
 .hgt{
   height:40px;
 }
+=======
+}
+.hgt{
+  height:40px;
+}
+>>>>>>> 82488f1746838294720c72bb09857f25976f1fc4
 .text-direction1{
 	direction:rtl;
 }
@@ -1001,6 +1008,7 @@ body {
     margin-bottom: 13px;
 }
 
+<<<<<<< HEAD
 .image-section-wrapper {
   border: 1px solid #ccc;
   margin: auto;
@@ -1018,6 +1026,9 @@ body {
   margin: 0;
   padding: 10px 0 10px 10px;
 }
+=======
+  
+>>>>>>> 82488f1746838294720c72bb09857f25976f1fc4
 /* profile page end */ 
 
 
