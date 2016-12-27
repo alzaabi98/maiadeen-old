@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -57,9 +57,16 @@
                 <a href="{{ url('/login') }}" class="btn btn-warning navbar-btn">Login</a>
                 <a href="{{ url('/register') }}" class="btn btn-success navbar-btn">Register</a>
                 @else
-                    <button class="btn btn-info navbar-btn">
+                    <button class="btn btn-info navbar-btn"  >
                       <span class="glyphicon glyphicon-user">
                         Become Teacher
+                       
+                      </span>
+
+                   </button>
+                   <button class="btn btn-info navbar-btn" onclick="window.location='{{ route("pages.mycourse") }}'">
+                      <span class="glyphicon glyphicon-book">
+                        My courses
                       </span>
 
                    </button>
@@ -69,7 +76,7 @@
                             <span class="caret"></span>
                           </button>
                           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#">User Profile</a></li>
+                            <li><a href="{{url('/profile')}}">User Profile</a></li>
                             <li><a href="#">Teacher</a></li>
                             <li><a href="{{url('/logout')}}">Logout</a></li>
                          

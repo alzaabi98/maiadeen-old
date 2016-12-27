@@ -3,13 +3,9 @@ body{
 }
 ul {
   list-style: inside !important;
-  padding-right: 0px;
 }
 ul.timeline {
   list-style: outside none none !important;
-}
-h4.panel-title a.accordion-toggle {
-  margin-right: 15px;
 }
 .planning-header {
   background: #dfdfdf;
@@ -87,10 +83,9 @@ h4.panel-title a.accordion-toggle {
   padding-bottom: 20px;
   padding-top: 20px;
 }
-
 .custom-table {
   margin: 0 auto;
-  max-width: 600px;
+  width: 600px;
   background: #fff;
 }
 .bg-white {
@@ -163,7 +158,7 @@ h4.panel-title a.accordion-toggle {
 */
 .panel-body {
     font-size: 20px;
-  text-align:right;
+  text-align:left;
 }
 .absolute {
   left: 0;
@@ -234,9 +229,795 @@ h1.yellow {
 
 @media (max-width:480px) {
 .absolute {
-  top: 40px;
+  top: 20px;
 }
-.custom-table {
-  font-size: 16px;
+.browse{
+	font-size:0px;
+	padding:5px;
+}
+.fc{
+	font-size:15px;
 }
 }
+
+
+
+body, html{
+     height: 100%;
+ 	background-repeat: no-repeat;
+ 	
+ 	font-family: 'Oxygen', sans-serif;
+}
+
+.main{
+ 	margin-top: 70px;
+}
+
+h1.title { 
+	font-size: 50px;
+	font-family: 'Passion One', cursive; 
+	font-weight: 400; 
+}
+
+hr{
+	width: 10%;
+	color: #fff;
+}
+
+.form-group{
+	margin-bottom: 15px;
+}
+
+label{
+	margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+.main-login{
+ 	background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.main-center {
+    background-color: #589b41;
+    color: #fff;
+      margin: 73px auto;
+    max-width: 436px;
+    padding: 40px;
+}
+.lh
+{
+	   line-height: 1.029;
+	    margin-bottom: 26px;
+}
+.login-button{
+	margin-top: 5px;
+}
+
+.login-register{
+	font-size: 11px;
+	text-align: center;
+}
+.mylabel {
+    text-align: center;
+}
+.text{
+	text-align:center!important;
+}
+/* tab css */
+div.bhoechie-tab-container{
+  z-index: 10;
+  
+  padding: 0 !important;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  
+  margin-top: 20px;
+ 
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  
+  -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  background-clip: padding-box;
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+}
+/*div.bhoechie-tab-menu{
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  
+}*/
+div.bhoechie-tab-menu div.list-group{
+  margin-bottom: 0;
+   min-height: 1173px;
+    background: #87ccd6 none repeat scroll 0 0;
+}
+div.bhoechie-tab-menu div.list-group>a{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a .glyphicon,
+div.bhoechie-tab-menu div.list-group>a .fa {
+  color: #fff;
+}
+div.bhoechie-tab-menu div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a.active,
+div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+div.bhoechie-tab-menu div.list-group>a.active .fa{
+ background: #f8a227 none repeat scroll 0 0;
+  color: #ffffff;
+}
+div.bhoechie-tab-menu div.list-group>a.active:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-left: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #F8A52D;
+  
+}
+
+div.bhoechie-tab-content{
+  background-color: #ffffff;
+  /* border: 1px solid #eeeeee; */
+  padding-left: 20px;
+  
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+  display: none;
+}
+/*new css*/
+.mypanel {
+
+ padding:10px;
+ color: #000;
+
+ font-size: 27px;
+ font-weight: bold;
+}
+
+.customfont
+{
+	  color: #fff;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.panel-body {
+    background-color: #fff;
+}
+
+.mybtn
+{
+	background-image: linear-gradient(to bottom, #b1b1b1 5px, #1d1d1d 100%);
+	color:#fff;
+	font-weight:bold;
+	font-size:20px;
+}
+
+.list-group-item {
+     background-color: #57A8AE;
+	 border: 1px solid #87ccd6;
+}
+a.list-group-item, button.list-group-item {
+    color: #fff;
+}
+.mybootclass
+{
+	
+   
+    padding-left: 0;
+    padding-right: 0px;
+	
+    
+}
+.coursehead {
+   
+    text-align: left;
+}
+@media (max-width: 767px) {
+div.bhoechie-tab-menu div.list-group{
+	min-height:auto;
+    
+  }
+}
+.form-header {
+    border-bottom: 1px solid #bfbfbf;
+    padding: 30px 45px;
+    position: relative;
+	text-align:left;
+}
+
+.add-form-wrapper .add-form-input-wrapper input {
+    border: 1px solid #bfbfbf;
+    color: #000000;
+    padding: 11px 25px;
+    width: 100%;
+}
+
+.add-btn {
+    border-bottom-left-radius: 0;
+    border-left: 0 none;
+    border-top-left-radius: 0;
+    padding: 11px 25px;
+}
+.pb30 {
+    padding-bottom: 30px;
+	text-align:left;
+}
+.labeled
+{
+	padding-bottom:38px;
+}
+.add-form-wrapper {
+    -moz-box-align: center;
+    align-items: stretch;
+    display: flex;
+}
+.add-form-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+.new-align{
+	text-align:left;
+}
+
+.course-detail
+{
+	text-align:left;
+	margin-left:300px;
+	padding-top:40px;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.flex-wrapper {
+    -moz-box-align: center;
+    align-items: flex-start;
+    display: flex;
+}
+.test-video-uploader-wrapper {
+    padding: 0 15px;
+    position: relative;
+}
+.fx {
+    -moz-box-flex: 1;
+    flex: 1 1 0;
+    min-width: 1px;
+}
+
+input-group[class*="col-"] {
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+.input-group {
+    border-collapse: separate;
+    display: table;
+    position: relative;
+}
+
+.input-group .form-control {
+    float: left;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+.ch-count-field {
+    text-align:left;
+}
+.p30 {
+    padding: 30px;
+}
+.p10{
+  padding:10px;
+}
+.form-actions {
+   
+    margin: 0 -45px;
+    padding: 20px 45px 0 0;
+    text-align: right;
+}
+#test-video-form .form-actions {
+    border-top: medium none;
+    margin: 0;
+    padding: 0;
+}
+.pb20 {
+    padding-bottom: 20px;
+}
+.blockLabel {
+    font-weight: 600;
+    margin-top: 0;
+}
+label, .blockLabel {
+    display: inline-block;
+    font-weight: initial;
+    margin-bottom: 5px;
+    max-width: 100%;
+     margin-left: 15px;
+}
+ .cfi-sortables-list{
+    border: 0 none;
+    margin: auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.cfi-chapter-container {
+    background-color: #f4f4f4;
+    border: 3px solid #49A149;
+    margin: 100px 0 20px;
+}
+/*.content.ui-state-default {
+    background: #5cadb2 none repeat scroll 0 0;
+    color: #fff;
+}*/
+.content {
+    -moz-box-align: center;
+    align-items: center;
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.55);
+    color: #333;
+    flex-direction: row;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2;
+    padding: 18px;
+    position: relative;
+}
+
+.content.ui-state-default.add-chapter-btn {
+    margin-top: 10px;
+    padding-top: 30px;
+}
+.custominput{
+	width:50%;
+	text-align:center;
+}
+.custompannel
+{
+	width:75%;
+}
+.price-drop-down > select {
+    padding: 10px;
+	width:100px;
+}
+.section-btn{
+	float:right;
+}
+.height100 {
+    height: 55px;
+}
+.btn-color{
+	background-color:#fff;
+	border: 3px solid #5299A3;
+}
+.custom-btn{
+	background:#5299A3;
+	color:#fff;
+}
+.form-in
+{
+	 font-size: 0px;
+    height: 0px;
+}
+.coursecoupons {
+    margin-top: 6px;
+}
+}
+.newpadding
+{
+	padding:20px;
+}
+
+.custom-height
+{
+	height: 48px;
+}
+.inheight
+{
+	 height: 42px;
+}
+textarea{ 
+  width: 100%; 
+  max-width:100%; 
+}
+
+.inputfile
+{
+	background-color: #f4f4f4;
+    border: 3px solid #49A149;
+	padding:15	px;
+}
+
+#imgInp {
+    border: 3px solid #AEC729;
+    border-radius: 5px;
+}
+.lecturepadding
+{
+	padding:5px;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    border-color: #f8a52d;
+}
+
+a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
+    background-color: #f8a52d;
+    color: #fff;
+    text-decoration: none;
+}
+.file {
+  visibility: hidden;
+  position: absolute;
+  
+}
+.hgt{
+  height:40px;
+}
+.text-direction1{
+	direction:rtl;
+}
+.textdirection
+{
+	direction: ltr;
+}
+.panel-title.glyphicon.glyphicon-chevron-down {
+    color: #fff;
+	 margin: 5px;
+}
+.fa.fa-bars {
+    margin: 5px;
+}
+.entry:not(:first-of-type)
+{
+    margin-top: 10px;
+}
+.glyphicon {
+    font-size: 20px;
+}
+.panel.panel-default.lecid.lecid1.login-button {
+    margin-top: 20px;
+}
+.imgicon {
+    margin: 10px;
+}
+.adding-button {
+    margin-top: 10px;
+}
+.lecture-icons {
+    background: #ececec none repeat scroll 0 0;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.45) inset;
+    display: inline-block;
+    height: 60px;
+    margin: 5px 15px 0;
+    overflow: hidden;
+    position: relative;
+    width: 70px;
+}
+
+.inner.form-control {
+  height: auto;
+  text-align:left;
+   cursor: all-scroll;
+}
+.btn-lg.btn-color.fa.fa-plus {
+    width: 240px;
+}
+.sectionadd {
+    /*background: rgb(87, 171, 176) none repeat scroll 0 0;
+    
+    color: #fff;*/
+    border: 1px solid;
+    margin-top: 10px;
+}
+.addcontentbtn{
+	cursor:pointer;
+}
+.cancel-link ,.cancel-link2{
+	cursor:pointer;
+	
+}
+.lecedit {
+    cursor: pointer;
+}
+.panel.panel-default.login-button {
+  padding: 0 10px;
+}
+.document > input {
+    margin: 15px;
+}
+.fa.fa-file-pdf-o {
+    font-size: 25px;
+}
+.lecid2 .form-control {
+    height: auto;
+}
+
+.ui-state-hover {
+background:lightyellow;   
+}
+.ui-state-active {
+background:lightgray   
+}
+.dragdrop {
+    cursor: all-scroll;
+     margin-top:10px;
+     height: 30px;
+}
+.editable-unsaved {
+    font-weight: lighter !important;
+}
+
+.editable-click, a.editable-click, a.editable-click:hover {
+    border-bottom: medium none !important;
+    text-decoration: none;
+}
+.curs {
+    cursor: pointer;
+}
+.dragdrop.ui-draggable.ui-droppable .in > .fa {
+    display: none !important;
+}
+.dragdrop.ui-draggable.ui-droppable:hover .in > .fa {
+    display: inline-block !important;
+}
+.inner.form-control.coursecoupons .fa-pencil ,
+.inner.form-control.coursecoupons .fa.fa-trash-o {
+    display: none;
+}
+.inner.form-control.coursecoupons:hover .fa-pencil ,
+.inner.form-control.coursecoupons:hover .fa.fa-trash-o {
+    display: inline-block;
+}
+/* user profile css */
+
+.my-courses-header {
+    background-color: #38B1D5;
+    
+    color: #ffffff;
+    height: 137px;
+}
+.pos-r {
+    position: relative;
+}
+.my-courses-header .my-courses-heading {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-left: -1px;
+    text-overflow: ellipsis;
+    top: 50px;
+    text-align:left;
+  
+    white-space: nowrap;
+}
+.my-courses .my-courses-header .tabs {
+    border: 0 none;
+    top: 59px;
+}
+.mt10 {
+    margin-top: 70px;
+}
+.mr20{
+  margin-right:20px;
+}
+.nav {
+    list-style: outside none none;
+    margin-bottom: 0;
+    padding-left: 0;
+
+}
+.plus {
+    background: #ddd none repeat scroll 0 0;
+    height: 250px;
+       margin-top: 20px;
+}
+.dimg{
+  width:100%;
+  height:50%;
+}
+/* extra */
+body {
+  padding : 10px ;
+  
+}
+
+#exTab1 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+#exTab2 h3 {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+/* remove border radius for the tab */
+
+#exTab1 .nav-pills > li > a {
+  border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+
+#exTab3 .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+}
+
+#exTab3 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+/* end user profile */
+
+/* instruct page css start */
+.instruct-head {
+    background: #3399ff none repeat scroll 0 0;
+    height: 120px;
+    width: 100%;
+}
+.ml{
+  margin-left:150px;
+}
+.nav {
+    list-style: outside none none;
+}
+/* end instruct page */
+/* profile page css */
+.nav-tabs {
+
+    float: left;
+
+    border-bottom: 0;
+
+  }
+
+   
+
+  .nav-tabs li {
+
+    float: none;
+
+    margin: 0;
+
+  }
+
+   
+
+  .nav-tabs li a {
+
+  margin-right: 0;
+
+    border: 0;
+    color: #fff;
+
+    background-color: #5CAAB0;
+    
+      padding: 8px;
+       text-align: center;
+         box-shadow: 1px 1px #ccc inset, 0 -1px #ccc inset;
+
+  }
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+  
+    background-color: #F8A52D;
+    color: #FFF;
+    
+}
+   .nav > li > a:focus, .nav > li > a:hover {
+    background-color: #f8a52d;
+  }
+
+  .nav-tabs li a:hover {}
+
+   
+
+  .nav-tabs .glyphicon { color: #fff; }
+
+   
+
+  .nav-tabs .active .glyphicon { color: #333; }
+
+   
+
+  .nav-tabs > li.active > a,
+
+  .nav-tabs > li.active > a:hover,
+
+  .nav-tabs > li.active > a:focus { border: 0; }
+  .tab-content .tab-pane {
+
+    display: none;
+
+    background-color: #fff;
+
+    padding: 1.6rem;
+
+    
+  }
+  .tab-content .active { display: block; }
+  .nav.nav-tabs {
+    border: 1px solid #ccc;
+    padding:0px;
+}
+.nav.nav-tabs.row.col-md-3 {
+    border: 1px solid #ccc;
+    min-height: 702px;
+       background: #8acdd7 none repeat scroll 0 0;
+}
+.container.textdirection {
+    border: 1px solid #ccc;
+     
+}
+
+.container.col-md-12.notification {
+    border: 1px solid #ccc;
+    padding: 89px;
+    background: #D4EAF6;
+    position: absolute;
+}
+.col-md-12.personal-info {
+    position: absolute;
+}
+.input-group.col-md-12 {
+    margin-bottom: 13px;
+}
+
+.image-section-wrapper {
+  border: 1px solid #ccc;
+  margin: auto;
+  padding: 18px;
+  width: 80%;
+  box-shadow:0 2px 0 hsla(0, 0%, 100%, 0.63), 0 1px 2px rgba(0, 0, 0, 0.15) inset;
+}
+.image-profile {
+  background: #eef4fd none repeat scroll 0 0;
+  text-align: center;
+}
+.profile-text > p {
+  color: #333333;
+  font-size: 14px;
+  margin: 0;
+  padding: 10px 0 10px 10px;
+}
+/* profile page end */ 
+
+

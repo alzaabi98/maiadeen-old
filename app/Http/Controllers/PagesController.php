@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Controller;
 use App\Http\Requests;
+use Illuminate\Support\Facades\Input;
 use Mail;
 
 class PagesController extends Controller
@@ -39,6 +40,32 @@ class PagesController extends Controller
           public function contactus() {
     	
     	return view('pages.contactus');
+    }
+	 public function createcourse() {
+      	
+    	return view('pages.createcourse');
+    }
+	public function courseview() {
+		
+    return view('pages.courseview');
+
+    	//return view('pages.courseview');
+    }
+    public function mycourse() {
+        
+    return view('pages.mycourse');
+
+        //return view('pages.courseview');
+    }
+     public function profile() {
+        
+    return view('pages.profile');
+
+        //return view('pages.courseview');
+    }
+    public function instruct() {
+        
+    return view('pages.test');
     }
 
 
