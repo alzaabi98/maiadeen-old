@@ -123,7 +123,7 @@
 
     <div class="tab-pane" id="favourite">
     
-<<<<<<< HEAD
+
 	<div class="image-section-wrapper">
 	<div class="image-profile">
 	<img src="/assets/pages/img/profile-pic.png" alt="profile-img">
@@ -132,8 +132,7 @@
 	<p>Your beautiful, clean, non-pixelated image should be at minimum 200x200 pixels.</p>
 	</div>
 	</div>
-=======
->>>>>>> 82488f1746838294720c72bb09857f25976f1fc4
+
     								
     </div>
 
