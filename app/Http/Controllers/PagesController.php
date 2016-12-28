@@ -67,7 +67,13 @@ class PagesController extends Controller
         
     return view('pages.test');
     }
-
+	 public function store() {
+       $file =$request ->file('file');
+       $name =time() . $file ->getClientOriginalName();
+      $file =move('image',$name);
+      Photo::create(['file'=>$name]);	  
+   
+    }
 
     public function send(Request $request) {
 

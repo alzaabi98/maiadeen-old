@@ -5,16 +5,29 @@
 	<script src="/assets/pages/js/script.js"></script>
 	<link href="/assets/pages/css/bootstrap-editable.css" rel="stylesheet">
     <script src="/assets/pages/js/bootstrap-editable.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="/assets/pages/js/fileinput.js" type="text/javascript"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.1/tinymce.min.js" type="text/javascript"></script>
 
+  <script>
+ tinymce.init({
+  selector: 'textarea',  // change this value according to your HTML
+  toolbar: " bold italic ",
+});
+
+</script>
 
 @stop
 @section('content')
 <!--new tab-->
 <div class="container textdirection">
-
-<ul class="nav nav-tabs row col-md-3">
-
+<div class="row">
+<div class="col-md-3 col-xs-12">
+<div class="left-menu-section">
+<ul class="nav nav-tabs">
+   <span id="profile-img-show"><img src="/assets/pages/img/profile-pic.png" alt="profile-img"></span>
     <li class="active"><a href="#home" data-toggle="tab">Profile</a></li>
 
     <li><a href="{{url('/mycourses')}}" >View Public Profile</a></li>
@@ -28,14 +41,15 @@
     <li><a href="#settings" data-toggle="tab">Notification</a></li>
 
   </ul>
-
+  </div>
+</div>
    
-
-  <div id="myTabContent" class="tab-content col-md-9">
+<div class=" col-md-9 col-xs-12">
+  <div id="myTabContent" class="tab-content">
 
 				<div class="tab-pane active" id="home">
 
-							<div class="col-md-12 personal-info ">
+							<div class="personal-info ">
 								<div class="alert alert-info alert-dismissable">
 								  <a class="panel-close close" data-dismiss="alert">×</a> 
 								  <p class="text-center">
@@ -83,36 +97,47 @@
 										</div>
 									  </div>
 									</div>
-
-										<div class="input-group col-md-12">
+									<div class="Biography_wrapper">
+									<h2>Biography</h2>
+									<div class="Biography-section">
+									 
+								<form method="post">
+									<textarea id="mytextarea">Hello, World!</textarea>
+								  </form>
+									</div>
+									</div>
+                                       <div class="profile-link-section">
+									   <h2>Link</h2>
+										<div class="input-group">
 										<span class="input-group-addon">https://plus.google.com/</span>
 										<input id="id_google_profile" class="textinput textInput form-control user-success hgt" maxlength="128" name="google_profile" placeholder="Google+ Link" type="text">
 										</div>
-										<div class="input-group col-md-12">
+										<div class="input-group">
 										<span class="input-group-addon">http://twitter.com/</span>
 										<input id="id_twitter_profile" class="textinput textInput form-control hgt" maxlength="128" name="twitter_profile" placeholder="Twitter Profile" type="text">
 										</div>
-										<div class="input-group col-md-12">
+										<div class="input-group">
 										<span class="input-group-addon">http://www.facebook.com/</span>
 										<input id="id_facebook_profile" class="textinput textInput form-control hgt" maxlength="128" name="facebook_profile" placeholder="Facebook Profile" type="text">
 										</div>
-										<div class="input-group col-md-12 ">
+										<div class="input-group ">
 										<span class="input-group-addon">http://www.linkedin.com/</span>
 										<input id="id_linkedin_profile" class="textinput textInput form-control hgt" maxlength="128" name="linkedin_profile" placeholder="LinkedIn Profile" type="text">
 										</div>
-										<div class="input-group col-md-12 ">
+										<div class="input-group ">
 										<span class="input-group-addon">http://www.youtube.com/</span>
 										<input id="id_youtube_profile" class="textinput textInput form-control hgt" maxlength="128" name="youtube_profile" placeholder="Youtube Profile" type="text">
 										</div>
-										<div class="form-group">
-									  <label class="col-md-3 control-label"></label>
-									  <div class="col-md-8">
+
+									<div class="profile-save-button">
+									<div class="form-group">
+									 
 										<input class="btn btn-primary" value="Save Changes" type="button">
-										<span></span>
-										<input class="btn btn-default" value="Cancel" type="reset">
-									  </div>
+										
+									</div>  
 									</div>
 							  </form>
+							</div>
 							</div>
 						
 					
@@ -122,17 +147,15 @@
 
 
     <div class="tab-pane" id="favourite">
-    
-
-	<div class="image-section-wrapper">
-	<div class="image-profile">
-	<img src="/assets/pages/img/profile-pic.png" alt="profile-img">
+ 
+    <div class="proifle-img-upload">
+	 <form enctype="multipart/form-data 3">
+     <div class="form-group">
+     <input id="profileimgInp" type="file" name="img[]" class="file" data-upload-url="#" onchange="readURL(this)";>
+                </div>
+              
+            </form>
 	</div>
-	<div class="profile-text">
-	<p>Your beautiful, clean, non-pixelated image should be at minimum 200x200 pixels.</p>
-	</div>
-	</div>
-
     								
     </div>
 
@@ -245,7 +268,53 @@
     </div>
 
   </div>
+  </div>
+  </div>
 </div>
+<script>
+$(document).on('click', '.browse', function(){
+  var file = $(this).parent().parent().parent().find('.file');
+  file.trigger('click');
+});
+$(document).on('change', '.file', function(){
+  $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
+});
+ function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#profile-img-show').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#profileimgInp").change(function(){
+        readURL(this);
+    });
+	$(document).on('click', '.fileinput-upload-button' ,function(){
+	     function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#profile-top-img')
+                        .attr('src', e.target.result)
+                        .width(200)
+                        .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+		});
+		
+
+
+
+    </script>
 @section('javascript')
 
 
