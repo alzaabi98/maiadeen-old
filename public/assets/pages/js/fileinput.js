@@ -374,8 +374,8 @@
         
         '    {progress} {actions}\n' +
         '</div>';
-    tActions = '<div class="file-actions">\n' +
-        '    <div class="file-footer-buttons">\n' +
+    tActions = 
+        
         '        {zoom} {other}' +
         '    </div>\n' +
         '    {drag}\n' +
@@ -386,7 +386,7 @@
     tActionDelete = '<button type="button" class="kv-file-remove {removeClass}" ' + 'title="{removeTitle}" {dataUrl}{dataKey}>{removeIcon}</button>\n';
     tActionUpload = '<button type="button" class="kv-file-upload {uploadClass}" title="{uploadTitle}">' +
         '{uploadIcon}</button>';
-    tActionZoom = '<button type="button" class="kv-file-zoom {zoomClass}" title="{zoomTitle}">{zoomIcon}</button>';
+    
     tActionDrag = '<span class="file-drag-handle {dragClass}" title="{dragTitle}">{dragIcon}</span>';
     tTagBef = '<div class="file-preview-frame{frameClass}" id="{previewId}" data-fileindex="{fileindex}"' +
         ' data-template="{template}"';
@@ -671,7 +671,7 @@
             }
             self.$dropZone = self.$container.find('.file-drop-zone');
             self.$progress = self.$container.find('.kv-upload-progress');
-            self.$btnUpload = self.$container.find('.fileinput-upload');
+            self.$btnUpload = self.$container.find('.ffileinput-upload');
             self.$captionContainer = getElement(options, 'elCaptionContainer', self.$container.find('.file-caption'));
             self.$caption = getElement(options, 'elCaptionText', self.$container.find('.file-caption-name'));
             self.$previewContainer = getElement(options, 'elPreviewContainer', self.$container.find('.file-preview'));
@@ -948,7 +948,7 @@
             if (!self.isUploadable) {
                 handler($form, 'submit', $.proxy(self._submitForm, self));
             }
-            handler(self.$container.find('.fileinput-upload'), 'click', $.proxy(self._uploadClick, self));
+            handler(self.$container.find('.ffileinput-upload'), 'click', $.proxy(self._uploadClick, self));
             handler($(window), 'resize', function () {
                 self._listenFullScreen(screen.width === window.innerWidth && screen.height === window.innerHeight);
             });
@@ -1017,7 +1017,7 @@
             self.$dropZone.removeClass('file-highlighted');
         },
         _uploadClick: function (e) {
-            var self = this, $btn = self.$container.find('.fileinput-upload'), $form,
+            var self = this, $btn = self.$container.find('.ffileinput-upload'), $form,
                 isEnabled = !$btn.hasClass('disabled') && isEmpty($btn.attr('disabled'));
             if (e && e.isDefaultPrevented()) {
                 return;
@@ -3075,7 +3075,7 @@
             self._raise('filedisabled');
             self.$element.attr('disabled', 'disabled');
             self.$container.find(".kv-fileinput-caption").addClass("file-caption-disabled");
-            self.$container.find(".btn-file, .fileinput-remove, .fileinput-upload, .file-preview-frame button").attr(
+            self.$container.find(".btn-file, .fileinput-remove, .ffileinput-upload, .file-preview-frame button").attr(
                 "disabled",
                 true);
             self._initDragDrop();

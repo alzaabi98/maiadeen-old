@@ -7,6 +7,7 @@
     <script src="/assets/pages/js/bootstrap-editable.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="/assets/pages/js/fileinput.js" type="text/javascript"></script>
+	<script src="/assets/pages/js/rcrop.min.js" type="text/javascript"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.1/tinymce.min.js" type="text/javascript"></script>
@@ -27,7 +28,7 @@
 <div class="col-md-3 col-xs-12">
 <div class="left-menu-section">
 <ul class="nav nav-tabs">
-   <span id="profile-img-show"><img src="/assets/pages/img/profile-pic.png" alt="profile-img"></span>
+   <span id="profile-img-show"><img id="profile-left-img" src="/assets/pages/img/profile-pic.png" alt="profile-img"></span>
     <li class="active"><a href="#home" data-toggle="tab">Profile</a></li>
 
     <li><a href="{{url('/mycourses')}}" >View Public Profile</a></li>
@@ -149,12 +150,14 @@
     <div class="tab-pane" id="favourite">
  
     <div class="proifle-img-upload">
-	 <form enctype="multipart/form-data 3">
-     <div class="form-group">
-     <input id="profileimgInp" type="file" name="img[]" class="file" data-upload-url="#" onchange="readURL(this)";>
-                </div>
-              
-            </form>
+	
+	<form id="form1" runat="server" enctype="multipart/form-data">
+	<div class="form-group">
+    <input type='file' id="fileinput-upload-button" name="file-fr[]" multiple />
+  
+	</div>
+
+     </form>
 	</div>
     								
     </div>
@@ -294,26 +297,38 @@ $(document).on('change', '.file', function(){
     $("#profileimgInp").change(function(){
         readURL(this);
     });
-	$(document).on('click', '.fileinput-upload-button' ,function(){
-	     function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
+	
+					 function readURL(input) {
 
-                reader.onload = function (e) {
-                    $('#profile-top-img')
-                        .attr('src', e.target.result)
-                        .width(200)
-                        .height(200);
-                };
+				if (input.files && input.files[0]) {
+					var reader = new FileReader();
 
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-		});
-		
+					reader.onload = function (e) {
+						$('#profile-top-img').attr('src', e.target.result);
+					}
+
+					reader.readAsDataURL(input.files[0]);
+				}
+			}
+
+			$("#fileinput-upload-button").change(function(){
+				readURL(this);
+			});
+					
+	 $('#fileinput-upload-button').fileinput({
+        language: 'fr',
+        uploadUrl: '#',
+        allowedFileExtensions : ['jpg', 'png','gif'],
+    });
+	$(document).on('click', '.fileinput-upload-button', function(){
+		var  profileimg = $('.kv-file-content img').attr('src');	
+       $('#profile-left-img').attr('src', profileimg);
+      
+				
+	});
 
 
-
+          
     </script>
 @section('javascript')
 

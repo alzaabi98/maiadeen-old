@@ -409,6 +409,12 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
 .profile-save-button {
   text-align: center;
 }
+.profile-save-upload-button {
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
 .left-menu-section {
   background: #8acdd7 none repeat scroll 0 0;
   height: 100%;
@@ -1151,7 +1157,7 @@ body {
     border-radius: 5px;
     border: 1px solid #ddd;
     padding: 5px;
-	max-height:225px;
+	min-height:280px;
     width: 100%;
     margin-bottom: 5px;
 }
@@ -1160,13 +1166,21 @@ body {
     position: relative;
     display: table;
     margin: 8px;
-    height: 160px;
+    height: 220px;
     border: 1px solid #ddd;
     box-shadow: 1px 1px 5px 0 #a2958a;
     padding: 6px;
     float: left;
     text-align: center;
     vertical-align: middle;
+}
+button.p-save-button {
+  background: #38b1d5 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 30px;
 }
 
 .file-preview-frame:not(.file-preview-error):hover {
@@ -1297,7 +1311,7 @@ body {
 .file-drop-zone {
     border: 1px dashed #aaa;
     border-radius: 4px;
-    max-height:195px;
+    min-height:250px;
     text-align: center;
     vertical-align: middle;
     margin: 12px 15px 12px 12px;
@@ -1464,4 +1478,173 @@ body {
   display: inline-block;
   text-align: center;
 }
+.profile-img-upload-section {
+  border: 1px solid #777777;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+#profile-img-show img {
+  height: 200px;
+  width: 200px;
+}
+/**/
+.rcrop-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: inherit; }
+  .rcrop-wrapper img {
+    display: block; }
+  .rcrop-wrapper .rcrop-croparea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+    .rcrop-wrapper .rcrop-croparea .rcrop-croparea-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid white;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+  .rcrop-wrapper .rcrop-outer-wrapper {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .rcrop-wrapper .rcrop-outer {
+    background: #fff;
+    position: absolute; }
+    .rcrop-wrapper .rcrop-outer.rcrop-outer-left {
+      height: 100%;
+      left: 0;
+      top: 0; }
+    .rcrop-wrapper .rcrop-outer.rcrop-outer-right {
+      height: 100%;
+      right: 0;
+      top: 0; }
+    .rcrop-wrapper .rcrop-outer.rcrop-outer-top {
+      top: 0;
+      width: 100%; }
+    .rcrop-wrapper .rcrop-outer.rcrop-outer-bottom {
+      bottom: 0;
+      width: 100%; }
+  .rcrop-wrapper .rcrop-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .rcrop-wrapper .rcrop-grid-line {
+    position: absolute; }
+    .rcrop-wrapper .rcrop-grid-line:nth-child(1) {
+      width: 100%;
+      height: 33%;
+      top: 33%;
+      left: 0;
+      border-top: 1px dashed #fff;
+      border-bottom: 1px dashed #fff; }
+    .rcrop-wrapper .rcrop-grid-line:nth-child(2) {
+      height: 100%;
+      width: 33%;
+      left: 33%;
+      top: 0;
+      border-left: 1px dashed #fff;
+      border-right: 1px dashed #fff; }
+  .rcrop-wrapper .rcrop-handler-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    .rcrop-wrapper .rcrop-handler-wrapper .rcrop-handler-corner {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      border: 1px solid #000; }
+    .rcrop-wrapper .rcrop-handler-wrapper .rcrop-handler-top-left {
+      top: -3px;
+      left: -3px; }
+    .rcrop-wrapper .rcrop-handler-wrapper .rcrop-handler-top-right {
+      top: -3px;
+      right: -3px; }
+    .rcrop-wrapper .rcrop-handler-wrapper .rcrop-handler-bottom-left {
+      bottom: -3px;
+      left: -3px; }
+    .rcrop-wrapper .rcrop-handler-wrapper .rcrop-handler-bottom-right {
+      bottom: -3px;
+      right: -3px; }
+    .rcrop-wrapper .rcrop-handler-wrapper .rcrop-handler-border {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      border: 1px solid #000; }
+    .rcrop-wrapper .rcrop-handler-wrapper .rcrop-handler-top {
+      top: -3px;
+      left: 50%;
+      margin-left: -3px; }
+    .rcrop-wrapper .rcrop-handler-wrapper .rcrop-handler-right {
+      right: -3px;
+      top: 50%;
+      margin-top: -3px; }
+    .rcrop-wrapper .rcrop-handler-wrapper .rcrop-handler-bottom {
+      bottom: -3px;
+      left: 50%;
+      margin-left: -3px; }
+    .rcrop-wrapper .rcrop-handler-wrapper .rcrop-handler-left {
+      left: -3px;
+      top: 50%;
+      margin-top: -3px; }
+
+.clayfy-box:not(.clayfy-not-move) {
+  cursor: move; }
+
+.clayfy-ghost {
+  z-index: 1000; }
+
+.clayfy-ghost-opacity {
+  opacity: .5; }
+
+.clayfy-handler {
+  z-index: 1001; }
+  .clayfy-handler.clayfy-top {
+    cursor: n-resize; }
+    .clayfy-handler.clayfy-top.left {
+      cursor: nw-resize;
+      /*
+      &:before{
+          content: '';
+          position: absolute;
+          top:0; left:0;
+          height: 100%; width: 100%;
+          border-top: 1px solid #000;
+          border-left: 1px solid #000;
+      }
+      */ }
+    .clayfy-handler.clayfy-top.right {
+      cursor: ne-resize; }
+  .clayfy-handler.clayfy-bottom {
+    cursor: n-resize; }
+    .clayfy-handler.clayfy-bottom.left {
+      cursor: sw-resize; }
+    .clayfy-handler.clayfy-bottom.right {
+      cursor: se-resize; }
+  .clayfy-handler.clayfy-left {
+    cursor: w-resize; }
+  .clayfy-handler.clayfy-right {
+    cursor: w-resize; }
+
+.clayfy-sort-droparea {
+  border: 2px solid #ccc; }
+
+/*# sourceMappingURL=rcrop.css.map */
 
